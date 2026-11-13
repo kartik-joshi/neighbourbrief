@@ -77,6 +77,9 @@ cp -R "$SITE"/. "$WORK"/
 (
   cd "$WORK"
   git init -q -b main
+  # same GitHub account as this checkout, for a global git hook that asks for one (git account), if used here
+  ACCOUNT=$(git -C ../.. config --local account.owner || true)
+  if [ -n "$ACCOUNT" ] && command -v git-account >/dev/null; then git account "$ACCOUNT" >/dev/null; fi
   git add -A
   git -c user.name="$NAME" -c user.email="$EMAIL" commit -q -m "Publish site $(date +%Y-%m-%d)"
   git push -q --force "$REMOTE" main
