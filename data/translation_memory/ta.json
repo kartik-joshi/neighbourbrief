@@ -1,4 +1,40 @@
 {
+ "Assaults: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Attacks: {0} report in October. {1} This year, {3} was {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 1 report in October. 77 this year, up 1% from 76 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "தாக்குதல்கள்: அக்டோபரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% ஆக இருந்தது."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Attacks: {0} reports in October. {1} this year, down {3} by {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 22 reports in October. 307 this year, down 1% from 309 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "தாக்குதல்கள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in October. {1} This year, {3} is down {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 45 this year, down 21% from 57 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "தாக்குதல்கள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in October. {1} This year, an increase of {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 3 reports in October. 64 this year, up 28% from 50 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "தாக்குதல்கள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
+ },
  "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,one,other": {
   "back": "Attacks: {0} reports in September. {1} this year, down {2}% from {3} at the same time last year.",
   "created": "2026-10-24",
@@ -44,6 +80,24 @@
   "status": "machine",
   "tr": "மிதிவண்டி திருட்டுகள்: செப்டம்பரில் {0} அறிக்கை. கடந்த ஆண்டு இதே நேரத்தில் {2} உடன் ஒப்பிடும்போது இந்த ஆண்டு {1}."
  },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year compared to {2} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 2 reports in October. 5 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "மிதிவண்டி திருட்டுகள்: அக்டோபரில் {0} அறிக்கைகள். கடந்த ஆண்டு இதே நேரத்தில் {2} உடன் ஒப்பிடும்போது இந்த ஆண்டு {1}."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle thefts: {0} reports in October. {1} This year, an increase of {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 10 reports in October. 32 this year, up 52% from 21 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "மிதிவண்டி திருட்டுகள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
+ },
  "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Bicycle thefts: {0} reports in September. {1} this year compared to {2} at the same time last year.",
   "created": "2026-10-24",
@@ -62,6 +116,24 @@
   "status": "machine",
   "tr": "மிதிவண்டி திருட்டுகள்: செப்டம்பரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} இல் இருந்து {2}% அதிகமாகும்."
  },
+ "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "House breakdowns: {0} report in October. {1} this year compared to {2} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 1 report in October. 10 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வீடு உடைப்புகள்: அக்டோபரில் {0} அறிக்கை. கடந்த ஆண்டு இதே நேரத்தில் {2} உடன் ஒப்பிடும்போது இந்த ஆண்டு {1}."
+ },
+ "Break-ins: {0} report in October. {1} this year, the same as by this time last year. |one,other": {
+  "back": "House breakdowns: {0} report in October. {1} this year, just as it was at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, the same as by this time last year.",
+  "example": "Break-ins: 1 report in October. 12 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வீடு உடைப்புகள்: அக்டோபரில் {0} அறிக்கை. இந்த ஆண்டு {1} , கடந்த ஆண்டு இந்த நேரத்தில் இருந்ததைப் போலவே."
+ },
  "Break-ins: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
   "back": "House breakdowns: {0} report in September. {1} this year compared to {2} at the same time last year.",
   "created": "2026-10-24",
@@ -79,6 +151,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "வீடு உடைப்புகள்: செப்டம்பரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "House breakdowns: {0} reports in October. {1} this year compared to {2} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 16 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வீடு உடைப்புகள்: அக்டோபரில் {0} அறிக்கைகள். கடந்த ஆண்டு இதே நேரத்தில் {2} உடன் ஒப்பிடும்போது இந்த ஆண்டு {1}."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "House breakdowns: {0} reports in October. {1} This year, {3} is down {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 7 reports in October. 39 this year, down 19% from 48 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வீடு உடைப்புகள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Break-ins: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "House breakdowns: {0} reports in October. {1} this year, just as it was at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Break-ins: 2 reports in October. 19 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வீடு உடைப்புகள்: அக்டோபரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} , கடந்த ஆண்டு இந்த நேரத்தில் இருந்ததைப் போலவே."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 27 this year, up 8% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வீடு உடைப்புகள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
  },
  "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "House breakdowns: {0} reports in September. {2} this year compared to {1} at the same time last year.",
@@ -116,6 +224,15 @@
   "status": "machine",
   "tr": "வீடு உடைப்புகள்: செப்டம்பரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} இல் இருந்து {2}% அதிகமாகும்."
  },
+ "Homicides: {0} reports in October. {1} this year. |other,one": {
+  "back": "Homicides: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "கொலைகள்: அக்டோபரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} ."
+ },
  "Homicides: {0} reports in September. {1} this year. |other,one": {
   "back": "Homicides: {0} reports in September. {1} this year.",
   "created": "2026-10-24",
@@ -124,6 +241,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "கொலைகள்: செப்டம்பரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} ."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, the police had {0} complaints in {name}. A complaint to the police does not mean that anyone has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 16 reports to police in Agincourt North. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "அக்டோபரில், {name}இல் காவல்துறைக்கு {0} புகார்கள் இருந்தன. காவல்துறைக்கு புகார் எவரும் குற்றம் சாட்டப்பட்டதாக அர்த்தமல்ல."
  },
  "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
   "back": "In September, there were {0} complaints to the police in {name}. A complaint to the police does not mean that anyone has been charged.",
@@ -152,6 +278,15 @@
   "status": "machine",
   "tr": "கேள்விகள்? கீழே பட்டியலிடப்பட்டுள்ள உங்கள் அண்டை சமூக அதிகாரிகளுடன் பேசுங்கள். அவசரகாலத்தில், {0}அழைக்கவும்."
  },
+ "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Robberies: {0} report in October. {1} This year, {3} was {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 24 this year, up 50% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "கொள்ளைகள்: அக்டோபரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% ஆக இருந்தது."
+ },
  "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
   "back": "Robberies: {0} report in September. {1} this year compared to {2} at the same time last year.",
   "created": "2026-10-24",
@@ -169,6 +304,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "கொள்ளைகள்: செப்டம்பரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robberies: {0} reports in October. {1} this year compared to {2} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 5 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "கொள்ளைகள்: அக்டோபரில் {0} அறிக்கைகள். கடந்த ஆண்டு இதே நேரத்தில் {2} உடன் ஒப்பிடும்போது இந்த ஆண்டு {1}."
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robberies: {0} reports in October. {1} This year, {3} is down {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 24 this year, down 8% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "கொள்ளைகள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robberies: {0} reports in October. {1} This year, an increase of {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 3 reports in October. 20 this year, up 25% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "கொள்ளைகள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
  },
  "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Robberies: {0} reports in September. {1} this year compared to {2} at the same time last year.",
@@ -197,6 +359,15 @@
   "status": "machine",
   "tr": "கொள்ளைகள்: செப்டம்பரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} இல் இருந்து {2}% அதிகமாகும்."
  },
+ "Shootings: {0} report in October. {1} this year. |one,other": {
+  "back": "Shootings: {0} report in October. This year {1} .",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} report in October. {1} this year.",
+  "example": "Shootings: 1 report in October. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "துப்பாக்கிச் சூடுகள்: அக்டோபரில் {0} அறிக்கை. இந்த ஆண்டு {1} ."
+ },
  "Shootings: {0} report in September. {1} this year. |one,other": {
   "back": "Shootings: {0} report in September. {1} this year.",
   "created": "2026-10-24",
@@ -205,6 +376,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "துப்பாக்கிச் சூடுகள்: செப்டம்பரில் {0} அறிக்கை. இந்த ஆண்டு {1} ."
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,one": {
+  "back": "Shootings: {0} reports in October. This year {1} .",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "துப்பாக்கிச் சூடுகள்: அக்டோபரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} ."
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,other": {
+  "back": "Shootings: {0} reports in October. This year {1} .",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 5 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "துப்பாக்கிச் சூடுகள்: அக்டோபரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} ."
  },
  "Shootings: {0} reports in September. {1} this year. |other,one": {
   "back": "Shootings: {0} reports in September. {1} this year.",
@@ -224,6 +413,24 @@
   "status": "machine",
   "tr": "துப்பாக்கிச் சூடுகள்: செப்டம்பரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} ."
  },
+ "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in October. {1} This year, {3} is down {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 14 this year, down 18% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "திருடப்பட்ட வாகனங்கள்: அக்டோபரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in October. {1} This year, {3} was {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 27 this year, up 4% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "திருடப்பட்ட வாகனங்கள்: அக்டோபரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% ஆக இருந்தது."
+ },
  "Stolen vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
   "back": "Stolen vehicles: {0} report in September. {1} This year, {3} is down {2}% at the same time last year.",
   "created": "2026-10-24",
@@ -232,6 +439,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "திருடப்பட்ட வாகனங்கள்: செப்டம்பரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} This year, {3} is down {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 5 reports in October. 55 this year, down 17% from 66 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "திருடப்பட்ட வாகனங்கள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 58 this year, up 7% from 54 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "திருடப்பட்ட வாகனங்கள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
  },
  "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Stolen vehicles: {0} reports in September. {1} This year, {3} is down {2}% from the same time last year.",
@@ -250,6 +475,51 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "திருடப்பட்ட வாகனங்கள்: செப்டம்பரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} இல் இருந்து {2}% அதிகமாகும்."
+ },
+ "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Theft from vehicles: {0} report in October. {1} This year, {3} was {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 45 this year, up 18% from 38 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வாகனங்களிலிருந்து திருட்டு: அக்டோபரில் {0} அறிக்கை. {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% ஆக இருந்தது."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 13 reports in October. 77 this year, down 1% from 78 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வாகனங்களிலிருந்து திருட்டு: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Theft from vehicles: {0} reports in October. {1} This year, {3} decreased by {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 33 this year, down 6% from 35 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வாகனங்களிலிருந்து திருட்டு: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Theft from vehicles: {0} reports in October. {1} this year, just as it was at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Theft from vehicles: 8 reports in October. 53 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வாகனங்களிலிருந்து திருட்டு: அக்டோபரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} , கடந்த ஆண்டு இந்த நேரத்தில் இருந்ததைப் போலவே."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 35 this year, up 9% from 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "வாகனங்களிலிருந்து திருட்டு: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் {3} இலிருந்து {2}% அதிகரித்துள்ளது."
  },
  "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Theft from vehicles: {0} reports in September. {1} This year, {2}% decreased from {3} at the same time last year.",
@@ -277,6 +547,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "வாகனங்களிலிருந்து திருட்டு: செப்டம்பரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} இல் இருந்து {2}% அதிகமாகும்."
+ },
+ "There were no reports to police in {name} in October in the categories we track. A report to police does not mean anyone was charged. |": {
+  "back": "There was no report to the police in {name} in October of the categories we tracked. A complaint to the police does not mean that anyone has been charged.",
+  "created": "2026-11-13",
+  "en": "There were no reports to police in {name} in October in the categories we track. A report to police does not mean anyone was charged.",
+  "example": "There were no reports to police in East L'Amoreaux in October in the categories we track. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "நாங்கள் கண்காணிக்கும் வகைகளில் அக்டோபரில் {name} இல் காவல்துறைக்கு எந்த அறிக்கையும் இல்லை. காவல்துறைக்கு ஒரு புகார் எவரும் குற்றம் சாட்டப்பட்டதாக அர்த்தமல்ல."
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": "{name}: Security Update for October {0}",
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Agincourt North: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: அக்டோபர் {0} க்கான பாதுகாப்பு புதுப்பிப்பு"
  },
  "{name}: safety update for September {0} |other": {
   "back": "{name}: Security Update for September {0}",

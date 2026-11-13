@@ -1,4 +1,67 @@
 {
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 58 this year, down 3% from 60 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Weerarada: {0} warbixinno bisha Oktoobar. {1} sanadkan, hoos {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in October. {1} this year, an increase of {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in October. 129 this year, up 2% from 126 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Weerarada: {0} warbixinno bishii Oktoobar. {1} sanadkan, koror {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Home hacking: {0} report in October. {1} this year, down {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 21 this year, down 22% from 27 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Jabsashada guryaha: {0} warbixin bishii Oktoobar. {1} sanadkan, hoos {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Home hacking: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 10 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Jabsashada guryaha: {0} warbixinno bisha Oktoobar. {1} sanadkan, marka la barbar dhigo {2} waqtigan sanadkii hore."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Home hacking: {0} reports in October. {1} this year, down {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 0 reports in October. 20 this year, down 26% from 27 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Jabsashada guryaha: {0} warbixinno bisha Oktoobar. {1} sanadkan, hoos {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Home hacking: {0} reports in October. {1} this year, an increase of {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 5 reports in October. 39 this year, up 15% from 34 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Jabsashada guryaha: {0} warbixinno bishii Oktoobar. {1} sanadkan, koror {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, {0} reports were sent to police at {name}. A report sent to police does not mean that a person has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 14 reports to police in Elms-Old Rexdale. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Bishii Oktoobar, warbixin {0} ah ayaa booliska loo diray {name}. Warbixin loo diray booliska macnaheedu ma aha in qof lagu soo oogay dacwad."
+ },
  "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
   "back": "In September, there were {0} police reports sent to {name}. A report sent to the police does not mean that a person has been charged.",
   "created": "2026-10-24",
@@ -16,6 +79,51 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Su'aalo? La hadal Saraakiisha Bulshada Xaafaddaada, kuwaas oo hoos ku taxan. Xaalad degdeg ah, wac {0}."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Fall: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 7 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Dhaca: {0} warbixinno bisha Oktoobar. {1} sanadkan, marka la barbar dhigo {2} waqtigan sanadkii hore."
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Fall: {0} reports in October. {1} this year, down {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 0 reports in October. 10 this year, down 9% from 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Dhaca: {0} warbixinno bisha Oktoobar. {1} sanadkan, hoos {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Shootings: {0} report in October. {1} this year. |one,other": {
+  "back": "Shootings: {0} report in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} report in October. {1} this year.",
+  "example": "Shootings: 1 report in October. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Toogashooyin: {0} warbixin bisha Oktoobar. {1} sanadkan."
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,other": {
+  "back": "Shootings: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Toogashooyin: {0} warbixinno bisha Oktoobar. {1} sanadkan."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, {2}% more than {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 45 this year, up 50% from 30 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Gaadiidka la xaday: {0} warbixin bishii Oktoobar. {1} sanadkan, {2}% ka badan {3} waqtigan sanadkii hore."
  },
  "Stolen vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
   "back": "Stolen vehicles: {0} report in September. {1} this year, down {2}% compared to {3} at this time last year.",
@@ -35,6 +143,24 @@
   "status": "machine",
   "tr": "Gaadiidka la xaday: {0} warbixin bishii Sebtembar. {1} sanadkan, koror {2}% marka loo eego {3} waqtigan sanadkii hore."
  },
+ "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, as at this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Stolen vehicles: 3 reports in October. 18 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Gaadiidka la xaday: {0} warbixin bisha Oktoobar. {1} sanadkan, sida waqtigan sanadkii hore."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, an increase of {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 9 reports in October. 70 this year, up 23% from 57 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Gaadiidka la xaday: {0} warbixinno bishii Oktoobar. {1} sanadkan, koror {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
  "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Stolen vehicles: {0} reports in September. {1} this year, {2}% more than {3} at this time last year.",
   "created": "2026-10-24",
@@ -43,6 +169,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Gaadiidka la xaday: {0} warbixin bishii Sebtembar. {1} sanadkan, {2}% ka badan {3} waqtigan sanadkii hore."
+ },
+ "Theft from vehicles: {0} report in October. {1} this year, the same as by this time last year. |one,other": {
+  "back": "Theft of goods inside vehicles: {0} report in October. {1} this year, as at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, the same as by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 11 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Xatooyada alaabta gudaha gaadiidka: {0} warbixin bisha Oktoobar. {1} sanadkan, sida waqtigan sanadkii hore."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Theft of goods in transportation: {0} reports in October. {1} this year, an increase of {2}% compared to {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 7 reports in October. 35 this year, up 169% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Xatooyada alaabta gudaha gaadiidka: {0} warbixinno bishii Oktoobar. {1} sanadkan, koror {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": "{name}: safety update in October {0}",
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Elms-Old Rexdale: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: cusboonaysiinta badbaadada ee Oktoobar {0}"
  },
  "{name}: safety update for September {0} |other": {
   "back": "{name}: safety update in September {0}",

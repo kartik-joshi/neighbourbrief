@@ -1,4 +1,31 @@
 {
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Assaults: {0} reported in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 12 reports in October. 113 this year, down 14% from 131 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Hành hung: {0} báo cáo vào tháng Mười. {1} năm nay, giảm {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Assaults: {0} reported in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 13 reports in October. 102 this year, up 12% from 91 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Hành hung: {0} báo cáo vào tháng Mười. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle theft: {0} reported in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in October. 9 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Trộm xe đạp: {0} báo cáo vào tháng Mười. {1} năm nay, so với {2} vào thời điểm này năm ngoái."
+ },
  "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Bicycle theft: {0} reported in September. {1} this year, compared to {2} at this time last year.",
   "created": "2026-10-24",
@@ -7,6 +34,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Trộm xe đạp: {0} báo cáo vào tháng Chín. {1} năm nay, so với {2} vào thời điểm này năm ngoái."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Break-ins: {0} reported in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 0 reports in October. 24 this year, down 4% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Đột nhập: {0} báo cáo vào tháng Mười. {1} năm nay, giảm {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Break-ins: {0} reported in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 26 this year, up 4% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Đột nhập: {0} báo cáo vào tháng Mười. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Homicides: {0} reports in October. {1} this year. |other,other": {
+  "back": "Homicides: {0} reported in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Các vụ giết người: {0} báo cáo vào tháng Mười. {1} năm nay."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, there were {0} reports to police in {name}. Reporting to police does not mean someone has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 19 reports to police in Brookhaven-Amesbury. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Vào tháng Mười, có {0} báo cáo với cảnh sát ở {name}. Báo cáo với cảnh sát không có nghĩa là ai đó bị buộc tội."
  },
  "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
   "back": "In September, there were {0} reports to police in {name}. Reporting to police doesn't mean someone has been charged.",
@@ -35,6 +98,69 @@
   "status": "machine",
   "tr": "Có thắc mắc gì không? Hãy trao đổi với các nhân viên cộng đồng khu phố của bạn, được liệt kê bên dưới. Trong trường hợp khẩn cấp, hãy gọi {0}."
  },
+ "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robbery: {0} reported in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in October. 6 this year, compared with 14 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Cướp tài sản: {0} báo cáo vào tháng Mười. {1} năm nay, so với {2} vào thời điểm này năm ngoái."
+ },
+ "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: Report {0} in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 22 this year, down 27% from 30 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Cướp tài sản: Báo cáo {0} vào tháng Mười. {1} năm nay, giảm {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robbery: {0} reported in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 6 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Cướp tài sản: {0} báo cáo vào tháng Mười. {1} năm nay, so với {2} vào thời điểm này năm ngoái."
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: {0} reported in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 3 reports in October. 24 this year, down 20% from 30 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Cướp tài sản: {0} báo cáo vào tháng Mười. {1} năm nay, giảm {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,other": {
+  "back": "Shootings: {0} reported in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Các vụ nổ súng: {0} báo cáo vào tháng Mười. {1} năm nay."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reported in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 7 reports in October. 11 this year, down 8% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Xe bị đánh cắp: {0} báo cáo vào tháng Mười. {1} năm nay, giảm {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reported in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 35 this year, up 40% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Xe bị đánh cắp: {0} báo cáo vào tháng Mười. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
+ },
  "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Stolen vehicles: {0} reported in September. {1} this year, up {2}% from {3} at this time last year.",
   "created": "2026-10-24",
@@ -43,5 +169,23 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Xe bị đánh cắp: báo cáo {0} vào tháng Chín. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Theft of items in vehicles: {0} reported in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 35 this year, up 25% from 28 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Trộm đồ trong xe: {0} báo cáo vào tháng Mười. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Theft in vehicles: {0} reported in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 42 this year, up 27% from 33 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Trộm đồ trong xe: {0} báo cáo vào tháng Mười. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
  }
 }

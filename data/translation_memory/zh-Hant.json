@@ -1,4 +1,49 @@
 {
+ "Assaults: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attack: Report from October {0}. {1} this year, down {2}% from {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 1 report in October. 38 this year, down 7% from 41 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "襲擊：{0}十月的報告。{1}今年，比去年同期的{3}下降{2}%。"
+ },
+ "Assaults: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attack: Report from October {0}. {1} This year, this is a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 1 report in October. 22 this year, up 22% from 18 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "襲擊：{0}十月的報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attack: October {0} report. {1} This year, this is a {2}% decrease compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 90 this year, down 6% from 96 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "襲擊：十月{0}報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Assaults: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Attack: October {0} report. {1} This year, just like this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Assaults: 50 reports in October. 435 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "襲擊：十月 {0} 報告。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: There were {0} reports in October. This year, {1} are a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 3 reports in October. 64 this year, up 28% from 50 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "襲擊：十月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
  "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Attacks: {0} reports in September. This year, {1} are reported, down {2}% from {3} in the same period last year.",
   "created": "2026-10-24",
@@ -26,6 +71,15 @@
   "status": "machine",
   "tr": "襲擊：九月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
+ "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 16 this year, down 20% from 20 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "單車被盜：{0}十月的報告。{1}今年，比去年同期的{3}下降{2}%。"
+ },
  "Bike thefts: {0} report in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": null,
   "created": "2026-10-24",
@@ -43,6 +97,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "單車被盜：{0}九月的報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle theft: {0} reports in October. {1} this year, and {2} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in October. 4 this year, compared with 3 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "單車被盜：十月有 {0} 報告。今年 {1} ，去年同期則有 {2} 。"
+ },
+ "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle theft: October {0} report. {1} This year, this is a {2}% decrease compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 7 reports in October. 31 this year, down 43% from 54 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "單車被盜：十月{0}報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle theft: {0} reports in October. {1} this year, a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 4 reports in October. 48 this year, up 9% from 44 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "單車被盜：十月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
  "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Bicycle theft: {0} reports in September. {1} this year, compared to {2} in the same period last year.",
@@ -71,6 +152,42 @@
   "status": "machine",
   "tr": "單車被盜：九月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
+ "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Burglary: Report from October {0}. This year, {1}, compared to {2} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 1 report in October. 11 this year, compared with 5 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊： {0} 十月的報告。今年 {1} ，與去年同期的 {2} 相比。"
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Burglary: October {0} report. {1} This year, down {2}% from {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 10 this year, down 17% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊：{0}十月的報告。{1}今年，比去年同期的{3}下降{2}%。"
+ },
+ "Break-ins: {0} report in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, the same as by this time last year.",
+  "example": "Break-ins: 1 report in October. 15 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊： {0} 報告在十月。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Burglary: October {0} report. {1} This year, this is a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 35 this year, up 17% from 30 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊：{0}十月的報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
  "Break-ins: {0} report in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Burglary: Report from September {0}. This year, {1}, compared to {2} in the same period last year.",
   "created": "2026-10-24",
@@ -97,6 +214,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "爆竊： {0} 九月的報告。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Burglary: October {0} report. {1} This year, down {2}% from {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 7 reports in October. 39 this year, down 19% from 48 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊：十月{0}報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Break-ins: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Burglary: October {0} report. {1} This year, just like around this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Break-ins: 2 reports in October. 19 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊：十月 {0} 報告。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Burglary: There were {0} reports in October. {1} this year, an {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 27 this year, up 8% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "爆竊：十月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
  "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Burglary: There were {0} reports in September. This year, {1}, compared to {2} in the same period last year.",
@@ -125,6 +269,15 @@
   "status": "machine",
   "tr": "爆竊：九月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
+ "Homicides: {0} reports in October. {1} this year. |other,other": {
+  "back": "Homicide: {0} The report will be released in October. This year, {1}.",
+  "created": "2026-11-13",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "兇殺： {0} 報告將於十月發布。今年 {1} 。"
+ },
  "Homicides: {0} reports in September. {1} this year. |other,other": {
   "back": "Homicide: {0} The report will be released in September. This year, {1}.",
   "created": "2026-10-24",
@@ -133,6 +286,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "兇殺： {0} 報告將於九月發布。今年 {1} 。"
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, the police received a report at {0} {name}. Reporting to the police does not mean someone is being prosecuted.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 16 reports to police in Agincourt North. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "十月時，警方接獲報案{0} {name}。報警並不代表有人被起訴。"
  },
  "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
   "back": null,
@@ -161,6 +323,24 @@
   "status": "machine",
   "tr": "有問題嗎？請與下方列出的社區官員聯繫。緊急狀況時，請撥打 {0}。"
  },
+ "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robbery: Report from October {0}. This year, {1}, compared to {2} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in October. 3 this year, compared with 5 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "搶劫： {0} 十月的報告。今年 {1} ，與去年同期的 {2} 相比。"
+ },
+ "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 11 this year, down 45% from 20 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "搶劫：{0}十月的報告。{1}今年，比去年同期的{3}下降{2}%。"
+ },
  "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Robbery: Report from September {0}. This year {1}, compared to {2} in the same period last year.",
   "created": "2026-10-24",
@@ -178,6 +358,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "搶劫：{0}九月的報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robbery: There were {0} reports in October. {1} this year, compared to {2} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 2 reports in October. 9 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "搶劫：十月有 {0} 報告。今年 {1} ，去年同期則有 {2} 。"
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: October {0} report. {1} This year, down {2}% from {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 10 this year, down 23% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "搶劫：十月{0}報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Robberies: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Robbery: reported on October {0}. {1} This year, just like at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Robberies: 2 reports in October. 11 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "搶劫：十月 {0} 報告。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: {0} reports in October. {1} This year, this is a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 0 reports in October. 14 this year, up 17% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "搶劫：十月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
  "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Robbery: There were {0} reports in September. This year, {1}, compared to {2} in the same period last year.",
@@ -197,6 +413,15 @@
   "status": "machine",
   "tr": "搶劫：九月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
+ "Shootings: {0} report in October. {1} this year. |other,other": {
+  "back": "Shooting: Report from October {0}. This year, February {1}.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} report in October. {1} this year.",
+  "example": "Shootings: 1 report in October. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "槍擊： {0} 十月的報告。今年 {1} 。"
+ },
  "Shootings: {0} report in September. {1} this year. |other,other": {
   "back": "Shooting: {0} Report will be published in September. {1} this year.",
   "created": "2026-10-24",
@@ -206,6 +431,15 @@
   "status": "machine",
   "tr": "槍擊： {0} 報告將於九月發表。今年 {1} 。"
  },
+ "Shootings: {0} reports in October. {1} this year. |other,other": {
+  "back": "Shooting: {0} Report will be released in October. This year, {1}.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "槍擊： {0} 報告將於十月發布。今年 {1} 。"
+ },
  "Shootings: {0} reports in September. {1} this year. |other,other": {
   "back": "Shooting: {0} Report will be released in September. This year, {1}.",
   "created": "2026-10-24",
@@ -214,6 +448,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "槍擊： {0} 報告將於九月發布。今年 {1} 。"
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 6 this year, compared with 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜： {0} 十月的報告。今年 {1} ，與去年同期的 {2} 相比。"
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 14 this year, down 36% from 22 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜：{0}十月的報告。{1}今年，比去年同期的{3}下降{2}%。"
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Car theft: October {0} report. {1} This year, this is a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 12 this year, up 9% from 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜：{0}十月的報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
  "Stolen vehicles: {0} report in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Car theft: Report from September {0}. This year, {1}, compared to {2} in the same period last year.",
@@ -242,6 +503,42 @@
   "status": "machine",
   "tr": "汽車被盜：{0}九月的報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
+ "Stolen vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Car theft: {0} reports in October. {1} this year, and {2} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 7 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜：十月有 {0} 報告。今年 {1} ，去年同期則有 {2} 。"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Car theft: October {0} report. {1} This year, down {2}% from {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 5 reports in October. 55 this year, down 17% from 66 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜：十月{0}報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Car theft: October {0} report. {1} This year, just like this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 19 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜：十月 {0} 報告。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Car theft: {0} reports in October. {1} this year, a {2}% increase from {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 58 this year, up 7% from 54 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "汽車被盜：十月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
  "Stolen vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Car theft: {0} reports in September. {1} this year, compared to {2} in the same period last year.",
   "created": "2026-10-24",
@@ -269,6 +566,24 @@
   "status": "machine",
   "tr": "汽車被盜：九月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
+ "Theft from vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 20 this year, down 47% from 38 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "車內財物被盜：{0}十月的報告。{1}今年，比去年同期的{3}下降{2}%。"
+ },
+ "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 23 this year, up 21% from 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "車內財物被盜：{0}十月的報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
  "Theft from vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Stolen belongings inside cars: Report from September {0}. {1} This year, this is a {2}% decrease compared to {3} in the same period last year.",
   "created": "2026-10-24",
@@ -286,6 +601,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "車內財物被盜：{0}九月的報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Vehicle theft: {0} reports in October. {1} this year, and {2} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 0 reports in October. 5 this year, compared with 27 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "車內財物被盜：十月有 {0} 報告。今年 {1} ，去年同期則有 {2} 。"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen belongings inside cars: reported on October {0}. {1} This year, this is a {2}% decrease compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 29 this year, down 36% from 45 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "車內財物被盜：十月{0}報告。{1}今年，比去年同期的{3}下降了{2}%。"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Stolen belongings inside the car: reported on October {0}. {1} This year, just like this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Theft from vehicles: 5 reports in October. 35 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "車內財物被盜：十月 {0} 報告。 {1} 今年，和去年這個時候一樣。"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen belongings inside vehicles: {0} reports in October. {1} This year, this is a {2}% increase compared to {3} in the same period last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 35 this year, up 9% from 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "車內財物被盜：十月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
  },
  "Theft from vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": null,
@@ -322,6 +673,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "車內財物被盜：九月有{0}報告。{1}今年，比去年同期的{3}增加{2}%。"
+ },
+ "There were no reports to police in {name} in October in the categories we track. A report to police does not mean anyone was charged. |": {
+  "back": "Among the categories we tracked, there were no police reports in {name} in October. Reporting to the police does not mean someone is being prosecuted.",
+  "created": "2026-11-13",
+  "en": "There were no reports to police in {name} in October in the categories we track. A report to police does not mean anyone was charged.",
+  "example": "There were no reports to police in East L'Amoreaux in October in the categories we track. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "在我們追蹤的類別中，十月的 {name} 沒有警方接獲報案。向警方報案並不代表有人被起訴。"
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": "{name}: October {0} Safety Update",
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Agincourt North: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}：十月{0}日安全更新"
  },
  "{name}: safety update for September {0} |other": {
   "back": "{name}: September {0} Safety Update",

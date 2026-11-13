@@ -1,4 +1,58 @@
 {
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |few,many,few,many": {
+  "back": "Assaults: {0} reports in October. {1} This year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in October. 88 this year, down 3% from 91 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "الاعتداءات: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,few,many,many": {
+  "back": "Assaults: {0} reports in October. {1} This year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 20 reports in October. 209 this year, down 19% from 259 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "الاعتداءات: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,many,few,few": {
+  "back": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 37 reports in October. 386 this year, down 4% from 404 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "الاعتداءات: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,many,two,many": {
+  "back": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 16 reports in October. 111 this year, down 2% from 113 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "الاعتداءات: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 58 this year, up 12% from 52 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "الاعتداءات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,one,many": {
+  "back": "Assaults: {0} reported in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 92 this year, up 1% from 91 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "الاعتداءات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
  "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,many,many,many": {
   "back": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} at this time last year.",
   "created": "2026-11-13",
@@ -71,6 +125,15 @@
   "status": "machine",
   "tr": "الاعتداءات: {0} تقارير في سبتمبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
  },
+ "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,many,many,many": {
+  "back": "Bicycle theft: {0} reports in October. {1} This year, down {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 17 reports in October. 94 this year, down 20% from 117 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "سرقة الدراجات: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
  "Bike thefts: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |many,many,many,few": {
   "back": null,
   "created": "2026-10-24",
@@ -80,11 +143,47 @@
   "status": "machine",
   "tr": "سرقة الدراجات: {0} تقارير في سبتمبر. {1} هذا العام، بانخفاض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
  },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |zero,few,many": {
+  "back": "Home and shop burglary: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 0 reports in October. 8 this year, compared with 24 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السطو على المنازل والمحلات: {0} تقارير في أكتوبر. {1} هذا العام، مقارنة ب {2} في مثل هذا الوقت من العام الماضي."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |two,many,many,many": {
+  "back": "Home and shop burglary: {0} reports in October. {1} This year, {2}% are down from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 18 this year, down 14% from 21 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السطو على المنازل والمحلات: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,few,many": {
+  "back": "Home and shop burglary: {0} reports in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 29 this year, up 107% from 14 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السطو على المنازل والمحلات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
  "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
   "back": "Home and shop robberies: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
   "created": "2026-11-13",
   "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
   "example": "Break-ins: 3 reports in October. 22 this year, up 47% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السطو على المنازل والمحلات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,many,many,many": {
+  "back": "Home and shop burglary: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 12 reports in October. 111 this year, up 61% from 69 by this time last year.",
   "reviewed_by": "",
   "status": "machine",
   "tr": "السطو على المنازل والمحلات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
@@ -179,6 +278,15 @@
   "status": "machine",
   "tr": "هل لديكم أسئلة؟ تحدث إلى ضباط المجتمع المحلي الخاص بك، المذكورين أدناه. في حالة الطوارئ، اتصل {0}."
  },
+ "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,many,many,many": {
+  "back": "Robbery by coercion: {0} report in October. {1} This year, {2}% is down from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 13 this year, down 19% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السرقة بالإكراه: {0} التقرير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
  "Robberies: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,many,many,many": {
   "back": "Theft by coercion: {0} report in September. {1} this year, down {2}% from {3} by this time last year.",
   "created": "2026-10-24",
@@ -187,6 +295,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "السرقة بالإكراه: {0} التقرير في سبتمبر. {1} هذا العام، بانخفاض {2}% عن {3} بحلول هذا الوقت من العام الماضي."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |zero,few,few": {
+  "back": "Forced theft: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 9 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السرقة بالإكراه: {0} تقارير في أكتوبر. {1} هذا العام، مقارنة ب {2} في مثل هذا الوقت من العام الماضي."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |two,many,few,many": {
+  "back": "Robbery by coercion: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 39 this year, up 8% from 36 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السرقة بالإكراه: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
  },
  "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |two,many,many,many": {
   "back": "Theft by coercion: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
@@ -242,6 +368,15 @@
   "status": "machine",
   "tr": "حوادث إطلاق النار: {0} تقارير في أكتوبر. {1} هذا العام."
  },
+ "Shootings: {0} reports in October. {1} this year. |zero,two": {
+  "back": "Shooting incidents: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "حوادث إطلاق النار: {0} تقارير في أكتوبر. {1} هذا العام."
+ },
  "Shootings: {0} reports in September. {1} this year. |zero,one": {
   "back": "Shootings: {0} reports in September. {1} this year.",
   "created": "2026-10-24",
@@ -259,6 +394,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "حوادث إطلاق النار: {0} تقارير في سبتمبر. {1} هذا العام."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Stolen cars: {0} reports in October. {1} This year, {2}% are down from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 7 reports in October. 45 this year, down 25% from 60 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السيارات المسروقة: {0} تقارير في أكتوبر. {1} هذا العام، انخفض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,few,many": {
+  "back": "Stolen cars: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 4 reports in October. 36 this year, up 6% from 34 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السيارات المسروقة: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Stolen cars: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 5 reports in October. 47 this year, up 27% from 37 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السيارات المسروقة: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
  },
  "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |few,many,many,many": {
   "back": "Stolen cars: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
@@ -310,6 +472,24 @@
   "created": "2026-11-13",
   "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
   "example": "Theft from vehicles: 7 reports in October. 53 this year, up 32% from 40 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السرقة من السيارات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,many,many,few": {
+  "back": "Car theft: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 13 reports in October. 117 this year, up 12% from 104 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السرقة من السيارات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |two,many,many,many": {
+  "back": "Car theft: {0} reports in October. {1} this year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 31 this year, up 15% from 27 by this time last year.",
   "reviewed_by": "",
   "status": "machine",
   "tr": "السرقة من السيارات: {0} التقارير في أكتوبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."

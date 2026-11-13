@@ -1,4 +1,58 @@
 {
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |few,few,few,many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 64 this year, down 4% from 67 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Нападения: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,few,many,many": {
+  "back": "Attacks: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 123 this year, down 16% from 147 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Нападения: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,many,many,many": {
+  "back": "Attacks: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 5 reports in October. 88 this year, down 12% from 100 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Нападения: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,few,few,many": {
+  "back": "Attacks: {0} reports in October. {1} this year is {2}% more than {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 14 reports in October. 134 this year, up 3% from 130 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Нападения: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,many,few,few": {
+  "back": "Attacks: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 120 this year, up 43% from 84 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Нападения: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,many,many,many": {
+  "back": "Attacks: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 17 reports in October. 137 this year, up 5% from 130 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Нападения: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
  "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |many,few,many,few": {
   "back": "Attacks: {0} reports in September. {1} this year, {2}% less than {3} at the same time last year.",
   "created": "2026-10-24",
@@ -44,6 +98,33 @@
   "status": "machine",
   "tr": "Нападения: {0} отчёты в сентябре. {1} в этом году, это на {2}% больше, чем {3} к этому же времени прошлого года."
  },
+ "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,many,many,many": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 11 this year, down 27% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи велосипедов: {0} отчет в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,many,many,one": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 11 this year, down 48% from 21 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи велосипедов: {0} отчет в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Bike thefts: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,many,many,many": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year is {2}% more than {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 18 this year, up 6% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи велосипедов: {0} отчет в октябре. {1} в этом году это {2}% больше, чем {3} к этому же времени прошлого года."
+ },
  "Bike thefts: {0} report in September. {1} this year, compared with {2} by this time last year. |one,many,few": {
   "back": "Bicycle thefts: {0} report in September. {1} this year, compared to {2} by the same time last year.",
   "created": "2026-10-24",
@@ -52,6 +133,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Кражи велосипедов: {0} отчёт в сентябре. {1} в этом году, по сравнению с {2} к этому же времени прошлого года."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |many,many,few": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in October. 7 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи велосипедов: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 2 reports in October. 19 this year, up 12% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи велосипедов: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
  },
  "Bike thefts: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |many,many,few,many": {
   "back": "Bicycle thefts: {0} reports in September. {1} this year, {2}% less than {3} by the same time last year.",
@@ -71,6 +170,33 @@
   "status": "machine",
   "tr": "Кражи велосипедов: {0} отчёты в сентябре. {1} в этом году, это на {2}% больше, чем {3} к этому же времени прошлого года."
  },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,many,few,many": {
+  "back": "Burglary: {0} report in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 27 this year, down 32% from 40 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи со взломом: {0} отчет в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,many,many,many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 16 this year, down 6% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи со взломом: {0} отчет в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,one,many,many": {
+  "back": "Burglary: {0} report in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 21 this year, down 25% from 28 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи со взломом: {0} отчет в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
  "Break-ins: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,many,many,many": {
   "back": "Burglaries: {0} report in September. {1} this year, down {2}% from {3} at the same time last year.",
   "created": "2026-10-24",
@@ -79,6 +205,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Кражи со взломом: {0} отчет в сентябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,few,few,many": {
+  "back": "Burglary: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 34 this year, up 143% from 14 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи со взломом: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,few,many,many": {
+  "back": "Burglary: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 22 this year, up 69% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи со взломом: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
  },
  "Break-ins: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |few,many,many,few": {
   "back": null,
@@ -116,6 +260,24 @@
   "status": "machine",
   "tr": "Кражи со взломом: {0} отчёты в сентябре. {1} в этом году, это на {2}% больше, чем {3} к этому же времени прошлого года."
  },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |few": {
+  "back": "In October, {name} received {0} reports to the police. Reporting to the police does not mean that someone has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 24 reports to police in Newtonbrook West. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "В октябре в {name} поступило {0} сообщений в полицию. Заявление в полицию не означает, что кто-то был обвинён."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 14 reports to police in Bathurst Manor. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "В октябре в {name} поступило {0} сообщений в полицию. Заявление в полицию не означает, что кто-то был обвинён."
+ },
  "Questions? Contact your local police division, listed below. In an emergency, call {0}. |many": {
   "back": "Questions? Contact your local police department listed below. In an emergency, call {0}.",
   "created": "2026-10-24",
@@ -134,6 +296,33 @@
   "status": "machine",
   "tr": "Грабежи: {0} отчёт в сентябре. {1} в этом году, по сравнению с {2} к этому же времени прошлого года."
  },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |many,many,many": {
+  "back": "Robberies: {0} reports in October. {1} this year, up from {2} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 18 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Грабежи: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Robberies: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 19 this year, up 19% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Грабежи: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Shootings: {0} reports in October. {1} this year. |many,few": {
+  "back": "Shooting cases: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Случаи стрельбы: {0} отчёты в октябре. {1} в этом году."
+ },
  "Shootings: {0} reports in September. {1} this year. |many,few": {
   "back": "Shooting cases: {0} reports in September. {1} this year.",
   "created": "2026-10-24",
@@ -142,6 +331,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Случаи стрельбы: {0} отчёты в сентябре. {1} в этом году."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,one,few,many": {
+  "back": "Car thefts: {0} report in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 21 this year, down 42% from 36 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчет в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
  },
  "Stolen vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,many,many,one": {
   "back": "Car thefts: {0} report in September. {1} this year, down {2}% from {3} at the same time last year.",
@@ -160,6 +358,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Угоны автомобилей: {0} отчёт в сентябре. {1} в этом году, это {2}% больше, чем {3} к этому же времени прошлого года."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Car thefts: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 35 this year, down 12% from 40 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,many,few,many": {
+  "back": "Car thefts: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 20 this year, down 44% from 36 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,few,many,many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 3 reports in October. 22 this year, up 10% from 20 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
+  "back": "Car thefts: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 18 this year, up 20% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
  },
  "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |many,few,many,many": {
   "back": "Car thefts: {0} reports in September. {1} this year, {2}% less than {3} by the same time last year.",
@@ -206,6 +440,69 @@
   "status": "machine",
   "tr": "Кражи из автомобилей: {0} отчет в сентябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
  },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |few,many,many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 8 this year, compared with 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,few,many,few": {
+  "back": "Car thefts: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 6 reports in October. 23 this year, down 28% from 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,few,many,one": {
+  "back": "Car thefts: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 5 reports in October. 52 this year, down 15% from 61 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |many,one,many,few": {
+  "back": "Thefts from cars: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 0 reports in October. 31 this year, down 6% from 33 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year. |few,few": {
+  "back": "Thefts from cars: {0} reports in October. {1} this year, the same as at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 33 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, то же самое, что и в это же время прошлого года."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,few,few,many": {
+  "back": "Thefts from cars: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 24 this year, up 33% from 18 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,few,many,many": {
+  "back": "Thefts from cars: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 3 reports in October. 23 this year, up 28% from 18 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
  "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |many,many,many,few": {
   "back": "Thefts from cars: {0} reports in September. {1} this year, {2}% less than {3} at the same time last year.",
   "created": "2026-10-24",
@@ -232,6 +529,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Кражи из автомобилей: {0} отчёты в сентябре. {1} в этом году, это на {2}% больше, чем {3} к этому же времени прошлого года."
+ },
+ "Thefts over $5,000: {0} reports in October. {1} this year, compared with {2} by this time last year. |few,many,many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Thefts over $5,000: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Thefts over $5,000: 2 reports in October. 8 this year, compared with 10 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи на сумму свыше $5,000: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
+ "Thefts over $5,000: {0} reports in October. {1} this year, compared with {2} by this time last year. |many,many,many": {
+  "back": "Thefts over $5,000: {0} reports in October. {1} this year, up from {2} by the same time last year.",
+  "created": "2026-11-13",
+  "en": "Thefts over $5,000: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Thefts over $5,000: 0 reports in October. 11 this year, compared with 9 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи на сумму свыше $5,000: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
+ "Thefts over $5,000: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,one,many,many": {
+  "back": "Thefts over $5,000: {0} reports in October. {1} this year is an {2}% increase from {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Thefts over $5,000: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Thefts over $5,000: 6 reports in October. 21 this year, up 11% from 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи на сумму свыше $5,000: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "{name}: safety update for October {0} |many": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Bathurst Manor: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: обновление по безопасности на октябрь {0} года"
  },
  "{name}: safety update for September {0} |many": {
   "back": "{name}: September {0} Security Update",

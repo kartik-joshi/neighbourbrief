@@ -1123,6 +1123,9 @@ def test_static_public_site(client, monkeypatch, tmp_path):
             assert staff not in text, (page, staff)
         if page.name != "numbers.csv":
             assert "Not affiliated with or endorsed by the Toronto Police Service" in text or "not affiliated" in text.lower(), page
+            # Open Government Licence – Ontario s.4: the attribution statement and a link to the licence
+            assert "Contains information licensed under the" in text and "open-government-licence-ontario" in text, page
+    assert (site / "static/vendor/THIRD_PARTY_NOTICES.txt").exists()
     index = (site / "index.html").read_text(encoding="utf-8")
     assert f'href="bulletins/{bid}/ur.html"' in index and 'href="static/app.css"' in index
     assert 'href="../index.html"' in (site / "neighbourhoods" / "055.html").read_text(encoding="utf-8")

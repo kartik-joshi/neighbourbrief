@@ -55,9 +55,13 @@ cat > "$SITE/README.md" <<EOF
 Monthly neighbourhood safety bulletins for Toronto's 158 neighbourhoods, in plain language and residents'
 languages, with every number checked against Toronto Police Service open data. Live at ${URL}
 
-Built automatically by NeighbourBrief TO (scripts/publish_site.sh). Prototype built on Toronto Police Service
-open data (Open Government Licence – Ontario) and City of Toronto open data (Open Government Licence – Toronto).
-Not affiliated with or endorsed by the Toronto Police Service.
+Built automatically by NeighbourBrief TO (scripts/publish_site.sh).
+
+Contains information licensed under the [Open Government Licence – Ontario](https://www.ontario.ca/page/open-government-licence-ontario)
+(Toronto Police Service data) and the [Open Government Licence – Toronto](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-licence/)
+(City of Toronto data). The data is provided as is, without warranty. Map tiles © OpenStreetMap contributors.
+Third-party software notices: static/vendor/THIRD_PARTY_NOTICES.txt.
+Not affiliated with or endorsed by the Toronto Police Service or the City of Toronto.
 EOF
 WORK=deploy/site-repo
 rm -rf "$WORK"; mkdir -p "$WORK"

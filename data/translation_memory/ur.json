@@ -1,4 +1,22 @@
 {
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: There are {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 20 reports in October. 239 this year, down 22% from 306 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "حملے: اکتوبر میں {0} رپورٹس ہیں۔ اس سال {1}، جو پچھلے سال اسی وقت تک {3} سے {2}% کم ہے۔"
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 14 reports in October. 126 this year, up 17% from 108 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "حملے: اکتوبر میں {0} رپورٹس ہیں۔ {1} اس سال، پچھلے سال اسی وقت {3} سے {2}% زیادہ ہے۔"
+ },
  "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Attacks: Reported on September {0}. {1} this year, down {2}% from {3} last year.",
   "created": "2026-10-24",
@@ -16,6 +34,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "حملے: ستمبر میں رپورٹ {0} ہے۔ {1} اس سال، جو پچھلے سال اسی وقت تک {3} سے {2}% زیادہ ہے۔"
+ },
+ "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Leaks: {0} report will come in October. This year is {1}, compared to {2} so far last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 1 report in October. 10 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "نقب زنی: {0} رپورٹ اکتوبر میں آئے گی۔ اس سال {1} ہے، پچھلے سال اسی وقت تک {2} کے مقابلے میں۔"
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 19 this year, down 17% from 23 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "نقب زنی: اکتوبر میں رپورٹ {0} ہے۔ {1} اس سال، پچھلے سال {3} سے {2}% کم۔"
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Leaks: There are {0} reports in October. {1} this year, down {2}% from {3} to the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 4 reports in October. 35 this year, down 20% from 44 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "نقب زنی: اکتوبر میں {0} رپورٹس ہیں۔ اس سال {1}، جو پچھلے سال اسی وقت تک {3} سے {2}% کم ہے۔"
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Disclaimer: There are {0} reports in October. {1} This year, up {2}% from {3} at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 54 this year, up 6% from 51 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "نقب زنی: اکتوبر میں {0} رپورٹس ہیں۔ {1} اس سال، پچھلے سال اسی وقت {3} سے {2}% زیادہ ہے۔"
  },
  "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Leaks: {0} reports in September. {1} compared to {2} last year.",
@@ -44,6 +98,24 @@
   "status": "machine",
   "tr": "نقب زنی: ستمبر میں رپورٹ {0} ہے۔ {1} اس سال، جو پچھلے سال اسی وقت تک {3} سے {2}% زیادہ ہے۔"
  },
+ "Homicides: {0} reports in October. {1} this year. |other,one": {
+  "back": "Murders: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "قتل: {0} رپورٹ اکتوبر میں ہے۔ {1} اس سال۔"
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, police received {0} reports in {name}. Reporting to the police does not mean that someone has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 48 reports to police in Clairlea-Birchmount. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "اکتوبر میں، پولیس کو {name}میں {0} رپورٹس موصول ہوئیں۔ پولیس کو رپورٹ کرنے کا مطلب یہ نہیں کہ کسی پر فرد جرم عائد کی گئی۔"
+ },
  "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
   "back": "Any questions? Contact your local police division, listed below. In case of an emergency, call {0}.",
   "created": "2026-10-24",
@@ -61,6 +133,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "سوالات؟ اپنے نیبرہڈ کمیونٹی آفیسرز سے بات کریں، جو نیچے درج ہیں۔ ہنگامی صورت میں، {0} کال کریں۔"
+ },
+ "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 13 this year, down 19% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ڈکیتی: اکتوبر میں رپورٹ {0} ہے۔ {1} اس سال، پچھلے سال {3} سے {2}% کم۔"
+ },
+ "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Robbery: Report {0} in October. {1} is {3} to {2}% higher this year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 15 this year, up 15% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ڈکیتی: اکتوبر میں رپورٹ {0} ہے۔ {1} اس سال {3} سے {2}% زیادہ ہے۔"
  },
  "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
   "back": "Robbery: Will report in September {0}. {1} this year, compared to {2} so far last year.",
@@ -80,6 +170,15 @@
   "status": "machine",
   "tr": "ڈکیتی: ستمبر میں رپورٹ {0} ہے۔ اس سال {1} پچھلے سال {3} سے {2}% کم ہے۔"
  },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robbery: Will report in October {0}. This year is {1}, compared to {2} so far last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 2 reports in October. 11 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ڈکیتی: {0} اکتوبر میں رپورٹ کرے گا۔ اس سال {1} ہے، پچھلے سال اسی وقت تک {2} کے مقابلے میں۔"
+ },
  "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
   "back": "Robbery: {0} reported in September. {1} this year compared to {2} last year.",
   "created": "2026-10-24",
@@ -89,6 +188,15 @@
   "status": "machine",
   "tr": "ڈکیتی: {0} رپورٹ ستمبر میں ہے۔ {1} اس سال کے مقابلے میں پچھلے سال {2} کے مقابلے میں۔"
  },
+ "Shootings: {0} report in October. {1} this year. |one,other": {
+  "back": "Firing: Will report on October {0}. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} report in October. {1} this year.",
+  "example": "Shootings: 1 report in October. 5 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "فائرنگ: {0} اکتوبر میں رپورٹ کروں گا۔ {1} اس سال۔"
+ },
  "Shootings: {0} report in September. {1} this year. |one,other": {
   "back": "Firing: Will report on September {0}. {1} this year.",
   "created": "2026-10-24",
@@ -97,6 +205,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "فائرنگ: {0} ستمبر میں رپورٹ کریں گے۔ {1} اس سال۔"
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,one": {
+  "back": "Shootings: {0} reported in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "فائرنگ: {0} رپورٹ اکتوبر میں ہے۔ {1} اس سال۔"
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,other": {
+  "back": "Firing: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "فائرنگ: {0} رپورٹ اکتوبر میں ہے۔ {1} اس سال۔"
  },
  "Shootings: {0} reports in September. {1} this year. |other,one": {
   "back": "Shootings: {0} reports in September. {1} this year.",
@@ -115,6 +241,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "فائرنگ: {0} رپورٹ ستمبر میں۔ {1} اس سال۔"
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen Vehicles: Report {0} in October. {1} This year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 56 this year, down 15% from 66 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "چوری شدہ گاڑیاں: اکتوبر میں رپورٹ {0} ہے۔ {1} اس سال، پچھلے سال {3} سے {2}% کم۔"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 7 reports in October. 45 this year, down 25% from 60 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "چوری شدہ گاڑیاں: اکتوبر میں {0} رپورٹس ہیں۔ اس سال {1}، جو پچھلے سال اسی وقت تک {3} سے {2}% کم ہے۔"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: There are {0} reports in October. {1} This year, up from {3} to {2}% at the same time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 11 reports in October. 93 this year, up 69% from 55 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "چوری شدہ گاڑیاں: اکتوبر میں {0} رپورٹس ہیں۔ {1} اس سال، پچھلے سال اسی وقت {3} سے {2}% زیادہ ہے۔"
  },
  "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": null,
@@ -143,6 +296,24 @@
   "status": "machine",
   "tr": "چوری شدہ گاڑیاں: ستمبر میں رپورٹ {0} ہے۔ {1} اس سال، جو پچھلے سال اسی وقت تک {3} سے {2}% زیادہ ہے۔"
  },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Thefts from vehicles: There are {0} reports in October. {1} this year, down {2}% from {3} to the same time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 3 reports in October. 33 this year, down 20% from 41 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "گاڑیوں سے چوری: اکتوبر میں {0} رپورٹس ہیں۔ اس سال {1}، جو پچھلے سال اسی وقت تک {3} سے {2}% کم ہے۔"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 13 reports in October. 80 this year, up 57% from 51 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "گاڑیوں سے چوری: اکتوبر میں {0} رپورٹس ہیں۔ {1} اس سال، پچھلے سال اسی وقت {3} سے {2}% زیادہ ہے۔"
+ },
  "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Theft from vehicles: reported on September {0}. {1} this year, down {2}% from {3} last year.",
   "created": "2026-10-24",
@@ -160,5 +331,14 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "گاڑیوں سے چوری: ستمبر میں رپورٹ {0} ہے۔ {1} اس سال، جو پچھلے سال اسی وقت تک {3} سے {2}% زیادہ ہے۔"
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": "{name}: Safety update for October {0}",
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Clairlea-Birchmount: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: اکتوبر {0} کے لیے حفاظتی اپ ڈیٹ"
  }
 }

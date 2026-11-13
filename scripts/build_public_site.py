@@ -116,6 +116,9 @@ def build(out: Path, hoods: str = "published", base_url: str = "", auto_bulletin
             mine = [b for b in bulletins if b["hood"]["id"] == hid and b["month_start"] == rec["facts"]["period"]["month_start"]]
             if not mine and auto.showable(rec):
                 autos.append({"id": rec["id"], "rec": rec, "codes": ["en"] + rec["languages"]})
+        # pages below show only the translations made above: a language that failed here (e.g. Azure's
+        # rate limit) and succeeded on a later try would be linked from a profile without its page built
+        auto.can_translate_now = lambda: False
     for b in bulletins + autos:
         for c in b["codes"]:
             pages[f"bulletins/{b['id']}/{c}.html"] = f"/bulletin/{b['id']}/{c}"
@@ -162,8 +165,10 @@ def build(out: Path, hoods: str = "published", base_url: str = "", auto_bulletin
             dest.write_bytes(r.content)
     (out / "README.txt").write_text(
         "NeighbourBrief TO public site: plain files, copy this folder to any web host.\n"
-        "Built by scripts/build_public_site.py. Prototype built on Toronto Police Service open data\n"
-        "(Open Government Licence – Ontario). Not affiliated with or endorsed by the Toronto Police Service.\n",
+        "Built by scripts/build_public_site.py. Contains information licensed under the Open Government\n"
+        "Licence – Ontario (Toronto Police Service data) and the Open Government Licence – Toronto (City of\n"
+        "Toronto data). Not affiliated with or endorsed by the Toronto Police Service or the City of Toronto.\n"
+        "Third-party software notices: static/vendor/THIRD_PARTY_NOTICES.txt\n",
         encoding="utf-8")
     return {"files": len(list(out.rglob("*"))), "bulletins": len(bulletins), "automatic": len(autos), "profiles": len(hood_ids) - len(skipped),
             "skipped": skipped}

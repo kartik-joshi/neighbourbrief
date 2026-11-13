@@ -1,4 +1,40 @@
 {
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Attacks: {0} reported in October. {1} decreased by {2}% this year from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 22 reports in October. 307 this year, down 1% from 309 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "হামলা: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 45 this year, down 21% from 57 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "হামলা: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Assaults: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Attacks: {0} reported in October. {1} this year, same as this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Assaults: 7 reports in October. 99 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "হামলা: অক্টোবরে {0} রিপোর্ট করা হয়েছে। এ বছর {1} , গত বছরের এই সময়ের মতোই।"
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reported in October. {1} this year is up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 11 reports in October. 129 this year, up 6% from 122 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "হামলা: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% বেড়েছে।"
+ },
  "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
   "back": null,
   "created": "2026-10-24",
@@ -7,6 +43,78 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "হামলা: সেপ্টেম্বরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle theft: {0} reported in October. {1} this year compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 2 reports in October. 10 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "সাইকেল চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle theft: {0} reported in October. {1} This year increased by {3} to {2}% at this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 2 reports in October. 24 this year, up 50% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "সাইকেল চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Burglary at home: {0} report in October. {1} This year increased by {3} to {2}% during this period last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 35 this year, up 17% from 30 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ঘরে ঢুকে চুরি: অক্টোবরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Burglary at home: {0} reported in October. {1} this year compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 16 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ঘরে ঢুকে চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 29 this year, down 29% from 41 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ঘরে ঢুকে চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 54 this year, up 6% from 51 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ঘরে ঢুকে চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Homicides: {0} reports in October. {1} this year. |one,one": {
+  "back": "Homicides: {0} reported in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "হত্যাকাণ্ড: অক্টোবরে {0} রিপোর্ট। এ বছর {1} ।"
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, {0} were reported to police in {name}. Reporting to the police does not mean that anyone was charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 9 reports to police in Bendale South. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "অক্টোবরে, {name} সালে পুলিশকে {0} রিপোর্ট করা হয়েছিল। পুলিশকে রিপোর্ট করার অর্থ এই নয় যে কাউকে অভিযুক্ত করা হয়েছিল।"
  },
  "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
   "back": "Questions? Contact your local police department listed below. In an emergency, call {0}.",
@@ -26,6 +134,33 @@
   "status": "machine",
   "tr": "প্রশ্ন? নীচে তালিকাভুক্ত আপনার প্রতিবেশী কমিউনিটি অফিসারদের সাথে কথা বলুন। জরুরি অবস্থায়, কল করুন {0}।"
  },
+ "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Robbery: {0} report in October. {1} This year decreased by {3} to {2}% at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 11 this year, down 15% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: অক্টোবরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Robberies: {0} report in October. {1} this year, the same as by this time last year. |one,other": {
+  "back": "Robbery: {0} report in October. {1} this year, same as this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, the same as by this time last year.",
+  "example": "Robberies: 1 report in October. 13 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: অক্টোবরে {0} রিপোর্ট। এ বছর {1} , গত বছরের এই সময়ের মতোই।"
+ },
+ "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Robbery: {0} report in October. {1} This year increased by {3} to {2}% over the same period last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 24 this year, up 50% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: অক্টোবরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% বেড়েছে।"
+ },
  "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
   "back": "Robbery: {0} report in September. {1} this year compared to {2} at this time last year.",
   "created": "2026-10-24",
@@ -34,6 +169,33 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Robbery: {0} reported in October. {1} this year compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 5 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 24 this year, down 8% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: {0} reported in October. {1} This year increased by {3} to {2}% at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 3 reports in October. 20 this year, up 25% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% বেড়েছে।"
  },
  "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |one,one,other": {
   "back": "Robbery: {0} reported in September. {1} this year compared to {2} at this time last year.",
@@ -79,5 +241,95 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। এই বছর {1}, গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Shootings: {0} report in October. {1} this year. |one,other": {
+  "back": "Firing: {0} report in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} report in October. {1} this year.",
+  "example": "Shootings: 1 report in October. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "গুলি চালানো: অক্টোবরে {0} রিপোর্ট। এ বছর {1} ।"
+ },
+ "Shootings: {0} reports in October. {1} this year. |one,one": {
+  "back": "Firing: {0} reported in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "গুলি চালানো: অক্টোবরে {0} রিপোর্ট। এ বছর {1} ।"
+ },
+ "Shootings: {0} reports in October. {1} this year. |one,other": {
+  "back": "Firing: {0} reported in October. This year {1} .",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "গুলি চালানো: অক্টোবরে {0} রিপোর্ট। এ বছর {1} ।"
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 27 this year, up 4% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "চুরি যাওয়া গাড়ি: অক্টোবরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year. |one,other": {
+  "back": "Stolen cars: {0} reported in October. {1} this year, same as this time last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 19 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "চুরি যাওয়া গাড়ি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। এ বছর {1} , গত বছরের এই সময়ের মতোই।"
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 49 this year, up 20% from 41 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "চুরি যাওয়া গাড়ি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 36 this year, up 57% from 23 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "গাড়ির ভেতর থেকে চুরি: অক্টোবরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% বেড়েছে।"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 33 this year, down 6% from 35 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "গাড়ির ভেতর থেকে চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Theft from inside cars: {0} reported in October. {1} This year is up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 15 reports in October. 68 this year, up 24% from 55 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "গাড়ির ভেতর থেকে চুরি: অক্টোবরে {0} রিপোর্ট করা হয়েছে। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% বেড়েছে।"
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": "{name}: Security Update for October {0}",
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Bendale South: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: অক্টোবর {0} এর জন্য নিরাপত্তা আপডেট"
  }
 }

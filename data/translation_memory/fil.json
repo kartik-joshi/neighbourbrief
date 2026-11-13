@@ -1,4 +1,274 @@
 {
+ "Assaults: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Pain: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 1 report in October. 45 this year, up 2% from 44 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 22 reports in October. 221 this year, down 3% from 228 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 22 reports in October. 307 this year, down 1% from 309 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,other,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 5 reports in October. 77 this year, down 19% from 95 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 13 reports in October. 122 this year, down 16% from 146 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 3 reports in October. 54 this year, down 11% from 61 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 20 reports in October. 239 this year, down 22% from 306 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 10 reports in October. 79 this year, down 9% from 87 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 20 reports in October. 209 this year, down 19% from 259 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 45 this year, down 21% from 57 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 125 this year, down 3% from 129 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,other,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 123 this year, down 16% from 147 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in October. 79 this year, down 2% from 81 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in October. 66 this year, down 13% from 76 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,one": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 64 this year, down 4% from 67 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Pain: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 64 this year, down 16% from 76 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, the same as by this time last year. |one,other": {
+  "back": "Injuries: {0} reports in October. {1} this year, the same as last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Assaults: 18 reports in October. 139 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, kapareho ng noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 5 reports in October. 62 this year, up 63% from 38 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 21 reports in October. 228 this year, up 1% from 226 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,one": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 13 reports in October. 125 this year, up 16% from 108 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 3 reports in October. 43 this year, up 19% from 36 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 22 reports in October. 229 this year, up 13% from 203 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 5 reports in October. 49 this year, up 11% from 44 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Injuries: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 18 reports in October. 166 this year, up 26% from 132 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 8 reports in October. 94 this year, up 24% from 76 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in October. 87 this year, up 2% from 85 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,one,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 58 this year, up 32% from 44 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,other,one": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 9 reports in October. 82 this year, up 64% from 50 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,one": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 14 reports in October. 126 this year, up 17% from 108 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Pain: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in October. 46 this year, up 28% from 36 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pananakit: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
  "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
   "back": "Pain: {0} reports in September. {1} this year, down {2}% from {3} last year.",
   "created": "2026-10-24",
@@ -179,6 +449,42 @@
   "status": "machine",
   "tr": "Pananakit: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
+ "Bike thefts: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 5 this year, compared with 3 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Bike thefts: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,other": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 8 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Bike thefts: {0} report in October. {1} this year, compared with {2} by this time last year. |one,other,one": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 6 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Bicycle thefts: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 1 report in October. 11 this year, down 27% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
  "Bike thefts: {0} report in September. {1} this year, compared with {2} by this time last year. |one,one,one": {
   "back": "Bicycle thefts: {0} report in September. {1} this year, compared to {2} last year.",
   "created": "2026-10-24",
@@ -187,6 +493,42 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Setyembre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,one,other": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in October. 7 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,other,one": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in October. 6 this year, compared with 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,one": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 6 reports in October. 24 this year, down 4% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 10 reports in October. 32 this year, up 52% from 21 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |one,one,one": {
   "back": "Bicycle thefts: {0} reports in September. {1} this year, compared to {2} at this time last year.",
@@ -233,6 +575,78 @@
   "status": "machine",
   "tr": "Pagnanakaw ng bisikleta: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
+ "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Burglary: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 1 report in October. 10 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,other": {
+  "back": "Burglary: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 1 report in October. 11 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Robbery: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 27 this year, down 32% from 40 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Robbery: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 19 this year, down 17% from 23 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Burglary: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 16 this year, down 6% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, the same as by this time last year. |one,one": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, the same as by this time last year.",
+  "example": "Break-ins: 1 report in October. 12 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, katulad ng noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Burglary: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 18 this year, up 38% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Robbery: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 28 this year, up 75% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
  "Break-ins: {0} report in September. {1} this year, compared with {2} by this time last year. |one,one,one": {
   "back": "Burglary: {0} report in September. {1} this year, compared to {2} last year.",
   "created": "2026-10-24",
@@ -277,6 +691,177 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Panloloob: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} sa ganitong panahon noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Burglaries: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 0 reports in October. 7 this year, compared with 10 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,one,other": {
+  "back": "Burglary: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 0 reports in October. 8 this year, compared with 24 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,other,one": {
+  "back": "Burglary: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 16 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,one,one": {
+  "back": "Robbery: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 4 reports in October. 17 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 47 this year, down 11% from 53 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Robbery: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 15 this year, down 21% from 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Robbery: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 13 reports in October. 46 this year, down 15% from 54 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Robbery: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 19 this year, down 39% from 31 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Burglaries: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 5 reports in October. 67 this year, up 43% from 47 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Burglaries: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 13 reports in October. 37 this year, up 42% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,one": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 7 reports in October. 32 this year, up 19% from 27 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 7 reports in October. 33 this year, up 14% from 29 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 26 this year, up 30% from 20 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 29 this year, up 81% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 54 this year, up 6% from 51 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,one,other": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 4 reports in October. 21 this year, up 11% from 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,other,one": {
+  "back": "Burglaries: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 14 reports in October. 107 this year, up 6% from 101 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,other,other": {
+  "back": "Burglaries: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 14 reports in October. 38 this year, up 46% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Robbery: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 4 reports in October. 29 this year, up 12% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panloloob: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year. |one,one,one": {
   "back": "Burglaries: {0} reports in September. {1} this year, compared to {2} at this time last year.",
@@ -386,6 +971,15 @@
   "status": "machine",
   "tr": "Panloloob: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
+ "Homicides: {0} reports in October. {1} this year. |one,one": {
+  "back": "Murders: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagpatay: {0} ulat sa Oktubre. {1} ngayong taon."
+ },
  "Homicides: {0} reports in September. {1} this year. |one,one": {
   "back": "Homicides: {0} reports in September. {1} this year.",
   "created": "2026-10-24",
@@ -394,6 +988,24 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Pagpatay: {0} ulat noong Setyembre. {1} ngayong taon."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |one": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 12 reports to police in Bedford Park-Nortown. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Noong Oktubre, may {0} na ulat sa pulisya sa {name}. Ang pag-uulat sa pulisya ay hindi nangangahulugang may kinasuhan."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, there were {0} police reports in {name}. Reporting to police does not mean someone has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 9 reports to police in Bendale South. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Noong Oktubre, may {0} na ulat sa pulisya sa {name}. Ang pag-uulat sa pulisya ay hindi nangangahulugang may kinasuhan."
  },
  "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |one": {
   "back": "In September, there were {0} police reports in {name}. A police report doesn't mean someone has been charged.",
@@ -430,6 +1042,51 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "May mga tanong? Kausapin ang iyong mga Neighborhood Community Officers, na nakalista sa ibaba. Sa emergency, tumawag sa {0}."
+ },
+ "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Update: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in October. 2 this year, compared with 3 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,other": {
+  "back": "Update: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in October. 8 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Update: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in October. 4 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Update: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 11 this year, down 45% from 20 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Update: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 1 report in October. 24 this year, up 50% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,one,one": {
   "back": "Update: {0} report in September. {1} this year, compared to {2} last year.",
@@ -475,6 +1132,105 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Panghoholdap: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} sa ganitong panahon noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Arrests: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 5 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,other,one": {
+  "back": "Update: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 2 reports in October. 9 this year, compared with 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Update: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 9 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Update: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 10 this year, down 23% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Update: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 24 this year, down 8% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,one,one": {
+  "back": "Update: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 4 reports in October. 15 this year, down 17% from 18 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, the same as by this time last year. |one,one": {
+  "back": "Update: {0} reports in October. {1} this year, the same as last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Robberies: 2 reports in October. 11 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, kapareho ng noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Arrests: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 0 reports in October. 20 this year, up 67% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Update: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 5 reports in October. 22 this year, up 38% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Update: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 25 this year, up 56% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Update: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in October. 19 this year, up 19% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Panghoholdap: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |one,one,one": {
   "back": "Update: {0} reports in September. {1} this year, compared to {2} at this time last year.",
@@ -539,6 +1295,15 @@
   "status": "machine",
   "tr": "Panghoholdap: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
+ "Shootings: {0} report in October. {1} this year. |one,one": {
+  "back": "Shooting: {0} report in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} report in October. {1} this year.",
+  "example": "Shootings: 1 report in October. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pamamaril: {0} ulat sa Oktubre. {1} ngayong taon."
+ },
  "Shootings: {0} report in September. {1} this year. |one,one": {
   "back": "Shooting: {0} report in September. {1} this year.",
   "created": "2026-10-24",
@@ -557,6 +1322,24 @@
   "status": "machine",
   "tr": "Pamamaril: {0} ulat sa Setyembre. {1} ngayong taon."
  },
+ "Shootings: {0} reports in October. {1} this year. |one,one": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pamamaril: {0} ulat sa Oktubre. {1} ngayong taon."
+ },
+ "Shootings: {0} reports in October. {1} this year. |one,other": {
+  "back": "Shootings: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 4 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pamamaril: {0} ulat sa Oktubre. {1} ngayong taon."
+ },
  "Shootings: {0} reports in September. {1} this year. |one,one": {
   "back": "Shootings: {0} reports in September. {1} this year.",
   "created": "2026-10-24",
@@ -574,6 +1357,60 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Pamamaril: {0} ulat noong Setyembre. {1} ngayong taon."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 14 this year, down 18% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,other": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 24 this year, down 17% from 29 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, the same as by this time last year. |one,one": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, the same as last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, the same as by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 17 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, katulad ng noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 27 this year, up 4% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 16 this year, up 60% from 10 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 24 this year, up 9% from 22 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Stolen vehicles: {0} report in September. {1} this year, compared with {2} by this time last year. |one,one,other": {
   "back": null,
@@ -619,6 +1456,177 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Mga ninakaw na sasakyan: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} sa ganitong panahon noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 51 this year, down 12% from 58 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Stolen vehicles: {0} reported in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 23 this year, down 21% from 29 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 21 this year, down 19% from 26 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 16 this year, down 48% from 31 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 24 this year, down 4% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 16 this year, down 64% from 44 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,other,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 4 reports in October. 30 this year, down 6% from 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, the same as last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Stolen vehicles: 29 reports in October. 364 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, kapareho ng noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 3 reports in October. 20 this year, up 33% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 3 reports in October. 47 this year, up 62% from 29 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 11 reports in October. 93 this year, up 69% from 55 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 52 this year, up 79% from 29 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in October. 14 this year, up 17% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 10 reports in October. 74 this year, up 14% from 65 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,one,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 6 reports in October. 48 this year, up 30% from 37 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 4 reports in October. 68 this year, up 39% from 49 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 6 reports in October. 89 this year, up 37% from 65 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 4 reports in October. 44 this year, up 13% from 39 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,one": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 4 reports in October. 26 this year, up 4% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
   "back": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} last year.",
@@ -773,6 +1781,24 @@
   "status": "machine",
   "tr": "Mga ninakaw na sasakyan: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
+ "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Theft from vehicle: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 13 this year, up 18% from 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Vehicle thefts: {0} report in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} report in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in October. 23 this year, up 21% from 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
  "Theft from vehicles: {0} report in September. {1} this year, compared with {2} by this time last year. |one,one,other": {
   "back": null,
   "created": "2026-10-24",
@@ -826,6 +1852,177 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} sa ganitong panahon noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 0 reports in October. 8 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,one,other": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 8 this year, compared with 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 13 reports in October. 77 this year, down 1% from 78 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,one,other,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in October. 33 this year, down 6% from 35 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 5 reports in October. 36 this year, down 10% from 40 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 8 reports in October. 89 this year, down 14% from 103 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,one,one": {
+  "back": "Theft from vehicle: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 18 this year, down 28% from 25 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,one,other,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 6 reports in October. 51 this year, down 4% from 53 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 34 this year, down 19% from 42 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, bumaba ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year. |one,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, the same as last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Theft from vehicles: 8 reports in October. 53 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, kapareho ng noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,one": {
+  "back": "Vehicle theft: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 13 reports in October. 80 this year, up 57% from 51 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,one,other": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 3 reports in October. 21 this year, up 31% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,one,other,other": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 11 reports in October. 110 this year, up 4% from 106 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,one,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 3 reports in October. 19 this year, up 27% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,one,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 55 this year, up 10% from 50 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,one,other,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 9 reports in October. 72 this year, up 16% from 62 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,one": {
+  "back": "Theft from vehicle: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in October. 46 this year, up 48% from 31 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,one": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 6 reports in October. 44 this year, up 16% from 38 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 6 reports in October. 64 this year, up 14% from 56 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
  },
  "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |one,one,one,one": {
   "back": "Theft from a vehicle: {0} reports in September. {1} this year, down {2}% from {3} last year.",
@@ -988,6 +2185,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Pagnanakaw mula sa sasakyan: {0} ulat noong Setyembre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": null,
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Bedford Park-Nortown: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: update sa kaligtasan para sa Oktubre {0}"
  },
  "{name}: safety update for September {0} |other": {
   "back": "{name}: safety update for September {0}",
