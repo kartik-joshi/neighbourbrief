@@ -1,0 +1,6 @@
+{# Step indicator: set `step` (1 Draft, 2 Review, 3 Publish) before including. #}
+<ol class="steps no-print" aria-label="Progress">
+  {% for n, label in [(1, 'Draft'), (2, 'Review'), (3, 'Translate & publish')] %}
+  <li class="{{ 'done' if n < step else 'now' if n == step else '' }}" {% if n == step %}aria-current="step"{% endif %}><span class="num">{{ '✓' if n < step else n }}</span>{{ label }}</li>
+  {% endfor %}
+</ol>

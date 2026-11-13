@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Help · NeighbourBrief TO{% endblock %}
+{% block content %}
+<div class="max-w-3xl">
+<p class="text-sm font-semibold uppercase tracking-wide text-brand-600">Help</p>
+<h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">Your first bulletin in five steps</h1>
+<ol class="mt-4 space-y-3">
+  <li class="card"><strong>1. Pick the neighbourhood.</strong> Type its name on <a class="underline" href="/new">Make a bulletin</a>, or use "Use my location". The division, your officers, the data date and the suggested languages fill in.</li>
+  <li class="card"><strong>2. Add your words.</strong> This month's priority and what you did, in a sentence or two each. If you made a bulletin last month, say what happened since ("you said, we did"). Optional: a prevention tip, the next meeting, who prepared it.</li>
+  <li class="card"><strong>3. Draft and review.</strong> NeighbourBrief counts the reports from open data and drafts a one-page bulletin. Every number is underlined and checked; change any wording you like. If a number turns red, it doesn't match the data.</li>
+  <li class="card"><strong>4. Translate.</strong> Pick the languages (suggested from the 2021 Census). Each translation is checked for the same numbers, the right alphabet, and the same meaning when read back in English.</li>
+  <li class="card"><strong>5. Publish and share.</strong> Print one page per language, save PDFs, copy for WhatsApp or a newsletter. Large print is one click away.</li>
+</ol>
+
+<h2 class="mt-8 text-xl font-bold text-ink">Common questions</h2>
+<div class="mt-3 space-y-2">
+  <details class="card"><summary class="cursor-pointer font-semibold">Publishing is blocked. What do I do?</summary>
+    <p class="mt-2 text-slate-700">The Publish page lists what failed. A number that doesn't match: fix the wording on Review. A translation problem: use "Translate again" on that language, or edit it by hand. Safety wording (for example a statement about a group of people): change it on Review. If you've checked it yourself, you can confirm a manual review and publish.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">Why is a percentage missing?</summary>
+    <p class="mt-2 text-slate-700">Percent change is shown only when both numbers are 10 or more; small numbers jump around and a big percentage would mislead. Shootings and homicides are always counts only.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">The numbers look lower than I expected.</summary>
+    <p class="mt-2 text-slate-700">Counts are reports to police by the date they were reported, for the last complete month. Very recent reports can still be added; the Review page warns when the data may not cover the whole month. TPS also reloads its data every day, and NeighbourBrief never uses data caught in the middle of a reload.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">Can a community translator check a translation?</summary>
+    <p class="mt-2 text-slate-700">Yes: <a class="underline" href="/translations">Translations to review</a> shows each line side by side with the English. Once they confirm, the bulletin says it was reviewed by a human translator.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">Does my team need a second person to approve?</summary>
+    <p class="mt-2 text-slate-700">It's optional. Anyone other than the author can sign off on the Publish page; if the text changes afterwards, the sign-off needs to be redone. Your administrator can make it required (REQUIRE_REVIEW=true) and rename the roles (for example Officer and Sergeant).</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">There's no internet at the meeting venue.</summary>
+    <p class="mt-2 text-slate-700">Before you go, open <a class="underline" href="/status">Status</a> and save your neighbourhood for offline use. With offline mode on, drafting, checking and printing all work on the laptop alone.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">Someone asks where a number comes from.</summary>
+    <p class="mt-2 text-slate-700">Each bulletin has "The numbers behind this bulletin" (a spreadsheet), and each <a class="underline" href="/neighbourhoods">neighbourhood profile</a> links every count to the same query on the Toronto Police Service open data portal.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">Can I just ask a question?</summary>
+    <p class="mt-2 text-slate-700">Yes: <a class="underline" href="/ask">Ask about a neighbourhood</a> answers in any language from the checked data only, with the sources linked. If an answer contains a number that isn't in the sources, it isn't shown. It never ranks neighbourhoods.</p></details>
+  <details class="card"><summary class="cursor-pointer font-semibold">Can I check someone else's newsletter or post?</summary>
+    <p class="mt-2 text-slate-700"><a class="underline" href="/check">Check my numbers</a> checks every number in any text against the open data for a neighbourhood and month.</p></details>
+</div>
+<p class="mt-6 text-sm text-slate-600">More: <a class="underline" href="/how-we-count">How we count</a> · <a class="underline" href="/privacy-ai">Privacy and AI</a> · <a class="underline" href="/data-health">Data health</a></p>
+</div>
+{% endblock %}

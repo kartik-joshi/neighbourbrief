@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}New bulletin · NeighbourBrief TO{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css"><script src="/static/vendor/leaflet/leaflet.js"></script>{% endblock %}
+{% block content %}
+<div class="grid gap-8 lg:grid-cols-[1fr_20rem]">
+  <section class="min-w-0">
+    {% set step = 1 %}{% include "_steps.html" %}
+    <p class="mt-4 text-sm font-semibold uppercase tracking-wide text-brand-600">New monthly bulletin</p>
+    <h1 class="mt-1 text-3xl font-bold text-ink">Your neighbourhood's safety update, in minutes</h1>
+    <p class="mt-2 max-w-2xl text-slate-600">Pick a neighbourhood, add a few words in your own voice, and NeighbourBrief drafts a one-page bulletin. Every number is checked against Toronto Police Service open data before you print or share it.</p>
+
+    {% if error or data_error %}
+    <div role="alert" class="mt-5 rounded-lg border border-red-200 bg-red-50 p-4 text-red-900">
+      <p class="font-semibold">{% if data_error or error_kind == 'data' %}We couldn't load the data{% else %}Please check the form{% endif %}</p>
+      <p class="text-sm mt-1">{{ error or data_error }}</p>
+    </div>
+    {% endif %}
+
+    <form id="draft-form" method="post" action="/draft" class="mt-6 space-y-6" data-reuse="{{ reuse }}" data-keep-langs="{{ '1' if form.languages else '' }}">
+      <div class="card">
+        <label for="hood-input" class="field-label">Neighbourhood</label>
+        <input id="hood-input" name="neighbourhood" list="hood-list" required autocomplete="off"
+               value="{{ selected }}" placeholder="Start typing, e.g. Thorncliffe Park"
+               class="input text-lg" aria-describedby="hood-help">
+        <datalist id="hood-list">
+          {% for h in hoods %}<option value="{{ h.name }}" data-id="{{ h.id }}">{% endfor %}
+        </datalist>
+        <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <button type="button" class="btn-secondary text-sm" data-locate="hood-input" aria-describedby="locate-note">📍 Use my location</button>
+          <span id="locate-note" class="text-xs text-slate-500" role="status" aria-live="polite">Your location stays in this browser. It isn't sent or saved.</span>
+        </div>
+        <p id="hood-help" class="mt-1 text-sm text-slate-500">{% if offline %}Offline mode: {{ hoods|length }} saved neighbourhood{{ 's' if hoods|length != 1 }}: {{ hoods|map(attribute='name')|join(', ') }}. Save more on the <a class="underline" href="/status#offline">Status</a> page when online.{% else %}All 158 City of Toronto neighbourhoods.{% endif %}</p>
+
+        <div id="hood-info" class="mt-4 hidden rounded-lg bg-brand-50 p-4 text-sm text-ink">
+          <div class="flex flex-wrap gap-x-6 gap-y-1">
+            <p><span class="text-slate-600">Division</span> <strong id="hi-division"></strong></p>
+            <p><span class="text-slate-600">TPS data updated</span> <strong id="hi-fresh"></strong></p>
+          </div>
+          <div id="hi-nco" class="mt-2"></div>
+          <p class="mt-2"><a id="hi-profile" class="underline font-semibold text-brand-700" href="/neighbourhoods">See the full neighbourhood profile</a></p>
+          <figure id="hood-map-box" class="mt-3 hidden">
+            <div id="hood-map" class="map-box" role="region" aria-label="Map of the neighbourhood boundary"></div>
+            <figcaption class="mt-1 text-xs text-slate-600">Neighbourhood boundary (City of Toronto). <span id="hood-map-pins"></span> No crime locations are mapped.</figcaption>
+          </figure>
+          <div id="reuse" class="mt-3 hidden flex flex-wrap items-center gap-3 border-t border-brand-100 pt-3">
+            <p class="text-slate-700">You have a <span id="reuse-month"></span> bulletin for this neighbourhood.</p>
+            <button type="button" id="reuse-btn" class="btn-secondary text-sm whitespace-normal text-left">Reuse its priority, actions, meeting &amp; languages</button>
+          </div>
+        </div>
+        <p id="hood-error" class="mt-3 hidden text-sm text-red-700"></p>
+        <div id="dup-warning" class="mt-4 hidden rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950" role="status" aria-live="polite"></div>
+        {% if months %}
+        <div class="mt-4">
+          <label for="month" class="field-label">Month</label>
+          <select id="month" name="month" class="input sm:w-72">
+            {% for m in months %}<option value="{{ m.strftime('%Y-%m') }}" {% if form.month == m.strftime('%Y-%m') %}selected{% endif %}>{{ m.strftime('%B %Y') }}{% if loop.first %} (latest){% endif %}</option>{% endfor %}
+          </select>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="card">
+        <fieldset>
+          <legend class="field-label">Languages</legend>
+          <p class="text-sm text-slate-500 -mt-1 mb-3">English is always included. Suggestions come from the 2021 Census neighbourhood profiles. Add or remove any.</p>
+          <div id="lang-chips" class="flex flex-wrap gap-2">
+            {% for l in lang_choices %}
+            <label class="chip {% if not l.enabled %}opacity-50{% endif %}" title="{{ l.name }}{% if not l.enabled %} (not supported by the translator){% endif %}">
+              <input type="checkbox" name="languages" value="{{ l.code }}" class="sr-only peer" {% if not l.enabled %}disabled{% endif %} {% if l.code in (form.languages or []) %}checked{% endif %}>
+              <span class="chip-body">{{ l.native }} <span class="text-slate-500 font-normal">· {{ l.name }}</span></span>
+            </label>
+            {% endfor %}
+          </div>
+          <p id="lang-note" class="mt-2 text-xs text-slate-500"></p>
+        </fieldset>
+      </div>
+
+      <div id="followup-box" class="card hidden">
+        <fieldset>
+          <legend class="field-label">Since last month <span class="font-normal text-slate-600">(optional: you said, we did)</span></legend>
+          <p class="text-sm text-slate-700 -mt-1">Last month's priority (<span id="fu-month"></span>): <q id="fu-prev" class="font-semibold text-ink"></q></p>
+          <input type="hidden" id="prev_priority" name="prev_priority" value="">
+          <label for="followup" class="mt-3 block text-sm font-semibold text-ink">What happened since then?</label>
+          <textarea id="followup" name="followup" rows="2" maxlength="160" class="input" placeholder="e.g. Patrols near the plaza every evening; fewer break-ins reported by the tenant association.">{{ form.followup or '' }}</textarea>
+          <label for="followup_status" class="mt-3 block text-sm font-semibold text-ink">Status</label>
+          <select id="followup_status" name="followup_status" class="input sm:w-72">
+            <option value="">Don't say</option><option value="done" {% if form.followup_status == 'done' %}selected{% endif %}>Done</option><option value="ongoing" {% if form.followup_status == 'ongoing' %}selected{% endif %}>Still working on it</option>
+          </select>
+          <p class="mt-2 text-xs text-slate-600">Shown at the top of "From your officers", in your words, translated and checked like the rest.</p>
+        </fieldset>
+      </div>
+
+      <section id="residents" class="card hidden border-brand-200" aria-labelledby="rs-h">
+        <h2 id="rs-h" class="field-label">What residents asked for <span class="font-normal text-slate-600">(<span id="rs-count"></span>, last 60 days)</span></h2>
+        <p class="text-sm text-ink -mt-1">Topics: <span id="rs-topics" class="font-semibold"></span></p>
+        <ul id="rs-comments" class="mt-2 text-sm space-y-1"></ul>
+        <p class="mt-2 text-xs text-slate-600">From "What should your officers focus on?" on bulletins and profiles. Anonymous: no names or contact details are kept. Comments are never published.</p>
+      </section>
+
+      <div class="card space-y-5">
+        <div>
+          <label for="priority" class="field-label">This month's priority</label>
+          <textarea id="priority" name="priority" rows="2" maxlength="400" class="input" placeholder="e.g. Car break-ins near the plaza parking lots in the evening.">{{ form.priority or '' }}</textarea>
+          <p class="hint">1–2 sentences, in your own words. We keep your meaning and only fix grammar.</p>
+        </div>
+        <div>
+          <label for="action_taken" class="field-label">What we did</label>
+          <textarea id="action_taken" name="action_taken" rows="2" maxlength="400" class="input" placeholder="e.g. More evening patrols and a lock-your-car reminder session with the tenant association.">{{ form.action_taken or '' }}</textarea>
+        </div>
+        <div>
+          <label for="tip_id" class="field-label">Prevention tip <span class="font-normal text-slate-500">(optional)</span></label>
+          <select id="tip_id" name="tip_id" class="input">
+            <option value="">No tip this month</option>
+            {% for t in tips %}<option value="{{ t.id }}" data-cats="{{ t.categories|join('|') }}" {% if form.tip_id == t.id %}selected{% endif %}>{{ t.topic }}: {{ t.text }}</option>{% endfor %}
+          </select>
+          <label for="tip_custom" class="sr-only">Or write your own tip</label>
+          <input id="tip_custom" name="tip_custom" maxlength="200" class="input mt-2" placeholder="…or write your own tip (one sentence)" value="{{ form.tip_custom or '' }}">
+          <p class="hint">Printed word for word at the end of the bulletin and translated with everything else.</p>
+        </div>
+        <div>
+          <label for="meeting_note" class="field-label">Next meeting <span class="font-normal text-slate-500">(optional)</span></label>
+          <input id="meeting_note" name="meeting_note" maxlength="200" class="input" placeholder="e.g. Tuesday, October 13 at 7 p.m., Thorncliffe Park Public Library" value="{{ form.meeting_note or '' }}">
+          <details class="mt-2 text-sm"><summary class="cursor-pointer text-brand-700 font-semibold">Add the date, time and place (gives residents an "Add to calendar" link)</summary>
+            <div class="mt-2 grid gap-2 sm:grid-cols-3">
+              <div><label for="meeting_date" class="block text-sm font-semibold text-ink">Date</label><input id="meeting_date" name="meeting_date" type="date" class="input" value="{{ form.meeting_date or '' }}"></div>
+              <div><label for="meeting_time" class="block text-sm font-semibold text-ink">Start time</label><input id="meeting_time" name="meeting_time" type="time" class="input" value="{{ form.meeting_time or '' }}"></div>
+              <div><label for="meeting_place" class="block text-sm font-semibold text-ink">Place</label><input id="meeting_place" name="meeting_place" maxlength="120" class="input" placeholder="e.g. Thorncliffe Park Public Library" value="{{ form.meeting_place or '' }}"></div>
+            </div>
+            <p class="mt-1 text-xs text-slate-600">If "Next meeting" is empty, it's written from these.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="card">
+        <label for="author" class="field-label">Your name <span class="font-normal text-slate-600">(optional; for this bulletin's history, never printed)</span></label>
+        <input id="author" name="author" class="input sm:w-96" maxlength="60" autocomplete="name" value="{{ form.author or '' }}">
+        <p class="hint">If your team uses a second check, the reviewer must be someone else.</p>
+      </div>
+
+      <div id="signoff-box" class="card hidden">
+        <label for="signoff" class="field-label">Prepared by <span class="font-normal text-slate-500">(optional)</span></label>
+        <select id="signoff" name="signoff" class="input sm:w-96"><option value="">No sign-off</option></select>
+        <p class="hint">Only officers TPS lists for this neighbourhood in “Find My NCO”.</p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <button id="draft-btn" type="submit" class="btn-primary text-lg">Draft bulletin</button>
+        <label class="text-sm text-slate-600 flex items-center gap-2">
+          <input type="checkbox" name="writer_mode" value="template" class="h-4 w-4" {% if form.writer_mode == 'template' %}checked{% endif %}> Quick template draft (no AI)
+        </label>
+      </div>
+      <p id="draft-wait" class="hidden text-sm text-slate-600" role="status" aria-live="polite">
+        <span class="spinner"></span> Writing the draft from TPS data… the local AI model usually takes under a minute.
+        <span id="draft-elapsed" class="tabular-nums text-slate-500" aria-hidden="true"></span>
+        <span id="draft-slow" class="hidden block mt-1 text-amber-800">Still working. If the AI writer takes longer than 150 seconds, NeighbourBrief switches to the quick template draft automatically. You won't lose anything.</span>
+      </p>
+    </form>
+  </section>
+
+  <aside class="space-y-4 text-sm">
+    <div class="card">
+      <h2 class="font-semibold text-ink">How it works</h2>
+      <ol class="mt-3 space-y-3 text-slate-600">
+        <li><strong class="text-ink">1. Facts from TPS open data.</strong> Code counts last month's reports to police and this year so far. No AI involved.</li>
+        <li><strong class="text-ink">2. A plain-language draft.</strong> Written at a Grade 6 level around your priority and actions.</li>
+        <li><strong class="text-ink">3. Every number checked.</strong> In English and every translation, against the facts.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2 class="font-semibold text-ink">Engines</h2>
+      <p class="mt-2 text-slate-600">Writer: <strong>{{ llm_status.label }}</strong>
+        {% if llm_status.ok %}<span class="text-emerald-700">● ready</span>{% else %}<span class="text-amber-700">● not available (template drafts only)</span>{% endif %}</p>
+      <p class="mt-1 text-slate-600">Translation: <strong>{{ engine }}</strong></p>
+    </div>
+  </aside>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="/static/app.js"></script>
+<script>NB.initNewForm(); NB.initLocate();</script>
+{% endblock %}

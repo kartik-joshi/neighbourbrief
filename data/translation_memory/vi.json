@@ -1,0 +1,47 @@
+{
+ "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle theft: {0} reported in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 2 reports in September. 9 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Trộm xe đạp: {0} báo cáo vào tháng Chín. {1} năm nay, so với {2} vào thời điểm này năm ngoái."
+ },
+ "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In September, there were {0} reports to police in {name}. Reporting to police doesn't mean someone has been charged.",
+  "created": "2026-10-24",
+  "en": "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In September, there were 46 reports to police in Black Creek. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Vào tháng Chín, có {0} báo cáo với cảnh sát ở {name}. Báo cáo với cảnh sát không có nghĩa là ai đó bị truy tố."
+ },
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Have questions? Contact your local police department, listed below. In case of an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Có thắc mắc gì không? Liên hệ với sở cảnh sát địa phương của bạn, được liệt kê bên dưới. Trong trường hợp khẩn cấp, hãy gọi {0}."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Have questions? Talk to your neighborhood community workers, listed below. In case of an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Có thắc mắc gì không? Hãy trao đổi với các nhân viên cộng đồng khu phố của bạn, được liệt kê bên dưới. Trong trường hợp khẩn cấp, hãy gọi {0}."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reported in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 7 reports in September. 61 this year, up 97% from 31 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Xe bị đánh cắp: báo cáo {0} vào tháng Chín. {1} năm nay, tăng {2}% so với {3} vào thời điểm này năm ngoái."
+ }
+}

@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+{% set n = f.neighbourhood %}
+{% block title %}{{ n.name }} · Neighbourhood profile · NeighbourBrief TO{% endblock %}
+{% block head %}<link rel="alternate" type="application/atom+xml" title="{{ n.name }} safety bulletins" href="/neighbourhoods/{{ n.id }}/feed.xml"><link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css"><script src="/static/vendor/leaflet/leaflet.js"></script>{% endblock %}
+{% macro change(pct, cur, prev) -%}
+  {%- if pct is none -%}<span class="text-slate-600">{% if cur < 10 or prev < 10 %}small numbers{% else %}n/a{% endif %}</span>
+  {%- elif pct > 0 -%}up {{ pct }}%{%- elif pct < 0 -%}down {{ -pct }}%{%- else -%}no change{%- endif -%}
+{%- endmacro %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="text-sm text-slate-600"><a class="underline" href="/neighbourhoods">Neighbourhoods</a> › {{ n.name }}</nav>
+<div class="mt-2 flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-2xl sm:text-3xl font-bold text-ink">{{ n.name }}</h1>
+    <p class="mt-1 text-slate-700">Neighbourhood {{ n.id|int }} · {% if public %}{{ n.division }}{% else %}<a class="underline" href="/divisions/{{ n.division.split(' ')[0] }}">{{ n.division }}</a>{% endif %}{% if p.trend and p.trend.population %} · about {{ "{:,}".format(p.trend.population) }} residents ({{ p.trend.population_year }} estimate){% endif %}</p>
+  </div>
+  {% if not public %}<form method="get" class="flex items-end gap-2">
+    <div><label for="pf-month" class="field-label">Month</label>
+      <select id="pf-month" name="month" class="input">{% for m in months %}<option value="{{ m.strftime('%Y-%m') }}" {% if f.period.month_start[:7] == m.strftime('%Y-%m') %}selected{% endif %}>{{ m.strftime('%B %Y') }}</option>{% endfor %}</select></div>
+    <button class="btn-secondary" type="submit">Show</button>
+  </form>{% endif %}
+</div>
+<div class="mt-4 flex flex-wrap gap-2 no-print">
+  {% if public %}{% for b in bulletins or [] %}<a class="btn-primary" href="/bulletin/{{ b.id }}/en">Read the {{ b.month }} bulletin</a>{% endfor %}
+  {% else %}<a class="btn-primary max-w-full whitespace-normal" href="/new?hood={{ n.name|urlencode }}">Make a bulletin for {{ n.name }}</a>{% endif %}
+  <a class="btn-secondary" href="/neighbourhoods/{{ n.id }}/data.json{% if selected_month %}?month={{ selected_month }}{% endif %}">Download the numbers (JSON)</a>
+  <a class="btn-secondary" href="/neighbourhoods/{{ n.id }}/feed.xml">Subscribe (feed)</a>
+  <button class="btn-secondary" type="button" onclick="window.print()">Print</button>
+</div>
+{% if auto_b %}
+<section class="mt-5 card border-brand-200" aria-labelledby="pf-auto">
+  <p class="text-xs font-bold uppercase tracking-wide text-brand-700">This month in plain language</p>
+  <h2 id="pf-auto" class="mt-1 text-lg font-bold text-ink">{{ auto_b.headline }}</h2>
+  <p class="mt-1 text-slate-700">{{ auto_b.summary }}</p>
+  <p class="mt-3 text-sm"><span class="font-semibold">Read the one-page bulletin:</span>
+    {% for l in auto_b.langs %}<a class="ms-2 text-brand-700 underline" href="/bulletin/{{ auto_b.id }}/{{ l.code }}" lang="{{ l.code }}">{{ l.native }}</a>{% endfor %}
+    <a class="ms-2 text-brand-700 underline" href="/bulletin/{{ auto_b.id }}/easy">Easy Read</a></p>
+  <p class="mt-2 text-xs text-slate-600">Written automatically from the open data on this page; every number checked. {% if not public %}No officer bulletin for {{ auto_b.month }} yet.{% else %}No note from officers this month.{% endif %}</p>
+</section>
+{% endif %}
+{% for w in p.warnings + f.data_warnings %}<p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-950" role="status">{{ w }}</p>{% endfor %}
+
+<section class="mt-6" aria-labelledby="pf-glance">
+  <h2 id="pf-glance" class="sr-only">At a glance</h2>
+  <div class="grid gap-3 grid-cols-2 lg:grid-cols-4">
+    <div class="stat-tile"><p class="stat-label">Reports to police, {{ f.period.month_label }}</p><p class="stat-value">{{ f.totals.month }}</p><p class="stat-note">9 major categories</p></div>
+    <div class="stat-tile"><p class="stat-label">Reports so far in {{ f.period.year }}</p><p class="stat-value">{{ f.totals.ytd }}</p><p class="stat-note">{{ f.period.ytd_label }}</p></div>
+    {% if p.road %}<div class="stat-tile"><p class="stat-label">Traffic collisions so far in {{ f.period.year }}</p><p class="stat-value">{{ p.road.ytd.total }}</p><p class="stat-note">{{ change(p.road.pct_change, p.road.ytd.total, p.road.ytd_prev.total) }} vs {{ f.period.prev_year }}</p></div>{% endif %}
+    {% if p.census and p.census.languages %}<div class="stat-tile"><p class="stat-label">Most common home language other than English or French</p><p class="stat-value text-2xl">{{ p.census.languages[0].language }}</p><p class="stat-note">{{ p.census.languages[0].share }}% of residents (2021 Census)</p></div>{% endif %}
+  </div>
+</section>
+
+<section class="mt-8" aria-labelledby="pf-crime">
+  <h2 id="pf-crime" class="text-xl font-bold text-ink">Reported crime</h2>
+  <p class="text-sm text-slate-600">Reports made to police, by report date. Percent change only when both numbers are 10 or more. "Check it yourself" opens the same count on the TPS open data portal.</p>
+  <div class="mt-3 card overflow-x-auto p-0" role="region" aria-label="Reported crime table" tabindex="0">
+    <table class="data-table">
+      <thead><tr><th scope="col">Category</th><th scope="col" class="num">{{ f.period.month_label }}</th><th scope="col" class="num">So far in {{ f.period.year }}</th><th scope="col" class="num">Same period {{ f.period.prev_year }}</th><th scope="col">Change</th><th scope="col">Check it yourself</th></tr></thead>
+      <tbody>{% for c in f.categories %}<tr><th scope="row">{{ c.label }}</th><td class="num">{{ c.month }}</td><td class="num">{{ c.ytd }}</td><td class="num">{% if c.ytd_prev is not none %}{{ c.ytd_prev }}{% else %}<span class="text-slate-600" title="Not published by report date for last year">not published*</span>{% endif %}</td><td>{{ change(c.pct_change, c.ytd, c.ytd_prev or 0) }}</td>
+        <td class="text-sm">{% set q = sources.get(c.key) if sources else none %}{% if q %}<a class="underline" href="{{ q.month }}" target="_blank" rel="noopener" aria-label="{{ c.label }}, {{ f.period.month_label }}: open the query on the TPS open data portal">month</a> · <a class="underline" href="{{ q.ytd }}" target="_blank" rel="noopener" aria-label="{{ c.label }}, so far in {{ f.period.year }}: open the query on the TPS open data portal">year</a>{% if q.prev %} · <a class="underline" href="{{ q.prev }}" target="_blank" rel="noopener" aria-label="{{ c.label }}, same period {{ f.period.prev_year }}: open the query on the TPS open data portal">{{ f.period.prev_year }}</a>{% endif %}{% endif %}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+  {% if f.categories | selectattr('ytd_prev', 'none') | list %}<p class="mt-2 text-xs text-slate-600">* Shootings and homicides are published for past years by the date they happened, not the date reported, so there's no fair "same period" number to compare with. The yearly totals below come from a different TPS dataset.</p>{% endif %}
+</section>
+
+{% if public %}
+<section class="mt-8" aria-labelledby="pf-jsfc">
+  <h2 id="pf-jsfc" class="text-xl font-bold text-ink">Check a text against these numbers</h2>
+  <p class="text-sm text-slate-600">Paste a news story, newsletter or post about {{ n.name }}. Every number is checked against the open data on this page (reported crime and traffic collisions), right here in your browser.</p>
+  <form id="jsfc-form" class="mt-3 card space-y-3">
+    <label for="jsfc-text" class="field-label">Text to check</label>
+    <textarea id="jsfc-text" class="input" rows="5" maxlength="6000" placeholder="e.g. Assaults were down {{ (f.categories[0].pct_change or 0)|abs }}% this year."></textarea>
+    <button type="submit" class="btn-primary">Check the numbers</button>
+  </form>
+  <div id="jsfc-out" class="mt-3" aria-live="polite"></div>
+  <script type="application/json" id="jsfc-data">{{ public_data|tojson }}</script>
+</section>
+{% endif %}
+
+{% if p.monthly and p.monthly.months|length > 1 %}{% set mo = p.monthly %}
+<section class="mt-8" aria-labelledby="pf-monthly">
+  <h2 id="pf-monthly" class="text-xl font-bold text-ink">This year, month by month</h2>
+  <p class="text-sm text-slate-600">Reports per month in {{ f.period.year }}, by report date. Each row has its own scale; the full numbers are in the table.</p>
+  <div class="mt-3 card overflow-x-auto p-0" role="region" aria-label="Reports per month table" tabindex="0">
+    <table class="data-table text-sm">
+      <thead><tr><th scope="col">Category</th>{% for m in mo.months %}<th scope="col" class="num">{{ m }}</th>{% endfor %}<th scope="col"><span class="sr-only">Pattern</span></th></tr></thead>
+      <tbody>{% for s in mo.series if s['values']|sum > 0 %}<tr>
+        <th scope="row">{{ s.label }}</th>{% for v in s['values'] %}<td class="num">{{ v }}</td>{% endfor %}
+        <td aria-hidden="true"><svg width="{{ mo.months|length * 9 }}" height="22" viewBox="0 0 {{ mo.months|length * 9 }} 22">{% for v in s['values'] %}{% set h = (v / (s.max or 1) * 20)|round(1) %}<rect x="{{ loop.index0 * 9 }}" y="{{ 22 - h }}" width="7" height="{{ h if h > 0 else 0.5 }}" rx="1.5" class="{{ 'mini-bar-last' if loop.last else 'mini-bar' }}"/>{% endfor %}</svg></td>
+      </tr>{% endfor %}</tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+
+{% if p.road %}{% set r = p.road %}
+<section class="mt-8" aria-labelledby="pf-road">
+  <h2 id="pf-road" class="text-xl font-bold text-ink">Road safety</h2>
+  <p class="text-sm text-slate-600">Traffic collisions police attended or were told about, by date of the collision.</p>
+  <div class="mt-3 grid gap-3 grid-cols-2 lg:grid-cols-5">
+    <div class="stat-tile"><p class="stat-label">{{ f.period.month_label }}</p><p class="stat-value">{{ r.month.total }}</p><p class="stat-note">collisions</p></div>
+    <div class="stat-tile"><p class="stat-label">With injuries</p><p class="stat-value">{{ r.ytd.injury }}</p><p class="stat-note">so far in {{ f.period.year }} ({{ r.ytd_prev.injury }} in {{ f.period.prev_year }})</p></div>
+    <div class="stat-tile"><p class="stat-label">Involving a pedestrian</p><p class="stat-value">{{ r.ytd.pedestrian }}</p><p class="stat-note">so far in {{ f.period.year }} ({{ r.ytd_prev.pedestrian }} in {{ f.period.prev_year }})</p></div>
+    <div class="stat-tile"><p class="stat-label">Involving a cyclist</p><p class="stat-value">{{ r.ytd.cyclist }}</p><p class="stat-note">so far in {{ f.period.year }} ({{ r.ytd_prev.cyclist }} in {{ f.period.prev_year }})</p></div>
+    <div class="stat-tile"><p class="stat-label">Fatal</p><p class="stat-value">{{ r.ytd.fatal }}</p><p class="stat-note">so far in {{ f.period.year }} ({{ r.ytd_prev.fatal }} in {{ f.period.prev_year }})</p></div>
+  </div>
+  {% set hi = (r.by_month|map(attribute='count')|max) or 1 %}
+  <figure class="mt-4 card">
+    <figcaption class="font-semibold text-ink">Collisions per month, last 12 months</figcaption>
+    <div class="overflow-x-auto" role="region" aria-label="Collisions per month chart" tabindex="0"><svg class="mt-2 w-full h-auto max-w-2xl min-w-[30rem]" viewBox="0 0 600 190" role="img" aria-labelledby="road-chart-desc">
+      <desc id="road-chart-desc">Bar chart. {% for b in r.by_month %}{{ b.label }}: {{ b.count }}. {% endfor %}</desc>
+      <line x1="0" y1="160.5" x2="600" y2="160.5" class="chart-axis"/>
+      {% for b in r.by_month %}{% set h = (b.count / hi * 130)|round(1) %}{% set x = loop.index0 * 50 + 6 %}{% set partial = loop.last and r.looks_partial %}
+      <g class="chart-bar{% if partial %} chart-bar-partial{% endif %}"><title>{{ b.label }}: {{ b.count }} collisions{% if partial %} (may be incomplete){% endif %}</title>
+        <rect x="{{ x - 6 }}" y="0" width="50" height="190" fill="transparent"/>
+        <path d="M{{ x }},160 V{{ 160 - h + 4 if h > 4 else 160 - h }} {% if h > 4 %}Q{{ x }},{{ 160 - h }} {{ x + 4 }},{{ 160 - h }} H{{ x + 34 }} Q{{ x + 38 }},{{ 160 - h }} {{ x + 38 }},{{ 160 - h + 4 }}{% else %}H{{ x + 38 }}{% endif %} V160 Z"/>
+        {% if loop.last or b.count == hi %}<text x="{{ x + 19 }}" y="{{ 160 - h - 6 }}" text-anchor="middle" class="chart-value">{{ b.count }}</text>{% endif %}
+        <text x="{{ x + 19 }}" y="178" text-anchor="middle" class="chart-label">{{ b.label[:3] }}</text>
+      </g>{% endfor %}
+    </svg></div>
+    {% if r.looks_partial %}<p class="mt-2 text-sm text-slate-700"><span class="legend-swatch legend-partial" aria-hidden="true"></span> {{ r.by_month[-1].label }} is lighter: it is well below recent months, which usually means late reports are still being added.</p>{% endif %}
+  </figure>
+</section>
+{% endif %}
+
+{% if p.trend %}{% set t = p.trend %}
+<section class="mt-8" aria-labelledby="pf-trend">
+  <h2 id="pf-trend" class="text-xl font-bold text-ink">Twelve years of reports, {{ t.years[0] }} to {{ t.years[-1] }}</h2>
+  <p class="text-sm text-slate-600">Reports per calendar year in {{ n.name }}. Each line has its own scale: compare the shape, not the height between lines.</p>
+  <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    {% for s in t.series %}
+    <li class="card py-3 flex items-center gap-3">
+      <div class="min-w-0 flex-1"><p class="font-semibold text-ink">{{ s.label }}</p>
+        <p class="text-sm text-slate-600">{{ t.years[0] }}: {{ s['values'][0] }} · {{ t.years[-1] }}: <strong class="text-ink">{{ s['values'][-1] }}</strong></p></div>
+      <svg width="120" height="28" viewBox="0 0 120 28" aria-hidden="true" class="shrink-0"><polyline points="{{ s.points }}" class="chart-line"/>{% set last = s.points.split(' ')[-1].split(',') %}<circle cx="{{ last[0] }}" cy="{{ last[1] }}" r="3" class="chart-dot"/></svg>
+    </li>
+    {% endfor %}
+  </ul>
+  <details class="mt-3 card">
+    <summary class="cursor-pointer font-semibold text-brand-700">Show all yearly numbers as a table</summary>
+    <div class="mt-3 overflow-x-auto" role="region" aria-label="Yearly numbers table" tabindex="0"><table class="data-table text-sm">
+      <thead><tr><th scope="col">Category</th>{% for y in t.years %}<th scope="col" class="num">{{ y }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for s in t.series %}<tr><th scope="row">{{ s.label }}</th>{% for v in s['values'] %}<td class="num">{{ v }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table></div>
+  </details>
+</section>
+{% endif %}
+
+<div class="mt-8 grid gap-6 lg:grid-cols-2">
+  <section aria-labelledby="pf-people">
+    <h2 id="pf-people" class="text-xl font-bold text-ink">Languages spoken at home</h2>
+    <p class="text-sm text-slate-600">Mother tongue other than English or French, 2021 Census.</p>
+    {% if p.census and p.census.languages %}
+    <ul class="mt-3 card space-y-2">
+      {% for l in p.census.languages[:6] %}
+      <li><div class="flex justify-between text-sm"><span class="font-semibold text-ink">{{ l.language }}</span><span class="text-slate-700">{{ l.share }}%</span></div>
+        <div class="share-track" aria-hidden="true"><div class="share-fill" style="width: {{ [l.share * 3, 100]|min }}%"></div></div></li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="mt-3 card text-slate-700">No language data for this neighbourhood.</p>{% endif %}
+  </section>
+  <section aria-labelledby="pf-help">
+    <h2 id="pf-help" class="text-xl font-bold text-ink">Officers and local help</h2>
+    <div class="mt-3 card text-sm">
+      {% if f.nco and f.nco.has_nco %}<p class="text-slate-600">Neighbourhood Community Officers</p><p class="font-semibold text-ink">{{ f.nco.officers|map(attribute='name')|join(' · ') }}</p>
+      {% elif f.nco %}<p class="text-slate-600">No NCO listed. Division contact:</p><p class="font-semibold text-ink">{{ f.nco.division.name }} · {{ f.nco.division.phone }}</p>{% endif %}
+      <p class="mt-2 text-slate-700">Emergency: 911 · Non-emergency police: 416-808-2222</p>
+      {% if map %}
+      <figure id="hood-map-box" class="mt-3">
+        <div id="hood-map" class="map-box" role="region" aria-label="Map of the neighbourhood boundary"></div>
+        <figcaption class="mt-1 text-xs text-slate-600">Neighbourhood boundary (City of Toronto). <span id="hood-map-pins"></span> No crime locations are mapped.</figcaption>
+      </figure>
+      {% endif %}
+    </div>
+  </section>
+</div>
+
+<section class="mt-8" aria-labelledby="pf-sources">
+  <h2 id="pf-sources" class="text-xl font-bold text-ink">Where these numbers come from</h2>
+  <ul class="mt-3 grid gap-2 sm:grid-cols-2 text-sm">
+    <li class="card py-3"><strong>{{ p.sources.crime.name }}</strong><br>{{ p.sources.crime.publisher }} · by {{ p.sources.crime.basis }} · updated {{ f.freshness.tps_updated_label }}</li>
+    {% if p.road %}<li class="card py-3"><strong>{{ p.sources.collisions.name }}</strong><br>{{ p.sources.collisions.publisher }} · by {{ p.sources.collisions.basis }} · updated {{ p.road.updated or 'unknown' }}</li>{% endif %}
+    {% if p.trend %}<li class="card py-3"><strong>{{ p.sources.trend.name }}</strong><br>{{ p.sources.trend.publisher }} · {{ p.sources.trend.basis }} · updated {{ p.trend.updated or 'unknown' }}</li>{% endif %}
+    <li class="card py-3"><strong>{{ p.sources.census.name }}</strong><br>{{ p.sources.census.publisher }} · {{ p.sources.census.basis }}</li>
+    <li class="card py-3"><strong>{{ p.sources.nco.name }}</strong> and <strong>{{ p.sources.services.name }}</strong><br>{{ p.sources.nco.publisher }} · {{ p.sources.nco.basis }}</li>
+    <li class="card py-3"><strong>{{ p.sources.boundaries.name }}</strong><br>{{ p.sources.boundaries.publisher }}</li>
+  </ul>
+  <p class="mt-3 text-xs text-slate-600">Toronto Police Service data under the Open Government Licence – Ontario; City of Toronto data under the Open Government Licence – Toronto. Counts only: no rankings, no comparisons between neighbourhoods and no incident locations. <a class="underline" href="/how-we-count">How we count</a></p>
+</section>
+{% if feedback_on %}{% with hid = n.id, fb_lang = 'en', fb_back = request.url.path, fb_kind = 'page' %}{% include "_feedback.html" %}{% endwith %}{% endif %}
+{% endblock %}
+{% block scripts %}<script src="/static/app.js"></script>{% if public %}<script src="/static/factcheck.js"></script>{% endif %}{% if map %}<script>NB.showMap({name: {{ n.name|tojson }}, map: {{ map|tojson }}});</script>{% endif %}{% endblock %}

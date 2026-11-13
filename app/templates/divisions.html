@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Divisions · NeighbourBrief TO{% endblock %}
+{% block content %}
+<h1 class="text-2xl sm:text-3xl font-bold text-ink">Police divisions</h1>
+<p class="mt-2 max-w-3xl text-slate-700">A summary per division, for Community Police Liaison Committees: the division's neighbourhoods side by side and their combined counts.</p>
+<ul class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+  {% for d in divs %}<li class="card py-4"><a class="font-bold text-brand-700 underline" href="/divisions/{{ d.number }}">{{ d.label }}</a><p class="text-sm text-slate-700">{{ d.hoods|length }} neighbourhoods</p></li>{% endfor %}
+</ul>
+{% endblock %}

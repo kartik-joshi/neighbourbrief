@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ rec.facts.neighbourhood.name }} · {{ rec.facts.period.month_label }} · all languages{% endblock %}
+{% block body_class %}bg-slate-100 standalone{% endblock %}
+{% block chrome %}
+<nav aria-label="Print all languages" class="no-print mx-auto max-w-[8.5in] px-2 pt-4 flex flex-wrap items-center gap-3">
+  <a href="{{ '/public' if public else '/publish/' ~ rec.id }}" class="text-sm text-brand-700 underline">← {{ 'All bulletins' if public else 'Back' }}</a>
+  <p class="text-sm text-slate-600">{{ views|length }} language{{ 's' if views|length != 1 }} · one page each</p>
+  <button type="button" class="btn-primary ms-auto" onclick="window.print()">Print / Save PDF</button>
+</nav>
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block main_class %}py-4 px-2 sm:px-4{% endblock %}
+{% block content %}
+{% for v in views %}
+<div class="sheet sheet-page mb-6">{% include "_bulletin.html" %}</div>
+{% endfor %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/app.js"></script>
+{% if auto_print %}<script>window.addEventListener('load', () => setTimeout(() => window.print(), 300));</script>{% endif %}
+{% endblock %}

@@ -1,0 +1,101 @@
+{# One print-ready bulletin page. Expects `v` from main.bulletin_view(). #}
+{% set f = v.facts %}
+{% set L = v.L %}
+{% set EN = labels('en') %}
+<article class="bulletin lang-{{ v.code }}" lang="{{ v.code }}" dir="{{ 'rtl' if v.info.rtl else 'ltr' }}" id="bulletin-{{ v.code }}">
+  <header class="b-head">
+    <div class="b-kicker">{{ L.title }}</div>
+    <h1 class="b-title">{{ f.neighbourhood.name }} <span class="b-sep">·</span> {{ v.month }}</h1>
+    <div class="b-meta" dir="ltr">
+      <span>{{ f.neighbourhood.division }}</span>
+      {% if v.code != 'en' %}<span aria-hidden="true">·</span>
+      <span lang="en">{{ EN.title }} · {{ f.neighbourhood.name }} · {{ f.period.month_label }}</span>{% endif %}
+    </div>
+  </header>
+
+  {% if not v.doc %}
+    <div class="b-missing">
+      {% if v.translation and v.translation.error %}{{ v.translation.error }}{% else %}Not translated yet.{% endif %}
+    </div>
+  {% else %}
+  <h2 class="b-headline">{{ v.headline }}</h2>
+  <p class="b-summary">{{ v.summary }}</p>
+
+  <section class="b-section">
+    <h3 class="b-h3">{{ L.reports }} <span class="b-h3-sub">· {{ v.month }}</span></h3>
+    <ul class="b-lines">
+      {% for text, c in v.bullets %}
+      <li class="b-line">
+        <span class="b-line-text">{{ text }}</span>
+        {% if c %}<span class="b-chip b-chip-{{ c.direction }}" title="{{ c.title }}">{{ c.text }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% if v.officer_section or v.followup %}
+  <section class="b-officer">
+    <h3 class="b-h3">{{ L.from_officers }}</h3>
+    {% if v.followup %}<p class="b-followup">{{ v.followup }}</p>{% endif %}
+    {% if v.officer_section %}<p>{{ v.officer_section }}</p>{% endif %}
+    {% if v.rec.signoff %}<p class="b-signoff" dir="ltr" lang="en">{{ v.rec.signoff }}, {{ f.neighbourhood.division }}</p>{% endif %}
+  </section>
+  {% endif %}
+
+  {% if v.rec.auto %}<p class="b-auto">{{ L.auto_note }}{% if v.code != 'en' %}<br><span dir="ltr" lang="en">{{ EN.auto_note }}</span>{% endif %}</p>{% endif %}
+  {% if v.closing %}<p class="b-closing">{{ v.closing }}</p>{% endif %}
+  {% endif %}
+
+  {% set nco = f.nco %}
+  {% if nco %}
+  <section class="b-contacts">
+    {% if nco.has_nco %}
+      <h3 class="b-h3">{{ L.ncos }}</h3>
+      <ul class="b-officers" dir="ltr">
+        {% for o in nco.officers[:6] %}
+        <li><strong>{{ o.name }}</strong><br>{% if o.phone %}{{ o.phone }}{% endif %}{% if o.email %} · {{ o.email }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% if nco.officers|length > 6 %}<p class="b-small">+ {{ nco.officers|length - 6 }} more: {{ nco.division.name }}, {{ nco.division.phone }}</p>{% endif %}
+    {% else %}
+      <h3 class="b-h3">{{ L.division }}</h3>
+      <p class="b-division" dir="ltr"><strong>{{ nco.division.name }}</strong> · {{ nco.division.address }} · {{ nco.division.phone }}{% if nco.division.email %} · {{ nco.division.email }}{% endif %}</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if v.services %}
+  <section class="b-services">
+    <h3 class="b-h3">{{ L.services }}</h3>
+    <ul class="b-service-list" dir="ltr" lang="en">
+      {% for s in v.services %}<li><strong>{{ s.name }}</strong><br>{{ s.address }}{% if s.phone %} · {{ s.phone }}{% endif %}</li>{% endfor %}
+    </ul>
+    <p class="b-small b-muted">{{ L.services_note }}</p>
+  </section>
+  {% endif %}
+
+  <footer class="b-foot">
+    <div class="b-badges">
+      {% if v.verification.ok %}
+        <span class="b-badge b-badge-ok">✅ {{ L.verified }}{% if v.code != 'en' %} <span dir="ltr">({{ EN.verified }})</span>{% endif %}</span>
+      {% elif v.doc %}
+        <span class="b-badge b-badge-warn">⚠️ {{ L.not_verified }}{% if v.rec.manual_override %} <span dir="ltr">(reviewed manually by the officer)</span>{% endif %}</span>
+      {% endif %}
+      <span class="b-emergency">{{ L.emergency }}</span>
+    </div>
+    {% if v.code != 'en' %}
+    {% if v.translation and v.translation.human_reviewed %}
+    <p class="b-notice b-notice-ok">{{ L.reviewed }}<br><span dir="ltr" lang="en">{{ EN.reviewed }}</span></p>
+    {% else %}
+    <p class="b-notice">{{ L.notice }}<br><span dir="ltr" lang="en">{{ EN.notice }}</span></p>
+    {% endif %}
+    {% endif %}
+    <p class="b-legal" dir="ltr" lang="en">
+      Contains information licensed under the <a href="https://www.ontario.ca/page/open-government-licence-ontario">Open Government Licence – Ontario</a> (Toronto Police Service data)
+      and the <a href="https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-licence/">Open Government Licence – Toronto</a> (City of Toronto data).
+      Not affiliated with or endorsed by the Toronto Police Service.
+      Counts are reports to police by report date ({{ f.period.month_label }}; year to date {{ f.period.ytd_label }} vs {{ f.period.ytd_prev_label }}); a report does not mean anyone was charged.
+      TPS data updated: {{ f.freshness.tps_updated_label }}
+    </p>
+  </footer>
+</article>

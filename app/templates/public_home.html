@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}NeighbourBrief TO · Neighbourhood safety bulletins{% endblock %}
+{% block main_class %}{% endblock %}
+{% block content %}
+<section class="band" aria-labelledby="pub-title">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:py-12">
+    <h1 id="pub-title" class="text-3xl sm:text-4xl font-bold max-w-3xl">Neighbourhood safety bulletins for Toronto</h1>
+    {% if publisher.name %}<p class="mt-2 text-sm font-semibold uppercase tracking-wide text-[#f2b705]">Published by {{ publisher.name }}</p>{% endif %}
+    <p class="mt-3 max-w-2xl text-brand-100 text-lg">A short monthly update for each neighbourhood, in plain language and in the languages residents speak at home. Every number is checked against Toronto Police Service open data before it is published.</p>
+    <p class="mt-5 flex flex-wrap gap-2">
+      <a class="btn-primary bg-[#f2b705] border-[#f2b705] text-[#0c2242] hover:bg-[#ffd24d]" href="/neighbourhoods">Find your neighbourhood</a>
+      <a class="btn-secondary" href="/how-it-works">How it works</a>
+      <a class="btn-secondary" href="/feed.xml">Subscribe (Atom feed)</a>
+    </p>
+  </div>
+</section>
+<section class="mx-auto max-w-6xl px-4 py-8" aria-labelledby="pub-latest">
+  <h2 id="pub-latest" class="text-2xl font-bold text-ink">Latest bulletins</h2>
+  {% if bulletins %}
+  <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {% for b in bulletins %}
+    <li class="home-card">
+      <h3>{{ b.hood.name }}</h3>
+      <p>{{ b.month }} · {{ b.hood.division }}</p>
+      <p class="flex flex-wrap gap-x-3 gap-y-1">
+        {% for c in b.codes %}{% set li = lang_info(c) %}<a class="underline font-semibold text-brand-700" href="/bulletin/{{ b.id }}/{{ c }}" hreflang="{{ c }}" lang="{{ c }}">{{ li.native }}</a>{% endfor %}
+      </p>
+      <p class="text-sm"><a class="underline" href="/neighbourhoods/{{ b.hood.id }}">Neighbourhood profile</a></p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="mt-3 text-slate-700">No bulletins published yet.</p>{% endif %}
+  <p class="mt-4 text-slate-700">Not listed? Every one of Toronto's 158 neighbourhoods has a monthly summary in plain language, written automatically from the open data and checked the same way. <a class="underline font-semibold text-brand-700" href="/neighbourhoods">Find your neighbourhood</a></p>
+</section>
+<section class="mx-auto max-w-6xl px-4 pb-10 grid gap-4 md:grid-cols-3" aria-label="About">
+  <article class="home-card"><h3>Plain language, checked numbers</h3><p>Code counts the reports from open data; an AI writer only phrases the sentences; every number in every language is checked against the data before publishing.</p><a class="btn-secondary" href="/how-we-count">How we count</a></article>
+  <article class="home-card"><h3>Fair by design</h3><p>Counts only, small numbers never turned into percentages, no rankings, no maps of incidents and no personal information.</p><a class="btn-secondary" href="/data-health">Data health</a></article>
+  <article class="home-card"><h3>For partner websites</h3><p>Community groups can show their neighbourhood's latest bulletin with one line of HTML.</p>
+    <code class="block mt-2 rounded bg-slate-100 p-2 text-xs break-all">&lt;iframe src="{{ (request.base_url|string ~ 'embed/055') if live_site else 'embed/055.html' }}" title="Neighbourhood safety bulletin" width="360" height="300"&gt;&lt;/iframe&gt;</code></article>
+</section>
+{% endblock %}

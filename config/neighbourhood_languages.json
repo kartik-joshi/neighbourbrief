@@ -1,0 +1,12 @@
+{
+  "_source": "2021 Census, City of Toronto Neighbourhood Profiles, as summarized by HomeTurf (June 2026). Percent = share of residents whose mother tongue is the language.",
+  "neighbourhoods": {
+    "Thorncliffe Park": [{"language": "Urdu", "code": "ur", "share": 24}, {"language": "Pashto", "code": "ps", "share": 8}, {"language": "Arabic", "code": "ar", "share": 5}],
+    "Milliken": [{"language": "Cantonese", "code": "zh-Hant", "share": 37}, {"language": "Mandarin", "code": "zh-Hans", "share": 23}, {"language": "Tamil", "code": "ta", "share": 5}],
+    "Westminster-Branson": [{"language": "Russian", "code": "ru", "share": 19}, {"language": "Tagalog/Filipino", "code": "fil", "share": 15}, {"language": "Italian", "code": "it", "share": 5}],
+    "Steeles": [{"language": "Cantonese", "code": "zh-Hant", "share": 33}, {"language": "Mandarin", "code": "zh-Hans", "share": 29}, {"language": "Arabic", "code": "ar", "share": 2}],
+    "Morningside Heights": [{"language": "Tamil", "code": "ta", "share": 30}],
+    "Caledonia-Fairbank": [{"language": "Portuguese", "code": "pt-pt", "share": 19}, {"language": "Spanish", "code": "es", "share": 5}, {"language": "Italian", "code": "it", "share": 3}],
+    "Newtonbrook West": [{"language": "Tagalog/Filipino", "code": "fil", "share": 10}, {"language": "Russian", "code": "ru", "share": 10}, {"language": "Korean", "code": "ko", "share": 8}]
+  }
+}

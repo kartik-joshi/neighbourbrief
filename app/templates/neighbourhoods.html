@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Neighbourhoods · NeighbourBrief TO{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css"><script src="/static/vendor/leaflet/leaflet.js"></script>{% endblock %}
+{% block content %}
+<p class="text-sm font-semibold uppercase tracking-wide text-brand-600">Neighbourhood profiles</p>
+<h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">Toronto's {{ rows|length }} neighbourhoods</h1>
+<p class="mt-2 text-sm">{% if not static_build or wards_in_site %}<a class="underline font-semibold text-brand-700" href="/wards">Ward briefs</a> (for councillors){% endif %}{% if not public %} · <a class="underline font-semibold text-brand-700" href="/divisions">Summaries by police division</a> (for Community Police Liaison Committees){% endif %}</p>
+<p class="mt-2 max-w-3xl text-slate-700">Each profile joins several open datasets for one neighbourhood: reported crime this month, road safety, twelve years of yearly counts, languages spoken at home, local services and the neighbourhood's officers. Counts only, with no rankings and no crime locations.</p>
+{% if data_error %}<p class="mt-4 rounded-lg bg-red-50 px-4 py-2 text-sm text-red-900" role="alert">{{ data_error }}</p>{% endif %}
+
+<figure class="mt-6">
+  <div id="all-map" class="map-box" style="height: 26rem" role="region" aria-label="Map of Toronto's neighbourhoods. The same neighbourhoods are listed below." data-src="/api/boundaries.geojson" data-tiles="{{ 'no' if offline else 'yes' }}"></div>
+  <figcaption class="mt-1 text-xs text-slate-600">Neighbourhood boundaries (City of Toronto). Select one to open its profile. The map shows places only, no crime data.</figcaption>
+</figure>
+
+<div class="mt-6 card">
+  <label for="hood-filter" class="field-label">Filter by name, division or language</label>
+  <input id="hood-filter" class="input" type="search" placeholder="e.g. Thorncliffe, 53 Division, Tamil" autocomplete="off" aria-describedby="hood-count">
+  <label class="mt-3 flex items-center gap-2 text-sm text-slate-800"><input id="nco-only" type="checkbox" class="h-4 w-4"> Only neighbourhoods with Neighbourhood Community Officers</label>
+  <p id="hood-count" class="mt-2 text-sm text-slate-600" role="status" aria-live="polite">{{ rows|length }} neighbourhoods · {{ nco_count }} with Neighbourhood Community Officers</p>
+</div>
+
+<ul id="hood-grid" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {% for h in rows %}
+  <li class="card py-4" data-nco="{{ 1 if h.has_nco else 0 }}" data-search="{{ (h.name ~ ' ' ~ h.id ~ ' ' ~ h.division_label ~ ' ' ~ h.languages|join(' '))|lower }}">
+    <a class="font-bold text-brand-700 underline-offset-2 hover:underline" href="/neighbourhoods/{{ h.id }}">{{ h.name }}</a>
+    <span class="text-sm text-slate-600">· {{ h.id|int }}</span>
+    <p class="mt-1 text-sm text-slate-700">{{ h.division_label }}{% if h.has_nco %} · <span class="font-semibold text-emerald-800">Has NCOs</span>{% endif %}</p>
+    {% if h.languages %}<p class="mt-1 text-sm text-slate-600">Languages: {{ h.languages|join(', ') }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<p id="hood-none" class="mt-4 hidden text-slate-700">No neighbourhood matches that filter.</p>
+{% endblock %}
+{% block scripts %}<script>
+(function () {
+  const el = document.getElementById('all-map');
+  if (!el || !window.L) return;
+  const known = new Map([...document.querySelectorAll('#hood-grid li a')].map(a => [a.getAttribute('href').split('/').pop().replace('.html', ''), a.getAttribute('href')]));
+  fetch(el.dataset.src).then(r => r.ok ? r.json() : Promise.reject(r.status)).then(fc => {
+    const map = L.map(el, {scrollWheelZoom: false, zoomSnap: 0.25});
+    if (el.dataset.tiles === 'yes') L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, referrerPolicy: 'strict-origin-when-cross-origin',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+    const layer = L.geoJSON(fc, {
+      style: f => ({color: '#0c2242', weight: 1, fillColor: '#1f4e8c', fillOpacity: known.has(f.properties.id) ? 0.06 : 0, opacity: known.has(f.properties.id) ? 0.9 : 0.3}),
+      onEachFeature: (f, lyr) => {
+        lyr.bindTooltip(f.properties.name, {sticky: true});
+        const href = known.get(f.properties.id);
+        if (href) lyr.on('click', () => { location.href = href; });
+        lyr.on('mouseover', () => lyr.setStyle({weight: 3})); lyr.on('mouseout', () => lyr.setStyle({weight: 1}));
+      }
+    }).addTo(map);
+    map.fitBounds(layer.getBounds(), {padding: [4, 4]});
+  }).catch(() => { el.closest('figure').hidden = true; });
+})();
+</script><script>
+(function () {
+  const q = document.getElementById('hood-filter'), items = [...document.querySelectorAll('#hood-grid li')];
+  const ncoOnly = document.getElementById('nco-only');
+  const count = document.getElementById('hood-count'), none = document.getElementById('hood-none');
+  const total = count.textContent;
+  function apply() {
+    const t = q.value.trim().toLowerCase(), nco = ncoOnly.checked;
+    let n = 0;
+    items.forEach(li => { const ok = (!t || li.dataset.search.includes(t)) && (!nco || li.dataset.nco === '1'); li.hidden = !ok; n += ok; });
+    count.textContent = (t || nco) ? n + ' of ' + items.length + ' neighbourhoods' : total;
+    none.classList.toggle('hidden', n > 0);
+  }
+  q.addEventListener('input', apply);
+  ncoOnly.addEventListener('change', apply);
+})();
+</script>{% endblock %}

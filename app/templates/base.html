@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{% block html_lang %}en{% endblock %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}NeighbourBrief TO{% endblock %}</title>
+  {% if not offline %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&family=Noto+Sans+Gujarati:wght@400;700&family=Noto+Sans+Gurmukhi:wght@400;700&display=swap">
+  {% endif %}
+  <link rel="stylesheet" href="/static/app.css">
+  <!-- Pre-built Tailwind (tools/tailwind, `npm run build`); after app.css, the order the in-browser compiler used -->
+  <link rel="stylesheet" href="/static/tw.css">
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}bg-slate-50 text-slate-900{% endblock %}">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  {% block chrome %}
+  {% set path = request.url.path if request else '' %}
+  <header class="no-print text-white">
+    <div class="bg-brand-900">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center gap-3 flex-wrap">
+        <a href="{{ '/public' if public and not live_site else '/' }}" class="flex items-center gap-3">
+          <span aria-hidden="true" class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 ring-1 ring-white/25">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 10h16M4 15h10M4 20h7"/></svg>
+          </span>
+          <span class="leading-tight">
+            <span class="block text-xs font-semibold uppercase tracking-wider text-brand-100">Neighbourhood safety updates</span>
+            <span class="block text-xl font-bold tracking-tight">NeighbourBrief <span class="font-normal text-brand-100">TO</span></span>
+          </span>
+        </a>
+        {% if offline %}<span class="ms-auto text-xs rounded-full bg-amber-300 text-amber-950 px-2.5 py-1 font-semibold" title="Running from the saved demo snapshot; no internet used">Offline demo mode</span>{% endif %}
+      </div>
+    </div>
+    <nav aria-label="Main" class="bg-[#08182f]">
+      <div class="mx-auto max-w-6xl px-2 sm:px-4 flex flex-wrap sm:flex-nowrap gap-x-1 sm:overflow-x-auto text-sm font-semibold">
+        {% set items = [('/public', 'Home'), ('/neighbourhoods', 'Neighbourhoods'), ('/how-we-count', 'How we count'), ('/data-health', 'Data health'), ('/privacy-ai', 'Privacy and AI'), ('/accessibility', 'Accessibility')] if public and not live_site else [('/', 'Home'), ('/neighbourhoods', 'Neighbourhoods'), ('/check', 'Check my numbers'), ('/ask', 'Ask'), ('/how-we-count', 'How we count'), ('/data-health', 'Data health'), ('/privacy-ai', 'Privacy and AI')] if public else [('/', 'Home'), ('/new', 'Make a bulletin'), ('/history', 'Saved bulletins'), ('/neighbourhoods', 'Neighbourhoods'), ('/check', 'Check my numbers'), ('/how-we-count', 'How we count'), ('/help', 'Help'), ('/status', 'Status')] %}
+        {% for href, label in items %}
+        {% set on = (path == href) or (href != '/' and path.startswith(href)) or (href == '/new' and (path.startswith('/review') or path.startswith('/publish'))) %}
+        <a href="{{ href }}" class="nav-link {% if on %}nav-link-on{% endif %}" {% if on %}aria-current="page"{% endif %}>{{ label }}</a>
+        {% endfor %}
+      </div>
+    </nav>
+  </header>
+  {% endblock %}
+  <main id="main" tabindex="-1" class="{% block main_class %}mx-auto max-w-6xl px-4 py-6{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+  {% block footer %}
+  <footer class="no-print mt-8 border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-6 text-xs text-slate-600 flex flex-wrap gap-x-6 gap-y-2">
+      <nav aria-label="Footer" class="flex flex-wrap gap-x-4 gap-y-1">
+        <a class="underline" href="/how-we-count">How we count</a>
+        <a class="underline" href="/how-we-count#data">Data sources</a>
+        <a class="underline" href="/data-health">Data health</a>
+        <a class="underline" href="/privacy-ai">Privacy and AI</a>
+        {% if not public %}<a class="underline" href="/impact">Impact</a>{% endif %}
+        {% if public %}<a class="underline" href="/accessibility">Accessibility</a>{% else %}<a class="underline" href="/status">Status</a>{% endif %}
+        <span>Code: MIT licence</span>
+      </nav>
+      {% if public and publisher.name %}<p class="w-full text-slate-700">Published by <strong>{{ publisher.name }}</strong>{% if publisher.contact %} · {{ publisher.contact }}{% endif %}.</p>{% endif %}
+      <p class="w-full">Prototype built on Toronto Police Service and City of Toronto open data.
+        Contains information licensed under the <a class="underline" href="https://www.ontario.ca/page/open-government-licence-ontario">Open Government Licence – Ontario</a>
+        and the <a class="underline" href="https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-licence/">Open Government Licence – Toronto</a>. The data is provided as is, without warranty.
+        Not affiliated with or endorsed by the Toronto Police Service or the City of Toronto.</p>
+    </div>
+  </footer>
+  {% endblock %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

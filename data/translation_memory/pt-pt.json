@@ -1,0 +1,362 @@
+{
+ "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Assaults: {0} reports in October. {1} this year, {2}% less than {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Assaults: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in October. 66 this year, down 7% from 71 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Agressões: {0} relatórios em outubro. {1} este ano, {2}% menos do que {3} por esta altura no ano passado."
+ },
+ "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Assaults: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 8 reports in September. 66 this year, down 28% from 92 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Agressões: {0} relatórios em setembro. {1} este ano, {2}% abaixo do {3} por esta altura do ano passado."
+ },
+ "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Assaults: {0} reports in September. {1} this year, a {2}% increase from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 3 reports in September. 57 this year, up 58% from 36 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Agressões: {0} relatórios em setembro. {1} este ano, um aumento {2}% face a {3} nesta altura do ano passado."
+ },
+ "Bike thefts: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Bicycle thefts: {0} report in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} report in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 1 report in September. 5 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatório em setembro. {1} este ano, comparado com {2} por esta altura no ano passado."
+ },
+ "Bike thefts: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Bicycle thefts: {0} report in September. {1} this year, {2}% less than {3} by this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} report in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 1 report in September. 15 this year, down 21% from 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatório em setembro. {1} este ano, {2}% menos do que {3} por esta altura no ano passado."
+ },
+ "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle thefts: {0} reports in October. {1} this year, {2}% less than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Bike thefts: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 2 reports in October. 14 this year, down 58% from 33 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatórios em outubro. {1} este ano, {2}% menos do que {3} por esta altura no ano passado."
+ },
+ "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,one": {
+  "back": "Bicycle thefts: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in September. 7 this year, compared with 1 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatórios em setembro. {1} este ano, comparado com {2} nesta altura no ano passado."
+ },
+ "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle thefts: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in September. 4 this year, compared with 10 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatórios em setembro. {1} este ano, comparado com {2} nesta altura no ano passado."
+ },
+ "Bike thefts: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle thefts: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 5 reports in September. 14 this year, down 22% from 18 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatórios em setembro. {1} este ano, {2}% abaixo do {3} por esta altura do ano passado."
+ },
+ "Bike thefts: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Bicycle thefts: {0} reports in September. {1} this year, a {2}% increase compared to {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Bike thefts: 6 reports in September. 32 this year, up 19% from 27 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos de bicicletas: {0} relatórios em setembro. {1} este ano, um aumento {2}% face a {3} nesta altura do ano passado."
+ },
+ "Break-ins: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Break-ins: {0} report in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} report in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 1 report in September. 5 this year, compared with 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Arrombamentos: {0} relatório em setembro. {1} este ano, comparado com {2} por esta altura no ano passado."
+ },
+ "Break-ins: {0} report in September. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Break-ins: {0} report in September. {1} this year, {2}% more than {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} report in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in September. 20 this year, up 11% from 18 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Arrombamentos: {0} relatório em setembro. {1} este ano, mais {2}% do que {3} por esta altura do ano passado."
+ },
+ "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Break-ins: {0} reports in October. {1} this year, {2}% less than {3} by this time last year.",
+  "created": "2026-11-13",
+  "en": "Break-ins: {0} reports in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 29 this year, down 3% from 30 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Arrombamentos: {0} relatórios em outubro. {1} este ano, {2}% menos do que {3} por esta altura no ano passado."
+ },
+ "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Break-ins: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 0 reports in September. 10 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Arrombamentos: {0} relatórios em setembro. {1} este ano, comparado com {2} nesta altura no ano passado."
+ },
+ "Break-ins: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Break-ins: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 2 reports in September. 11 this year, down 48% from 21 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Arrombamentos: {0} relatórios em setembro. {1} este ano, {2}% abaixo do {3} por esta altura do ano passado."
+ },
+ "Break-ins: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Break-ins: {0} reports in September. {1} this year, a {2}% increase from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 3 reports in September. 16 this year, up 23% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Arrombamentos: {0} relatórios em setembro. {1} este ano, um aumento {2}% face a {3} nesta altura do ano passado."
+ },
+ "Homicides: {0} reports in September. {1} this year. |other,one": {
+  "back": "Homicides: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Homicídios: {0} relatórios em setembro. {1} este ano."
+ },
+ "Homicides: {0} reports in September. {1} this year. |other,other": {
+  "back": "Homicides: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Homicídios: {0} relatórios em setembro. {1} este ano."
+ },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In October, there were {0} reports to the police in {name} A report to the police does not mean that anyone has been charged.",
+  "created": "2026-11-13",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 12 reports to police in Palmerston-Little Italy. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Em outubro, houve {0} denúncias à polícia em {name} Uma denúncia à polícia não significa que alguém tenha sido acusado."
+ },
+ "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In September, there were {0} reports to the police in {name}. A report to the police does not mean that someone has been charged.",
+  "created": "2026-10-24",
+  "en": "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In September, there were 6 reports to police in Beechborough-Greenbrook. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Em setembro, houve {0} denúncias à polícia em {name}. Uma denúncia à polícia não significa que alguém tenha sido acusado."
+ },
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Contact your local police division, listed below. In case of emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Perguntas? Contacte a sua divisão policial local, indicada abaixo. Em caso de emergência, ligue para {0}."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Talk to your Neighborhood Community Officers, listed below. In case of emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Perguntas? Fale com os seus Agentes Comunitários de Bairro, listados abaixo. Em caso de emergência, ligue para {0}."
+ },
+ "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Robberies: {0} report in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in September. 3 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Roubos: {0} relatório em setembro. {1} este ano, comparado com {2} por esta altura no ano passado."
+ },
+ "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robberies: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Robberies: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in October. 7 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Roubos: {0} relatórios em outubro. {1} este ano, comparado com {2} por esta altura no ano passado."
+ },
+ "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robberies: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 2 reports in September. 12 this year, compared with 9 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Roubos: {0} relatórios em setembro. {1} este ano, comparado com {2} nesta altura no ano passado."
+ },
+ "Shootings: {0} reports in October. {1} this year. |other,one": {
+  "back": "Shootings: {0} reports in October. {1} this year.",
+  "created": "2026-11-13",
+  "en": "Shootings: {0} reports in October. {1} this year.",
+  "example": "Shootings: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Tiroteios: {0} relatórios em outubro. {1} este ano."
+ },
+ "Shootings: {0} reports in September. {1} this year. |other,one": {
+  "back": "Shootings: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} reports in September. {1} this year.",
+  "example": "Shootings: 0 reports in September. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Tiroteios: {0} relatórios em setembro. {1} este ano."
+ },
+ "Shootings: {0} reports in September. {1} this year. |other,other": {
+  "back": "Shootings: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} reports in September. {1} this year.",
+  "example": "Shootings: 0 reports in September. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Tiroteios: {0} relatórios em setembro. {1} este ano."
+ },
+ "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in September. {1} this year, {2}% more than {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in September. 23 this year, up 10% from 21 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Veículos furtados: {0} relatório em setembro. {1} este ano, mais {2}% do que {3} por esta altura do ano passado."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in September. 6 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Veículos furtados: {0} relatórios em setembro. {1} este ano, comparado com {2} nesta altura no ano passado."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 5 reports in September. 71 this year, down 5% from 75 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Veículos furtados: {0} relatórios em setembro. {1} este ano, {2}% abaixo do {3} por esta altura do ano passado."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, an increase of {2}% compared to {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in September. 17 this year, up 31% from 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Veículos furtados: {0} relatórios em setembro. {1} este ano, um aumento {2}% face a {3} nesta altura do ano passado."
+ },
+ "Theft from vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Vehicle thefts: {0} report in September. {1} this year, {2}% less than {3} by this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in September. 20 this year, down 9% from 22 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos em veículos: {0} relatório em setembro. {1} este ano, {2}% menos do que {3} por esta altura no ano passado."
+ },
+ "Theft from vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Vehicle thefts: {0} report in September. {1} this year, {2}% more than {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in September. 12 this year, up 20% from 10 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos em veículos: {0} relatório em setembro. {1} este ano, mais {2}% do que {3} por esta altura do ano passado."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Vehicle thefts: {0} reports in October. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-11-13",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 3 reports in October. 28 this year, up 65% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos em veículos: {0} relatórios em outubro. {1} este ano, {2}% acima de {3} por esta altura do ano passado."
+ },
+ "Theft from vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Vehicle thefts: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 4 reports in September. 16 this year, compared with 6 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos em veículos: {0} relatórios em setembro. {1} este ano, comparado com {2} nesta altura no ano passado."
+ },
+ "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Vehicle thefts: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 0 reports in September. 14 this year, down 39% from 23 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos em veículos: {0} relatórios em setembro. {1} este ano, {2}% abaixo do {3} por esta altura do ano passado."
+ },
+ "Theft from vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Vehicle thefts: {0} reports in September. {1} this year, a {2}% increase compared to {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 3 reports in September. 40 this year, up 25% from 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furtos em veículos: {0} relatórios em setembro. {1} este ano, um aumento {2}% face a {3} nesta altura do ano passado."
+ },
+ "{name}: safety update for October {0} |other": {
+  "back": "{name}: Security Update for October {0}",
+  "created": "2026-11-13",
+  "en": "{name}: safety update for October {0}",
+  "example": "Palmerston-Little Italy: safety update for October 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: atualização de segurança para outubro de {0}"
+ },
+ "{name}: safety update for September {0} |other": {
+  "back": "{name}: Security update for September {0}",
+  "created": "2026-10-24",
+  "en": "{name}: safety update for September {0}",
+  "example": "Beechborough-Greenbrook: safety update for September 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: atualização de segurança para setembro de {0}"
+ }
+}

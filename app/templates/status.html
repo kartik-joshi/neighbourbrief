@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Status · NeighbourBrief TO{% endblock %}
+{% block content %}
+{% set icon = {'ok': '✅', 'warn': '⚠️', 'fail': '❌', 'info': 'ℹ️'} %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand-600">Pre-flight check</p>
+    <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">
+      {% if st.overall == 'ok' %}Ready for your meeting{% elif st.overall == 'warn' %}Ready, with things to check{% else %}Something needs fixing{% endif %}
+    </h1>
+    <p class="mt-1 text-slate-600">Checked {{ st.checked_at|fmt_dt }} · <a class="text-brand-700 underline" href="/status">Check again</a></p>
+  </div>
+  <span class="pill {{ 'bg-emerald-100 text-emerald-900' if st.overall == 'ok' else 'bg-amber-100 text-amber-900' if st.overall == 'warn' else 'bg-red-100 text-red-900' }}">{{ icon[st.overall] }} {{ st.overall|upper }}</span>
+</div>
+<ul class="mt-6 grid gap-3" style="grid-template-columns: minmax(0, 1fr)">
+  {% for i in st['items'] %}
+  <li class="card min-w-0 flex gap-3" data-state="{{ i.state }}">
+    <span class="text-xl leading-6" aria-hidden="true">{{ icon[i.state] }}</span>
+    <div class="min-w-0">
+      <p class="font-semibold text-ink">{{ i.name }} <span class="sr-only">({{ i.state }})</span></p>
+      <p class="text-sm text-slate-700">{{ i.detail }}</p>
+      {% if i.fix %}<p class="mt-1 text-sm text-brand-800"><strong>What to do:</strong> {% if 'Run: ' in i.fix or i.fix.startswith('.venv') %}{% set parts = i.fix.split('Run: ') %}{{ parts[0] }}<code class="break-all rounded bg-slate-100 px-1">{{ parts[-1] }}</code>{% else %}{{ i.fix }}{% endif %}</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+<section id="offline" class="card mt-8">
+  <h2 class="font-semibold text-ink">Neighbourhoods available offline</h2>
+  <p class="text-sm text-slate-600">If the meeting venue's Wi-Fi is unreliable, save your neighbourhood's data now. In offline mode (<code>DEMO_OFFLINE=true</code>) the app works from these saved copies.</p>
+  {% if saved %}<p class="mt-3 rounded-lg bg-emerald-50 px-3 py-2 text-sm text-emerald-900" role="status">✅ Saved {{ saved }} for offline use.</p>{% endif %}
+  {% if error %}<p class="mt-3 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-900" role="alert">{{ error }}</p>{% endif %}
+  {% if offline_hoods %}
+  <ul class="mt-3 flex flex-wrap gap-2 text-sm">
+    {% for hid, h in offline_hoods.items() %}<li class="pill bg-slate-100 text-slate-800">{{ h.name }}{% if h.date %} · {{ h.date }}{% endif %}</li>{% endfor %}
+  </ul>
+  {% endif %}
+  {% if not offline %}
+  <form method="post" action="/offline/save" class="mt-4 flex flex-wrap gap-2" id="offline-form">
+    <label for="offline-hood" class="sr-only">Neighbourhood</label>
+    <input id="offline-hood" name="neighbourhood" list="offline-hood-list" required class="input sm:w-80" placeholder="Neighbourhood, e.g. Steeles" autocomplete="off">
+    <datalist id="offline-hood-list">{% for h in hoods %}<option value="{{ h.name }}">{% endfor %}</datalist>
+    <button type="submit" class="btn-primary">Save for offline</button>
+  </form>
+  <script>document.getElementById('offline-form').addEventListener('submit', e => { const b = e.target.querySelector('button'); b.disabled = true; b.textContent = 'Downloading…'; });</script>
+  {% endif %}
+</section>
+{% endblock %}

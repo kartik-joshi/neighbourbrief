@@ -1,0 +1,773 @@
+{
+ "id": "demo-milliken-2026-09",
+ "created_at": "2026-10-24T14:20:49-04:00",
+ "status": "published",
+ "facts": {
+  "neighbourhood": {
+   "id": "130",
+   "name": "Milliken",
+   "division_code": "D42",
+   "division": "42 Division"
+  },
+  "period": {
+   "month_label": "September 2026",
+   "month_start": "2026-09-01",
+   "month_end": "2026-09-30",
+   "month_number": 9,
+   "month_last_day": 30,
+   "days_in_month": 30,
+   "year": 2026,
+   "prev_year": 2025,
+   "ytd_label": "January 1 – September 30, 2026",
+   "ytd_prev_label": "January 1 – September 30, 2025",
+   "basis": "report date (when the report was made to police), Toronto time"
+  },
+  "categories": [
+   {
+    "key": "Assault",
+    "label": "Assaults",
+    "month": 10,
+    "ytd": 60,
+    "ytd_prev": 56,
+    "pct_change": 7,
+    "direction": "up",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Break and Enter",
+    "label": "Break-ins",
+    "month": 6,
+    "ytd": 57,
+    "ytd_prev": 46,
+    "pct_change": 24,
+    "direction": "up",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Auto Theft",
+    "label": "Stolen vehicles",
+    "month": 8,
+    "ytd": 78,
+    "ytd_prev": 93,
+    "pct_change": -16,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Theft from Motor Vehicle",
+    "label": "Theft from vehicles",
+    "month": 10,
+    "ytd": 74,
+    "ytd_prev": null,
+    "pct_change": null,
+    "direction": null,
+    "counts_only": false,
+    "mci": false
+   },
+   {
+    "key": "Robbery",
+    "label": "Robberies",
+    "month": 1,
+    "ytd": 17,
+    "ytd_prev": 19,
+    "pct_change": -11,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Theft Over",
+    "label": "Thefts over $5,000",
+    "month": 4,
+    "ytd": 18,
+    "ytd_prev": 23,
+    "pct_change": -22,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Bike Theft",
+    "label": "Bike thefts",
+    "month": 1,
+    "ytd": 3,
+    "ytd_prev": null,
+    "pct_change": null,
+    "direction": null,
+    "counts_only": false,
+    "mci": false
+   },
+   {
+    "key": "Shooting",
+    "label": "Shootings",
+    "month": 0,
+    "ytd": 2,
+    "ytd_prev": null,
+    "pct_change": null,
+    "direction": null,
+    "counts_only": true,
+    "mci": false
+   },
+   {
+    "key": "Homicide",
+    "label": "Homicides",
+    "month": 0,
+    "ytd": 1,
+    "ytd_prev": null,
+    "pct_change": null,
+    "direction": null,
+    "counts_only": true,
+    "mci": false
+   }
+  ],
+  "display": [
+   "Assault",
+   "Break and Enter",
+   "Auto Theft",
+   "Theft from Motor Vehicle",
+   "Shooting",
+   "Homicide"
+  ],
+  "totals": {
+   "month": 40,
+   "ytd": 310
+  },
+  "excluded": [
+   "Sexual Violation"
+  ],
+  "nco": {
+   "has_nco": false,
+   "officers": [],
+   "division": {
+    "name": "42 Division",
+    "phone": "416-808-4200",
+    "address": "242 Milner Av E",
+    "email": "42division@torontopolice.on.ca"
+   }
+  },
+  "services": [
+   {
+    "id": "69800230",
+    "name": "Council of Agencies Serving South Asians",
+    "category": "Newcomers-Ethnocultural",
+    "address": "5200 Finch Ave E",
+    "phone": "416-932-1359",
+    "lat": 43.81036,
+    "lon": -79.25749
+   },
+   {
+    "id": "69794191",
+    "name": "Agincourt Pentecostal Church Community Connections Food Bank",
+    "category": "Food",
+    "address": "Agincourt Church; 2885 Kennedy Rd",
+    "phone": "416-291-9575",
+    "lat": 43.80274,
+    "lon": -79.29682
+   },
+   {
+    "id": "69795995",
+    "name": "Mount Sinai Hospital: Wellness Centre",
+    "category": "Seniors",
+    "address": "3660 Midland Ave",
+    "phone": "416-291-3883",
+    "lat": 43.81354,
+    "lon": -79.29224
+   },
+   {
+    "id": "71408567",
+    "name": "Carefirst Seniors and Community Services Association: Silver Star Blvd",
+    "category": "Health",
+    "address": "300 Silver Star Blvd",
+    "phone": "416-646-6108",
+    "lat": 43.81257,
+    "lon": -79.29493
+   },
+   {
+    "id": "69799422",
+    "name": "CPAC",
+    "category": "Newcomers-Ethnocultural",
+    "address": "4150 Finch Ave E",
+    "phone": "416-298-7885",
+    "lat": 43.80364,
+    "lon": -79.28955
+   },
+   {
+    "id": "69799021",
+    "name": "Senior Tamils' Centre",
+    "category": "Seniors",
+    "address": "5200 Finch Ave E",
+    "phone": "416-496-2897",
+    "lat": 43.81036,
+    "lon": -79.25749
+   },
+   {
+    "id": "69797351",
+    "name": "New Canadian Community Centre",
+    "category": "Newcomers-Ethnocultural",
+    "address": "3241 Kennedy Rd",
+    "phone": "416-850-6630",
+    "lat": 43.81688,
+    "lon": -79.30263
+   },
+   {
+    "id": "69801641",
+    "name": "North American Muslim Foundation",
+    "category": "Newcomers-Ethnocultural",
+    "address": "4140 Finch Ave E",
+    "phone": "416-299-1969",
+    "lat": 43.80375,
+    "lon": -79.2903
+   },
+   {
+    "id": "69799807",
+    "name": "Polycultural Immigrant and Community Services: Polycultural Immigra…",
+    "category": "Newcomers-Ethnocultural",
+    "address": "3660-A Midland Ave",
+    "phone": "416-439-1293",
+    "lat": 43.81365,
+    "lon": -79.29206
+   },
+   {
+    "id": "69797159",
+    "name": "SEAS Centre: SEAS Centre, Scarborough Centre and Administration Office",
+    "category": "Newcomers-Ethnocultural",
+    "address": "4168 Finch Ave E",
+    "phone": "416-519-5320",
+    "lat": 43.80376,
+    "lon": -79.28889
+   }
+  ],
+  "languages": [
+   {
+    "language": "Cantonese",
+    "code": "zh-Hant",
+    "share": 33.7
+   },
+   {
+    "language": "Mandarin",
+    "code": "zh-Hans",
+    "share": 20.8
+   },
+   {
+    "language": "Tamil",
+    "code": "ta",
+    "share": 4.6
+   }
+  ],
+  "freshness": {
+   "tps_updated": "2026-10-24T12:12:10.273000-04:00",
+   "tps_updated_label": "October 24, 2026, 12:12 p.m.",
+   "latest_report_date": "2026-10-23",
+   "fetched_at": "2026-10-24T14:20:12-04:00"
+  },
+  "source": {
+   "name": "Toronto Police Service Public Safety Data Portal",
+   "licence": "Open Government Licence – Ontario",
+   "layers": [
+    "YTD_CRIME_WM",
+    "Major_Crime_Indicators_Open_Data",
+    "NCO_Neighbourhoods_WM_A",
+    "Community_Assets_TO"
+   ],
+   "attribution": "Prototype built on Toronto Police Service open data (Open Government Licence – Ontario). Not affiliated with or endorsed by the Toronto Police Service."
+  },
+  "data_warnings": [],
+  "allowed_numbers": [
+   "0",
+   "1",
+   "2",
+   "3",
+   "4",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "16",
+   "17",
+   "18",
+   "19",
+   "22",
+   "23",
+   "24",
+   "30",
+   "40",
+   "42",
+   "46",
+   "56",
+   "57",
+   "60",
+   "74",
+   "78",
+   "93",
+   "310",
+   "911",
+   "2025",
+   "2026",
+   "5000"
+  ]
+ },
+ "officer": {
+  "priority": "Vehicles stolen from driveways overnight.",
+  "action_taken": "More overnight patrols on residential streets and anti-theft tips shared at 3 community events.",
+  "meeting_note": "Thursday, November 12 at 6:30 p.m., Milliken branch, Toronto Public Library",
+  "tip": "Park in a garage or a well-lit spot, and consider a steering wheel lock.",
+  "prev_priority": "Vehicles stolen from driveways overnight.",
+  "followup": "Overnight patrols started on the streets residents named at the last meeting.",
+  "tip_id": "car-theft",
+  "followup_status": "ongoing",
+  "meeting": {
+   "date": "2026-11-12",
+   "time": "18:30",
+   "place": "Milliken branch, Toronto Public Library"
+  }
+ },
+ "officer_warnings": [],
+ "languages": [
+  "zh-Hant",
+  "zh-Hans",
+  "ta"
+ ],
+ "english": {
+  "headline": "Milliken Neighbourhood Safety Bulletin - September 2026",
+  "summary": "There were 40 reports to police this month. A report to police does not mean anyone was charged.",
+  "bullets": [
+   "Assaults: 10 reports in September. 60 this year, up 7% from 56 by this time last year.",
+   "Break-ins: 6 reports in September. 57 this year, up 24% from 46 by this time last year.",
+   "Stolen vehicles: 8 reports in September. 78 this year, down 16% from 93 by this time last year.",
+   "Theft from vehicles: 10 reports in September. 74 this year.",
+   "Shootings: 0 reports in September. 2 this year.",
+   "Homicides: 0 reports in September. 1 this year."
+  ],
+  "officer_section": "This month's priority: Vehicles stolen from driveways overnight.\nWhat we did: More overnight patrols on residential streets and anti-theft tips shared at 3 community events.",
+  "closing": "The next community meeting is Thursday, November 12 at 6:30 p.m., Milliken branch, Toronto Public Library. Tip: Park in a garage or a well-lit spot, and consider a steering wheel lock. In an emergency, call 911.",
+  "followup": "Since last month: Overnight patrols started on the streets residents named at the last meeting. We are still working on it."
+ },
+ "draft_source": "ai",
+ "draft_note": "AI draft (36.9 s)",
+ "draft_info": {
+  "attempts": 1,
+  "errors": [],
+  "seconds": 36.9
+ },
+ "translations": {
+  "zh-Hant": {
+   "doc": {
+    "headline": "米利肯社區安全公告 - 2026年9月",
+    "summary": "本月警方接獲 40 通報案。報警並不代表有人被起訴。",
+    "bullets": [
+     "攻擊事件：九月有10報告。今年60，比去年同期的56增加了7%。",
+     "入室盜竊：九月有6報告。57今年，比去年同期的46增加了24%。",
+     "失竊車輛：九月有8報告。今年78，較去年同期的93下降16%。",
+     "車輛盜竊： 10 報告於九月。今年 74 。",
+     "槍擊事件：九月有 0 報告。今年 2 。",
+     "兇殺案：九月有 0 報告。今年 1 。"
+    ],
+    "officer_section": "本月優先事項：夜間從車道被竊的車輛。\n我們的行動：在住宅區街道進行更多夜間巡邏，並在社區活動中分享防盜技巧 3 。",
+    "closing": "下一次社區會議將於11月 12 日星期四晚上 6:30 點，在多倫多公共圖書館米利肯分館舉行。小提醒：請將車停在車庫或光線充足的地方，並考慮安裝方向盤鎖。緊急狀況時，請致電 911。",
+    "followup": "自上個月起：上次會議中居民點名的街道開始夜間巡邏。我們仍在努力中。"
+   },
+   "note": "Fixed the order of a month and year.",
+   "engine": "azure",
+   "attempts": 1,
+   "problems": [],
+   "engine_label": "Azure Translator",
+   "seconds": 15.6,
+   "script_ok": true,
+   "translated_at": "2026-10-24T14:21:04-04:00",
+   "back": {
+    "doc": {
+     "headline": "Milliken Community Safety Bulletin - September 2026",
+     "summary": "This month, the police received 40 reports. Reporting does not mean someone is being prosecuted.",
+     "bullets": [
+      "Attack incidents: There were 10 reports in September. This year, 60 are reported, a 7% increase from 56 in the same period last year.",
+      "Burglaries: 6 reports in September. 57 this year, a 24% increase compared to 46 in the same period last year.",
+      "Stolen vehicles: There were 8 reports in September. This year, 78 were reported, down 16% from 93 in the same period last year.",
+      "Vehicle theft: 10 reported in September. This year, 74.",
+      "Shootings: 0 reported in September. 2 this year.",
+      "Homicide: 0 reports in September. 1 this year."
+     ],
+     "officer_section": "This month's priority: vehicles stolen from driveways at night. \nOur Actions: More nighttime patrols on residential streets and sharing anti-theft tips at community events.",
+     "closing": "The next community meeting will be held on Thursday, November 12, at 6:30 PM at the Milliken branch of the Toronto Public Library. A small reminder: Please park your car in a garage or well-lit area and consider installing a steering wheel lock. In case of emergency, call 911.",
+     "followup": "Since last month: the streets named by residents at the last meeting have begun nighttime patrols. We are still working hard."
+    },
+    "for": "8c291562dc7575da",
+    "at": "2026-10-24T14:21:05-04:00"
+   }
+  },
+  "zh-Hans": {
+   "doc": {
+    "headline": "米利肯社区安全公告 - 2026年9月",
+    "summary": "本月警方收到了 40 份报告。向警方举报并不意味着有人被起诉。",
+    "bullets": [
+     "袭击事件：9月有10报告。60今年，比去年同期的56增加了7%。",
+     "入室盗窃：九月有6报告。今年57，比去年同期的46增加了24%。",
+     "被盗车辆：8报告在九月。78今年，比去年同期的93下降了16%。",
+     "车辆盗窃： 10 报告在九月。 74 今年。",
+     "枪击事件： 0 报告在九月。今年 2 。",
+     "凶杀案：9月有 0 报告。今年 1 。"
+    ],
+    "officer_section": "本月重点：夜间从车道被盗车辆。\n我们的做法：在住宅街区进行更多夜间巡逻，并在社区活动中分享防盗小贴士 3 。",
+    "closing": "下一次社区会议将于11月 12 日星期四下午 6:30 点，在多伦多公共图书馆米利肯分馆举行。提示：将车停在车库或光线充足的地方，考虑安装方向盘锁。紧急情况下，请拨打 911。",
+    "followup": "自上个月起：上次会议上居民点名的街道开始夜间巡逻。我们还在努力。"
+   },
+   "note": "Fixed the order of a month and year.",
+   "engine": "azure",
+   "attempts": 1,
+   "problems": [],
+   "engine_label": "Azure Translator",
+   "seconds": 0.3,
+   "script_ok": true,
+   "translated_at": "2026-10-24T14:21:05-04:00",
+   "back": {
+    "doc": {
+     "headline": "Milliken Community Safety Bulletin - September 2026",
+     "summary": "This month, the police received 40 reports. Reporting to the police does not mean someone is being prosecuted.",
+     "bullets": [
+      "Attacks: 10 reported in September. 60 this year, a 7% increase from 56 in the same period last year.",
+      "Burglary: There were 6 reports in September. This year, 57 were reported, up 24% from 46 in the same period last year.",
+      "Stolen vehicles: 8 reported in September. 78 this year, a 16% decrease compared to 93 in the same period last year.",
+      "Vehicle theft: 10 reports in September. 74 this year.",
+      "Shootings: 0 reported in September. 2 this year.",
+      "Homicide: 0 reports in September. 1 this year."
+     ],
+     "officer_section": "This month's focus: Vehicles stolen from driveways at night. \nOur approach: conduct more nighttime patrols in residential neighborhoods and share anti-theft tips at community events.",
+     "closing": "The next community meeting will be held on Thursday, November 12, at 6:30 PM at the Milliken branch of the Toronto Public Library. Tip: Park your car in a garage or well-lit area and consider installing a steering wheel lock. In case of emergency, call 911.",
+     "followup": "Since last month: the streets that residents named at the last meeting have started nighttime patrols. We are still working hard."
+    },
+    "for": "360b1f28585525c1",
+    "at": "2026-10-24T14:21:05-04:00"
+   }
+  },
+  "ta": {
+   "doc": {
+    "headline": "மில்லிக்கன் அண்டை பாதுகாப்பு புல்லட்டின் - செப்டம்பர் 2026",
+    "summary": "இந்த மாதம் காவல்துறைக்கு 40 புகார்கள் இருந்தன. காவல்துறைக்கு புகார் எவரும் குற்றம் சாட்டப்பட்டதாக அர்த்தமல்ல.",
+    "bullets": [
+     "தாக்குதல்கள்: செப்டம்பரில் 10 அறிக்கைகள். 60 இந்த ஆண்டு, கடந்த ஆண்டு இந்த நேரத்தில் 56 இலிருந்து 7% அதிகரித்துள்ளது.",
+     "பிரேக்-இன்ஸ்: செப்டம்பரில் 6 அறிக்கைகள். இந்த ஆண்டு 57, கடந்த ஆண்டு இதே நேரத்தில் 46 இலிருந்து 24% அதிகரித்துள்ளது.",
+     "திருடப்பட்ட வாகனங்கள்: செப்டம்பரில் 8 அறிக்கைகள். இந்த ஆண்டு 78, கடந்த ஆண்டு இதே நேரத்தில் 93 16% குறைந்துள்ளது.",
+     "வாகனங்களில் இருந்து திருட்டு: செப்டம்பரில் 10 அறிக்கைகள். இந்த ஆண்டு 74 .",
+     "துப்பாக்கிச் சூடு: செப்டம்பரில் 0 அறிக்கைகள். இந்த ஆண்டு 2 .",
+     "கொலைகள்: செப்டம்பரில் 0 அறிக்கைகள். இந்த ஆண்டு 1 ."
+    ],
+    "officer_section": "இந்த மாத முன்னுரிமை: ஒரே இரவில் டிரைவ்வேகளில் இருந்து திருடப்பட்ட வாகனங்கள். \nநாங்கள் என்ன செய்தோம்: குடியிருப்பு தெருக்களில் ஒரே இரவில் ரோந்து மற்றும் 3 சமூக நிகழ்வுகளில் பகிரப்பட்ட திருட்டு எதிர்ப்பு உதவிக்குறிப்புகள்.",
+    "closing": "அடுத்த சமூகக் கூட்டம் நவம்பர் 12 வியாழக்கிழமை மாலை 6:30 மணிக்கு, மில்லிகன் கிளை, டொராண்டோ பொது நூலகம். உதவிக்குறிப்பு: ஒரு கேரேஜ் அல்லது நன்கு ஒளிரும் இடத்தில் நிறுத்தி, ஸ்டீயரிங் வீல் பூட்டைக் கவனியுங்கள். அவசரகாலத்தில், 911ஐ அழைக்கவும்.",
+    "followup": "கடந்த மாதம் முதல்: கடந்த கூட்டத்தில் குடியிருப்பாளர்கள் பெயரிடப்பட்ட தெருக்களில் ஒரே இரவில் ரோந்து தொடங்கியது. நாங்கள் இன்னும் அதில் பணியாற்றி வருகிறோம்."
+   },
+   "note": "",
+   "engine": "azure",
+   "attempts": 1,
+   "problems": [],
+   "engine_label": "Azure Translator",
+   "seconds": 0.7,
+   "script_ok": true,
+   "translated_at": "2026-10-24T14:21:06-04:00",
+   "back": {
+    "doc": {
+     "headline": "Milliken Neighborhood Safety Bulletin - September 2026",
+     "summary": "The police had 40 complaints this month. A complaint to the police does not mean that anyone has been charged.",
+     "bullets": [
+      "Attacks: 10 reports in September. 60% increase this year, up from 56 at this time last year.",
+      "Break-ins: 6 reports in September. 57 this year, up 24% from 46 at the same time last year.",
+      "Stolen vehicles: 8 reports in September. This year, a decrease of 78, 93 at the same time last year, is down 16%.",
+      "Theft from vehicles: 10 reports in September. This year 74 .",
+      "Firing: 0 reports in September. This year 2 .",
+      "Homicides: 0 reports in September. 1 this year."
+     ],
+     "officer_section": "This month's priority: Vehicles stolen from driveways overnight.  \nWhat we did: Overnight patrols on residential streets and shared anti-theft tips at 3 community events.",
+     "closing": "The next community gathering is Thursday, Nov. 12 at 6:30 p.m., Milligan Branch, Toronto Public Library. Tip: Stop in a garage or well-lit area and watch for the steering wheel lock. In an emergency, call 911.",
+     "followup": "Since last month: The overnight patrol of the streets named by the residents at the last meeting began. We are still working on it."
+    },
+    "for": "009703d694d8886f",
+    "at": "2026-10-24T14:21:06-04:00"
+   }
+  }
+ },
+ "services_shown": [
+  "69800230",
+  "69794191",
+  "69795995",
+  "71408567"
+ ],
+ "signoff": "",
+ "author": "",
+ "manual_override": false,
+ "timings": {
+  "draft_seconds": 36.9,
+  "draft_model": "gemma3:12b (local)",
+  "translate_seconds": {
+   "zh-Hant": 15.6,
+   "zh-Hans": 0.3,
+   "ta": 0.7
+  }
+ },
+ "verification": {
+  "en": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "2026",
+     "40",
+     "10",
+     "60",
+     "7",
+     "56",
+     "6",
+     "57",
+     "24",
+     "46",
+     "8",
+     "78",
+     "16",
+     "93",
+     "10",
+     "74",
+     "0",
+     "2",
+     "0",
+     "1",
+     "3",
+     "12",
+     "6",
+     "30",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Latin"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": false,
+    "ok": true,
+    "issues": []
+   }
+  },
+  "zh-Hant": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "2026",
+     "40",
+     "10",
+     "60",
+     "56",
+     "7",
+     "6",
+     "57",
+     "46",
+     "24",
+     "8",
+     "78",
+     "93",
+     "16",
+     "10",
+     "74",
+     "0",
+     "2",
+     "0",
+     "1",
+     "3",
+     "12",
+     "6",
+     "30",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Han"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": true,
+    "ok": true,
+    "issues": [],
+    "stale": false
+   }
+  },
+  "zh-Hans": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "2026",
+     "40",
+     "10",
+     "60",
+     "56",
+     "7",
+     "6",
+     "57",
+     "46",
+     "24",
+     "8",
+     "78",
+     "93",
+     "16",
+     "10",
+     "74",
+     "0",
+     "2",
+     "0",
+     "1",
+     "3",
+     "12",
+     "6",
+     "30",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Han"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": true,
+    "ok": true,
+    "issues": [],
+    "stale": false
+   }
+  },
+  "ta": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "2026",
+     "40",
+     "10",
+     "60",
+     "56",
+     "7",
+     "6",
+     "57",
+     "46",
+     "24",
+     "8",
+     "78",
+     "93",
+     "16",
+     "10",
+     "74",
+     "0",
+     "2",
+     "0",
+     "1",
+     "3",
+     "12",
+     "6",
+     "30",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Tamil"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": true,
+    "ok": true,
+    "issues": [],
+    "stale": false
+   }
+  }
+ },
+ "audit": [
+  {
+   "at": "2026-10-24T14:20:49-04:00",
+   "action": "drafted",
+   "who": "",
+   "role": "Author",
+   "detail": "AI draft for September 2026"
+  },
+  {
+   "at": "2026-10-24T14:21:06-04:00",
+   "action": "published",
+   "who": "",
+   "role": "",
+   "detail": "Published without a second check"
+  }
+ ],
+ "updated_at": "2026-10-24T14:21:06-04:00",
+ "job": {
+  "status": "done",
+  "started": 1792866049.127496,
+  "engine": "Azure Translator",
+  "langs": {
+   "zh-Hant": {
+    "status": "done",
+    "started": 1792866049.129336,
+    "seconds": 15.6
+   },
+   "zh-Hans": {
+    "status": "done",
+    "started": 1792866065.070254,
+    "seconds": 0.3
+   },
+   "ta": {
+    "status": "done",
+    "started": 1792866065.650321,
+    "seconds": 0.7
+   }
+  },
+  "todo": [
+   "zh-Hant",
+   "zh-Hans",
+   "ta"
+  ],
+  "finished": 1792866066.661534
+ },
+ "published_review": null,
+ "published_at": "2026-10-24T14:21:06-04:00",
+ "manual_override_langs": [],
+ "manual_override_content": [],
+ "demo": true
+}

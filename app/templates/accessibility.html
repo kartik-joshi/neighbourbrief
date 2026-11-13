@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Accessibility · NeighbourBrief TO{% endblock %}
+{% block content %}
+<div class="max-w-3xl">
+<h1 class="text-2xl sm:text-3xl font-bold text-ink">Accessibility statement</h1>
+<p class="mt-3 text-slate-700">NeighbourBrief aims to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at level AA, which is above what Ontario's AODA requires of public-sector websites (WCAG 2.0 AA).</p>
+<h2 class="mt-6 text-xl font-bold text-ink">What we do</h2>
+<ul class="mt-2 list-disc ps-6 space-y-1 text-slate-800">
+  <li>Every page is tested automatically with axe-core, on desktop and phone widths, before each release. The current release has no violations.</li>
+  <li>Keyboard: a "Skip to main content" link on every page, visible focus, and arrow keys between language tabs.</li>
+  <li>Bulletins come in a large-print version and print on one Letter page each in regular print.</li>
+  <li>Right-to-left languages (Urdu, Arabic, Pashto, Persian) are laid out right to left, with fonts made for their scripts.</li>
+  <li>Charts have a text description and a table with every number; colour is never the only signal.</li>
+  <li>Plain language: bulletins are written for about a Grade 6 reading level.</li>
+</ul>
+<h2 class="mt-6 text-xl font-bold text-ink">Known limits</h2>
+<ul class="mt-2 list-disc ps-6 space-y-1 text-slate-800">
+  <li>Translations are AI-assisted and say so on every page; a human review partner is being sought.</li>
+  <li>The neighbourhood map uses OpenStreetMap tiles; the same information (boundary and services) is listed in text next to it.</li>
+</ul>
+<h2 class="mt-6 text-xl font-bold text-ink">Tell us about a problem</h2>
+<p class="mt-2 text-slate-700">If something on this site is hard to use, please tell the community group that shared it with you, or open an issue on the project's code repository. We aim to reply within 5 business days.</p>
+<p class="mt-6 text-sm text-slate-600">Prototype built on Toronto Police Service open data. Not affiliated with or endorsed by the Toronto Police Service.</p>
+</div>
+{% endblock %}

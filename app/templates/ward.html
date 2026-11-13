@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ w.ward.label }} · NeighbourBrief TO{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="text-sm text-slate-600"><a class="underline" href="/wards">Wards</a> › Ward {{ w.ward.number }}</nav>
+<h1 class="mt-2 text-2xl sm:text-3xl font-bold text-ink">{{ w.ward.label }}</h1>
+<p class="mt-2 max-w-3xl text-slate-700">A brief for the ward's councillor and residents: {{ w.rows|length }} neighbourhoods, {{ w.period.month_label }}. Each neighbourhood has its own checked, plain-language bulletin you can share in newsletters, in the languages its residents speak.</p>
+{% for m in w.warnings %}<p class="mt-2 rounded bg-amber-50 px-3 py-2 text-sm text-amber-950" role="status">{{ m }}</p>{% endfor %}
+<section class="mt-6" aria-labelledby="wd-hoods">
+  <h2 id="wd-hoods" class="text-xl font-bold text-ink">Neighbourhoods (A to Z)</h2>
+  <div class="mt-3 card overflow-x-auto p-0" role="region" aria-label="Neighbourhoods in the ward" tabindex="0">
+    <table class="data-table"><thead><tr><th scope="col">Neighbourhood</th><th scope="col">In this ward</th><th scope="col" class="num">Reports, {{ w.period.month_label }}</th><th scope="col" class="num">So far in {{ w.period.year }}</th><th scope="col">Bulletin</th></tr></thead>
+      <tbody>{% for r in w.rows %}<tr>
+        <th scope="row"><a class="underline" href="/neighbourhoods/{{ r.id }}">{{ r.name }}</a><br><span class="text-xs font-normal text-slate-600">{{ r.division }}</span></th>
+        <td>{% if r.mostly %}{{ 'All' if r.share >= 95 else 'Mostly (' ~ r.share ~ '%)' }}{% else %}Partly ({{ r.share }}%){% endif %}{% if r.other_wards %}<br><span class="text-xs text-slate-600">also {% for n, name in r.other_wards %}<a class="underline" href="/wards/{{ n }}">Ward {{ n }}</a>{{ ', ' if not loop.last }}{% endfor %}</span>{% endif %}</td>
+        <td class="num">{{ r.month }}</td><td class="num">{{ r.ytd }}</td>
+        <td><a class="underline" href="{{ r.bulletin }}">Read</a>{% if r.by_officers %} <span class="text-xs text-slate-600">(from officers)</span>{% endif %}</td></tr>{% endfor %}</tbody></table>
+  </div>
+  <p class="mt-2 text-xs text-slate-600">Listed alphabetically on purpose: NeighbourBrief never ranks neighbourhoods. Each count is the whole neighbourhood's (reports to police, by report date); counts are not split by area or added into a ward total, because ward and neighbourhood boundaries don't line up. Share of area from City of Toronto ward and neighbourhood boundaries ({{ w.built }}).</p>
+</section>
+<section class="mt-8 card" aria-labelledby="wd-use">
+  <h2 id="wd-use" class="text-lg font-bold text-ink">Using this in a ward newsletter</h2>
+  <ul class="mt-2 list-disc ps-5 text-slate-700 space-y-1">
+    <li>Link to a neighbourhood's bulletin, or embed its card on the ward website (one line of HTML, on the public site's home page).</li>
+    <li>Paste your own text into {% if static_build %}"Check a text" on a neighbourhood's page{% else %}<a class="underline" href="/check">Check my numbers</a>{% endif %} before publishing: every number is checked against the same open data.</li>
+    <li>Police divisions covering this ward: {{ w.divisions|join(', ') }}. Questions about policing go to the division or the neighbourhood's officers, listed on each bulletin.</li>
+  </ul>
+</section>
+{% endblock %}

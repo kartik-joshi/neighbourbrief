@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}NeighbourBrief TO · Neighbourhood safety updates from open data{% endblock %}
+{% block main_class %}{% endblock %}
+{% block content %}
+<section class="band" aria-labelledby="hero-title">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+    <h1 id="hero-title" class="text-3xl sm:text-4xl font-bold max-w-3xl">Neighbourhood safety updates, in plain language and in residents' languages</h1>
+    <p class="mt-3 max-w-2xl text-brand-100 text-lg">A one-page monthly bulletin for community meetings and newsletters, built from Toronto Police Service open data. Every number is checked before anything is published.</p>
+    <form method="get" action="/new" class="mt-6 flex flex-wrap gap-2 max-w-2xl" role="search">
+      <label for="home-hood" class="sr-only">Neighbourhood</label>
+      <input id="home-hood" name="hood" list="home-hood-list" class="input text-lg flex-1 min-w-[14rem]" placeholder="Find your neighbourhood, e.g. Thorncliffe Park" autocomplete="off">
+      <datalist id="home-hood-list">{% for h in hoods %}<option value="{{ h.name }}">{% endfor %}</datalist>
+      <button type="submit" class="btn-primary text-lg bg-[#f2b705] border-[#f2b705] text-[#0c2242] hover:bg-[#ffd24d]">Start a bulletin</button>
+    </form>
+    <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-100">
+      <button type="button" class="underline font-semibold text-white" data-locate="home-hood" data-go="/new?hood=" aria-describedby="home-locate-note">📍 Use my location</button>
+      <span id="home-locate-note" role="status" aria-live="polite">Your location stays in this browser. It isn't sent or saved.</span>
+    </p>
+    {% if data_error %}<p class="mt-4 rounded-lg bg-red-50 px-4 py-2 text-sm text-red-900 max-w-2xl" role="alert">{{ data_error }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 py-8" aria-labelledby="tasks-title">
+  <h2 id="tasks-title" class="text-2xl font-bold text-ink text-center">What would you like to do?</h2>
+  <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="home-card">
+      <h3>Make a bulletin</h3>
+      <p>Turn this month's open data and your own words into a one-page bulletin, translated and checked.</p>
+      <a class="btn-primary" href="/new">Start</a>
+    </article>
+    <article class="home-card">
+      <h3>Saved bulletins</h3>
+      <p>Open, print or share a bulletin you've made. {{ stats.bulletins }} saved, {{ stats.published }} published.</p>
+      <a class="btn-secondary" href="/history">Open</a>
+    </article>
+    <article class="home-card">
+      <h3>Neighbourhood profiles</h3>
+      <p>All 158 neighbourhoods: crime reports, road safety, twelve years of trends, languages and local help, from eight open datasets (TPS and City of Toronto).</p>
+      <a class="btn-secondary" href="/neighbourhoods">Browse</a>
+    </article>
+    <article class="home-card">
+      <h3>Ask about a neighbourhood</h3>
+      <p>Ask in any language; answers come only from the checked open data, with sources and every number verified.</p>
+      <a class="btn-secondary" href="/ask">Ask</a>
+    </article>
+    <article class="home-card">
+      <h3>Check my numbers</h3>
+      <p>Paste a newsletter or post: every number is checked against open data, with the right category and direction.</p>
+      <a class="btn-secondary" href="/check">Check</a>
+    </article>
+    <article class="home-card">
+      <h3>How we count</h3>
+      <p>Where every number comes from, what's counted, and the rules that keep it fair.</p>
+      <a class="btn-secondary" href="/how-we-count">Read</a>
+    </article>
+    <article class="home-card">
+      <h3>Pre-flight check</h3>
+      <p>Before a meeting: check the data, the AI writer and the translator are ready.</p>
+      <a class="btn-secondary" href="/status">Run check</a>
+    </article>
+  </div>
+</section>
+
+<section class="bg-white border-y border-slate-200" aria-label="At a glance">
+  <dl class="mx-auto max-w-6xl px-4 py-6 grid gap-4 grid-cols-2 sm:grid-cols-4 text-center">
+    <div><dt class="text-sm text-slate-600">Toronto neighbourhoods</dt><dd class="text-3xl font-bold text-ink">{{ stats.neighbourhoods }}</dd></div>
+    <div><dt class="text-sm text-slate-600">Languages</dt><dd class="text-3xl font-bold text-ink">{{ stats.languages }}</dd></div>
+    <div><dt class="text-sm text-slate-600">Neighbourhoods with suggested languages</dt><dd class="text-3xl font-bold text-ink">{{ stats.with_languages }}</dd></div>
+    <div><dt class="text-sm text-slate-600">Numbers published unchecked</dt><dd class="text-3xl font-bold text-ink">0</dd></div>
+  </dl>
+</section>
+
+{% if monthly %}
+<section class="mx-auto max-w-6xl px-4 pt-8" aria-labelledby="month-title">
+  <h2 id="month-title" class="text-xl font-bold text-ink">{{ monthly.month }}: {% if monthly.todo %}{{ monthly.todo }} bulletin{{ 's' if monthly.todo != 1 }} to make{% else %}all done ✓{% endif %}</h2>
+  <p class="text-sm text-slate-600">{{ monthly.month }} is the latest complete month. Neighbourhoods you've made bulletins for (Start reuses last month's text and languages):</p>
+  <ul class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    {% for x in monthly.rows %}
+    <li class="card py-3 flex items-center justify-between gap-3">
+      <div><p class="font-semibold text-ink">{{ x.name }}</p>
+        <p class="text-sm text-slate-600">{% if x.current %}{{ monthly.month }}: {{ x.current.status }}{% else %}Last: {{ x.last_month }}{% endif %}</p></div>
+      {% if x.current %}<a class="btn-secondary text-sm" href="/publish/{{ x.current.id }}">Open<span class="sr-only"> {{ x.name }}</span></a>
+      {% else %}<a class="btn-primary text-sm" href="/new?hood={{ x.name|urlencode }}&amp;reuse={{ x.last.id }}">Start {{ monthly.month.split(' ')[0] }}<span class="sr-only"> bulletin for {{ x.name }}</span></a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if recent %}
+<section class="mx-auto max-w-6xl px-4 py-8" aria-labelledby="recent-title">
+  <div class="flex items-end justify-between gap-3">
+    <h2 id="recent-title" class="text-xl font-bold text-ink">Recent bulletins</h2>
+    <a class="text-sm text-brand-700 underline" href="/history">All saved bulletins</a>
+  </div>
+  <ul class="mt-4 grid gap-3 sm:grid-cols-3">
+    {% for r in recent %}
+    <li class="home-card">
+      <h3 class="text-base">{{ r.facts.neighbourhood.name }} · {{ r.facts.period.month_label }}</h3>
+      <p class="text-sm">{{ 'Published' if r.status == 'published' else 'Draft' }} · English{% for c in r.languages %}, {{ lang_info(c).name }}{% endfor %}</p>
+      <a class="btn-secondary text-sm" href="/publish/{{ r.id }}">Open</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}
+{% block scripts %}<script src="/static/app.js"></script><script>NB.initLocate();</script>{% endblock %}

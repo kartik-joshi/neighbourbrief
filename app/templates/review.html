@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block title %}Review · {{ rec.facts.neighbourhood.name }} · NeighbourBrief TO{% endblock %}
+{% block content %}
+{% set ven = rec.verification.en %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    {% set step = 2 %}{% include "_steps.html" %}
+    <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-brand-600">Review the English draft</p>
+    <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">{{ rec.facts.neighbourhood.name }} · {{ rec.facts.period.month_label }}</h1>
+  </div>
+  <div class="flex flex-wrap items-center gap-2 text-sm">
+    {% if rec.draft_source == 'ai' %}
+      <span class="pill bg-brand-100 text-brand-800" title="{{ rec.draft_note }}">AI draft</span>
+    {% else %}
+      <span class="pill bg-slate-200 text-slate-800" title="{{ rec.draft_note }}">Template draft</span>
+    {% endif %}
+    {% if ven.ok %}
+      <span class="pill bg-emerald-100 text-emerald-900">✅ Numbers verified</span>
+    {% else %}
+      <span class="pill bg-red-100 text-red-900">⚠️ Number mismatch</span>
+    {% endif %}
+    <a href="#translate-form" class="btn-primary text-sm">Next: translate &amp; publish ↓</a>
+  </div>
+</div>
+
+{% if rec.draft_source != 'ai' %}
+<p class="mt-3 rounded-lg bg-slate-100 px-4 py-2 text-sm text-slate-700">{{ rec.draft_note }}</p>
+{% endif %}
+{% for w in data_warnings %}
+<p class="mt-3 rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm text-amber-900"><strong>Data check:</strong> {{ w }}</p>
+{% endfor %}
+{% for w in rec.officer_warnings %}
+<p class="mt-3 rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm text-amber-900">{{ w }}</p>
+{% endfor %}
+{% if not ven.ok %}
+<div role="alert" class="mt-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
+  <strong>These numbers aren't in the TPS facts for this bulletin:</strong> {{ ven.numbers.not_allowed|join(', ') }}.
+  Fix them in the text (they're highlighted in red), then press “Re-check numbers”.
+</div>
+{% endif %}
+
+<div id="progress" class="mt-6 {% if not (job and job.status == 'running') %}hidden{% endif %} card border-brand-200" role="status" aria-live="polite">
+  <div class="flex items-center gap-3">
+    <span class="spinner"></span>
+    <div>
+      <p class="font-semibold text-ink">Translating and checking every number…</p>
+      <p class="text-sm text-slate-600">{% set eng = job.engine if job else engine %}Using <span id="pg-engine">{{ eng }}</span>. {% if 'Azure' in eng %}This usually takes a few seconds.{% else %}The local model takes about 30–90 seconds per language.{% endif %} You can leave this page open.</p>
+    </div>
+  </div>
+  <ul id="pg-langs" class="mt-4 grid gap-2 sm:grid-cols-3 text-sm"></ul>
+</div>
+
+<div class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
+  <section>
+    <form method="post" action="/review/{{ rec.id }}/save" class="card space-y-4">
+      <h2 class="font-semibold text-ink">Edit text</h2>
+      <div><label class="field-label" for="headline">Headline</label>
+        <input class="input" id="headline" name="headline" value="{{ rec.english.headline }}"></div>
+      <div><label class="field-label" for="summary">Summary</label>
+        <textarea class="input" id="summary" name="summary" rows="4">{{ rec.english.summary }}</textarea></div>
+      <div><label class="field-label" for="bullets">Category lines <span class="font-normal text-slate-500">(one per line)</span></label>
+        <textarea class="input text-sm" id="bullets" name="bullets" rows="8">{{ rec.english.bullets|join('\n') }}</textarea></div>
+      {% if rec.english.followup or rec.officer.prev_priority %}<div><label class="field-label" for="followup">Since last month (you said, we did)</label>
+        <textarea class="input" id="followup" name="followup" rows="2">{{ rec.english.followup }}</textarea></div>{% endif %}
+      <div><label class="field-label" for="officer_section">From your officers</label>
+        <textarea class="input" id="officer_section" name="officer_section" rows="4">{{ rec.english.officer_section }}</textarea></div>
+      <div><label class="field-label" for="closing">Closing</label>
+        <textarea class="input" id="closing" name="closing" rows="3">{{ rec.english.closing }}</textarea></div>
+      <button type="submit" class="btn-secondary w-full">Re-check numbers &amp; wording</button>
+      <p class="hint">Numbers you type must match the TPS facts (or your own priority/action/meeting text).</p>
+    </form>
+    {% if rec.versions %}
+    <details class="card mt-4 text-sm" id="versions">
+      <summary class="cursor-pointer font-semibold text-brand-700">Earlier versions ({{ rec.versions|length }})</summary>
+      <ol class="mt-2 space-y-2">
+        {% for v in rec.versions|reverse %}{% set i = rec.versions|length - loop.index %}
+        <li class="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-2">
+          <span><span class="text-slate-600">{{ v.at|fmt_dt }}</span> · {{ v.english.headline }}</span>
+          <form method="post" action="/review/{{ rec.id }}/restore/{{ i }}"><button type="submit" class="btn-secondary text-sm">Restore<span class="sr-only"> the version from {{ v.at|fmt_dt }}</span></button></form>
+        </li>{% endfor %}
+      </ol>
+      <p class="mt-2 text-xs text-slate-600">Restoring keeps the current text as a version too. Translations are cleared, as with any change.</p>
+    </details>
+    {% endif %}
+
+    <section class="card mt-6" id="content-checks" aria-labelledby="cc-title">
+      <div class="flex items-center justify-between gap-2">
+        <h2 id="cc-title" class="font-semibold text-ink">Plain-language &amp; safety checks</h2>
+        {% if content_check.ok %}<span class="pill bg-emerald-100 text-emerald-900">✅ OK</span>{% else %}<span class="pill bg-amber-100 text-amber-900">⚠️ Review</span>{% endif %}
+      </div>
+      <p class="hint">{{ content_check.words }} words{% if content_check.grade is not none %} · reading level ≈ Grade {{ '%g'|format(content_check.grade) }}{% endif %} · ⚠️ items block publishing until fixed or confirmed; ℹ️ items are advice</p>
+      {% if content_check.findings %}
+      <ul class="mt-3 space-y-2 text-sm">
+        {% for f in content_check.findings %}
+        <li class="rounded-lg px-3 py-2 {{ 'bg-amber-50 text-amber-950' if f.level == 'warn' else 'bg-slate-50 text-slate-700' }}">
+          <strong>{{ '⚠️' if f.level == 'warn' else 'ℹ️' }} {{ f.title }}</strong>{% if f.matches %}: <span class="font-mono text-xs">{{ f.matches|join(', ') }}</span>{% endif %}
+          <br><span class="text-xs">{{ f.detail }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="mt-2 text-sm text-slate-600">Calm tone, no personal information, no statements about groups, includes the “report ≠ charge” reminder.</p>
+      {% endif %}
+    </section>
+
+    {% if rec.facts.nco and rec.facts.nco.officers %}
+    <form id="signoff" method="post" action="/review/{{ rec.id }}/signoff" class="card mt-6 space-y-2">
+      <label for="signoff-sel" class="font-semibold text-ink block">Prepared by</label>
+      <select id="signoff-sel" name="signoff" class="input">
+        <option value="">No sign-off</option>
+        {% for o in rec.facts.nco.officers %}<option value="{{ o.name }}" {% if rec.signoff == o.name %}selected{% endif %}>{{ o.name }}</option>{% endfor %}
+      </select>
+      <button type="submit" class="btn-secondary w-full">Save "Prepared by"</button>
+    </form>
+    {% endif %}
+
+    {% if rec.facts.services %}
+    <form id="services" method="post" action="/review/{{ rec.id }}/services" class="card mt-6 space-y-3">
+      <h2 class="font-semibold text-ink">Local support services</h2>
+      <p class="hint -mt-2">From the TPS community assets list for {{ rec.facts.neighbourhood.name }}. Pick up to 4 for the bulletin.</p>
+      <ul class="space-y-2 text-sm">
+        {% for s in rec.facts.services %}
+        <li><label class="flex items-start gap-2"><input type="checkbox" name="services" value="{{ s.id }}" class="svc mt-1 h-4 w-4" {% if s.id in rec.services_shown %}checked{% endif %}>
+          <span><strong>{{ s.name }}</strong> <span class="text-slate-500">· {{ s.category }}</span><br><span class="text-slate-600">{{ s.address }}{% if s.phone %} · {{ s.phone }}{% endif %}</span></span></label></li>
+        {% endfor %}
+      </ul>
+      <button type="submit" class="btn-secondary w-full">Update services</button>
+    </form>
+    <script>(function(){const b=[...document.querySelectorAll('.svc')];function f(){const n=b.filter(x=>x.checked).length;b.forEach(x=>{x.disabled=!x.checked&&n>=4;});}b.forEach(x=>x.addEventListener('change',f));f();})();</script>
+    {% endif %}
+
+    <form id="translate-form" method="post" action="/review/{{ rec.id }}/translate" class="card mt-6 space-y-4">
+      <h2 class="font-semibold text-ink">Languages</h2>
+      <div class="flex flex-wrap gap-2">
+        {% for l in lang_choices %}
+        <label class="chip {% if not l.enabled %}opacity-50{% endif %}" title="{{ l.name }}">
+          <input type="checkbox" name="languages" value="{{ l.code }}" class="sr-only peer" {% if l.code in rec.languages %}checked{% endif %} {% if not l.enabled %}disabled{% endif %}>
+          <span class="chip-body">{{ l.native }}</span>
+        </label>
+        {% endfor %}
+      </div>
+      <p class="hint">Translation engine: {{ engine }}.</p>
+      <button type="submit" class="btn-primary w-full">Translate &amp; publish →</button>
+    </form>
+  </section>
+
+  <section id="preview" aria-label="Print preview">
+    <div class="mb-2 flex items-center justify-between text-sm text-slate-600">
+      <span>Preview (as it will print)</span>
+      <span class="flex items-center gap-3"><span class="text-slate-600">Key:</span> <span class="num-ok">12</span> = matches TPS data <span class="num-bad">12</span> = not in the data</span>
+    </div>
+    <div class="sheet">{% set v = view %}{% include "_bulletin.html" %}</div>
+    <details class="mt-4 card text-sm">
+      <summary class="cursor-pointer font-semibold text-ink">The facts behind this draft</summary>
+      <table class="mt-3 w-full text-left">
+        <thead class="text-slate-500"><tr><th class="py-1">Category</th><th>{{ rec.facts.period.month_label }}</th><th>YTD {{ rec.facts.period.year }}</th><th>Same period {{ rec.facts.period.prev_year }}</th><th>Change</th></tr></thead>
+        <tbody>
+        {% for l in rec.facts.categories %}
+          <tr class="border-t border-slate-100 {% if l.key not in rec.facts.display %}text-slate-400{% endif %}">
+            <td class="py-1">{{ l.label }}</td><td>{{ l.month }}</td><td>{{ l.ytd }}</td>
+            <td>{{ l.ytd_prev if l.ytd_prev is not none else 'n/a' }}</td>
+            <td>{% if l.pct_change is not none %}{{ l.pct_change }}%{% elif l.counts_only %}counts only{% elif l.ytd_prev is not none %}under 10: counts only{% else %}n/a{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      <p class="mt-3"><a class="underline text-brand-700" href="/bulletin/{{ rec.id }}/numbers.csv">Download these numbers (CSV)</a></p>
+      <p class="mt-3 text-slate-500">Counted by report date in Toronto time; one count per occurrence and category. Excluded: {{ rec.facts.excluded|join(', ') }}. Allowed numbers: {{ rec.facts.allowed_numbers|join(', ') }}.</p>
+    </details>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="/static/app.js"></script>
+<script>NB.initReview({{ rec.id|tojson }}, {{ 'true' if (job and job.status == 'running') else 'false' }});</script>
+{% endblock %}

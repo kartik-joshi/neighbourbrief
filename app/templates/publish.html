@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %}Publish · {{ rec.facts.neighbourhood.name }} · NeighbourBrief TO{% endblock %}
+{% block content %}
+{% set published = rec.status == 'published' %}
+<div class="no-print flex flex-wrap items-end justify-between gap-4">
+  <div>
+    {% set step = 3 if not published else 4 %}{% include "_steps.html" %}
+    <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-brand-600">{{ 'Published' if published else 'Check and publish' }}</p>
+    <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">{{ rec.facts.neighbourhood.name }} · {{ rec.facts.period.month_label }}</h1>
+  </div>
+  <a href="/review/{{ rec.id }}" class="text-sm text-brand-700 underline">← Back to the English draft</a>
+</div>
+
+{% if request.query_params.get('taken_down') %}<p class="no-print mt-4 rounded-lg bg-slate-100 px-4 py-2 text-sm text-slate-800" role="status">Taken down: it's a draft again and no longer on the public site, feeds or embed cards. Publish again when it's ready.</p>{% endif %}
+{% if not published %}
+<form method="post" action="/publish/{{ rec.id }}" class="no-print mt-5 card {% if blocked or content_blocked %}border-red-200 bg-red-50{% else %}border-emerald-200 bg-emerald-50{% endif %}">
+  {% if blocked or content_blocked %}
+    <p class="font-semibold text-red-900">⚠️ Publishing is blocked: {% if blocked and content_blocked %}some checks failed{% elif blocked %}some languages failed a check{% else %}the English text needs a safety review{% endif %}</p>
+    <ul class="mt-2 text-sm text-red-900 list-disc ps-5">
+      {% for v in views if v.code in blocked %}<li><strong>{{ v.info.name }}</strong>: {{ v.verification.summary }}{% if v.translation and v.translation.suggestion %}. {{ v.translation.suggestion }}{% endif %}</li>{% endfor %}
+      {% for f in content_blocked %}<li><strong>{{ f.title }}</strong>{% if f.matches %}: {{ f.matches|join(', ') }}{% endif %}. {{ f.detail }} <a class="underline" href="/review/{{ rec.id }}#content-checks">Fix on the review page</a></li>{% endfor %}
+    </ul>
+    <label class="mt-3 flex items-start gap-2 text-sm text-red-950">
+      <input type="checkbox" name="manual_ok" value="1" id="manual-ok" class="mt-0.5 h-4 w-4">
+      <span>I've reviewed this manually and it's OK to publish.</span>
+    </label>
+    <button id="publish-btn" type="submit" class="btn-primary mt-3" disabled>Publish</button>
+  {% else %}
+    <p class="font-semibold text-emerald-900">✅ Every number in every language matches the TPS facts, and every translation uses the right script.</p>
+    {% if approval.required and not approval.current %}<p class="mt-2 text-sm text-slate-800">Waiting for the second check below.</p>
+    <button id="publish-btn" type="submit" class="btn-primary mt-3" disabled>Publish</button>{% else %}
+    <button id="publish-btn" type="submit" class="btn-primary mt-3">Publish</button>{% endif %}
+  {% endif %}
+</form>
+{% set a = approval %}{% set R = a.roles %}
+<section id="second-check" class="no-print mt-4 card" aria-labelledby="sc-title">
+  <h2 id="sc-title" class="font-bold text-ink">Second check {% if a.required %}<span class="text-sm font-semibold text-red-800">(required before publishing)</span>{% else %}<span class="text-sm font-normal text-slate-600">(optional)</span>{% endif %}</h2>
+  {% if error in ('review', 'confirm', 'name', 'same') %}<p class="mt-2 rounded bg-red-50 px-3 py-2 text-sm text-red-900" role="alert">{{ {'review': 'Publishing needs a current sign-off by a second person.', 'confirm': 'Please tick the box to confirm what you checked.', 'name': "Please type the " ~ R.reviewer|lower ~ "'s name.", 'same': "The " ~ R.reviewer|lower ~ " must be a different person from the " ~ R.author|lower ~ "."}[error] }}</p>{% endif %}
+  {% if a.current %}
+    <p class="mt-2 text-emerald-900">✓ Signed off by <strong>{{ a.review.name }}</strong> ({{ a.review.role }}), {{ a.review.at|fmt_dt }}. It applies to this exact text.</p>
+  {% else %}
+    {% if a.stale %}<p class="mt-2 text-sm text-amber-900">⚠️ {{ a.review.name }} signed off an earlier version ({{ a.review.at|fmt_dt }}). The text has changed since, so it needs a new sign-off.</p>{% endif %}
+    <form method="post" action="/publish/{{ rec.id }}/review-signoff" class="mt-3 flex flex-wrap items-end gap-3">
+      <div><label for="sc-name" class="field-label">{{ R.reviewer }}'s name</label>
+        <input id="sc-name" name="name" class="input" autocomplete="name" maxlength="60" required></div>
+      <label class="flex items-start gap-2 text-sm max-w-md"><input type="checkbox" name="confirm" value="1" class="mt-0.5 h-4 w-4" required>
+        <span>I'm not the {{ R.author|lower }}{% if a.author %} ({{ a.author }}){% endif %}. I checked the numbers, the wording and every language.</span></label>
+      <button type="submit" class="btn-secondary">Sign off as {{ R.reviewer }}</button>
+    </form>
+  {% endif %}
+</section>
+{% else %}
+<form method="post" action="/publish/{{ rec.id }}/unpublish" class="no-print mt-2 text-right" onsubmit="return confirm('Take this bulletin down? It goes back to draft and comes off the public site, feeds and embed cards.');">
+  <button type="submit" class="text-sm text-red-800 underline">Take it down (back to draft)</button>
+</form>
+<p class="no-print mt-1 rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-2 text-sm text-emerald-900">
+  Published {{ rec.published_at|fmt_dt }}{% if rec.published_review %} · second check by {{ rec.published_review.name }} ({{ rec.published_review.role }}){% endif %}{% if rec.manual_override %}, with a manual review of: {{ (rec.manual_override_langs + (rec.manual_override_content or []))|join(', ') }}{% endif %} · Print it or share it below.
+</p>
+{% endif %}
+
+{% if rec.officer and rec.officer.meeting %}<p class="no-print mt-3 text-sm"><a class="underline font-semibold text-brand-700" href="/bulletin/{{ rec.id }}/meeting.ics">📅 Add the next meeting to a calendar</a> <span class="text-slate-600">({{ rec.officer.meeting_note or '' }})</span></p>{% endif %}
+{% if published and views|length > 1 %}
+<p class="no-print mt-4 text-sm"><a class="btn-secondary" href="/bulletin/{{ rec.id }}/all?print=1" target="_blank" rel="noopener">🖨 Print all {{ views|selectattr('doc')|list|length }} languages</a>
+  <span class="ms-2 text-slate-500">One page per language, for meeting handouts.</span></p>
+{% endif %}
+<div class="no-print mt-6 flex gap-1 overflow-x-auto border-b border-slate-200" role="tablist" aria-label="Languages">
+  {% for v in views %}
+  <button role="tab" type="button" class="tab {% if v.code == active %}tab-active{% endif %}" data-tab="{{ v.code }}" tabindex="{{ '0' if v.code == active else '-1' }}"
+          aria-selected="{{ 'true' if v.code == active else 'false' }}" aria-controls="panel-{{ v.code }}" id="tab-{{ v.code }}">
+    <span lang="{{ v.code }}">{{ v.info.native }}</span>
+    {% if v.verification.ok %}<span title="Verified">✅</span>{% elif v.doc %}<span title="{{ v.verification.summary }}">⚠️</span>{% else %}<span title="Not translated">✕</span>{% endif %}
+  </button>
+  {% endfor %}
+</div>
+
+{% for v in views %}
+<section role="tabpanel" tabindex="0" id="panel-{{ v.code }}" aria-labelledby="tab-{{ v.code }}" class="panel {% if v.code != active %}hidden{% endif %}" data-panel="{{ v.code }}">
+  <div class="no-print my-4 flex flex-wrap items-center gap-2">
+    {% set can_share = published and v.doc %}
+    <button type="button" class="btn-primary" data-print {% if not can_share %}disabled title="Publish first"{% endif %}>Print / Save PDF</button>
+    {% if v.doc %}<button type="button" class="btn-secondary" data-listen="{{ v.code }}" hidden>🔊 Listen</button>
+    <button type="button" class="btn-secondary" data-card="{{ v.code }}" data-file="neighbourbrief-{{ rec.id.rsplit('-', 1)[0] }}-{{ v.code }}.png"
+            data-label="{{ v.L.title }}" data-verified="{{ v.L.verified }}" data-rtl="{{ '1' if v.info.rtl else '' }}"
+            data-notice="{{ '' if v.code == 'en' else (v.L.reviewed if (v.translation and v.translation.human_reviewed) else v.L.notice) }}"
+            {% if not can_share %}disabled title="Publish first"{% endif %}>🖼 Image to share</button>{% endif %}
+    {% if v.code in texts %}
+    <button type="button" class="btn-secondary" data-copy="{{ v.code }}" {% if not can_share %}disabled{% endif %}>Copy for WhatsApp</button>
+    <a class="btn-secondary {% if not can_share %}btn-disabled{% endif %}" {% if can_share %}href="{{ wa[v.code] }}"{% else %}role="link" aria-disabled="true"{% endif %} target="_blank" rel="noopener">Open WhatsApp</a>
+    <a class="btn-secondary {% if not can_share %}btn-disabled{% endif %}" {% if can_share %}href="{{ mailto[v.code] }}"{% else %}role="link" aria-disabled="true"{% endif %}>Email</a>
+    <button type="button" class="btn-secondary" data-copy="{{ v.code }}" data-copy-src="nl-{{ v.code }}" {% if not can_share %}disabled{% endif %} title="The whole bulletin as plain text, for CPLC newsletters">Copy for newsletter</button>
+    <textarea class="sr-only" id="nl-{{ v.code }}" aria-hidden="true" tabindex="-1" readonly>{{ newsletter[v.code] }}</textarea>
+    <textarea class="sr-only" id="wa-{{ v.code }}" aria-hidden="true" tabindex="-1" readonly>{{ texts[v.code] }}</textarea>
+    <span class="text-xs text-slate-500">{{ texts[v.code]|length }} / 1000 characters</span>
+    {% endif %}
+    <span class="copy-ok hidden text-sm text-emerald-700" data-copied="{{ v.code }}">Copied ✓</span>
+    {% if v.translation %}
+      <span class="ms-auto text-xs text-slate-500">{{ v.translation.engine_label or '' }}{% if v.translation.seconds %} · {{ v.translation.seconds }} s{% endif %}{% if v.translation.glossary and v.translation.glossary.expected %} · glossary {{ v.translation.glossary.used }}/{{ v.translation.glossary.expected }}{% endif %}{% if v.translation.edited %} · edited by hand{% endif %}{% if v.translation.human_reviewed %} · ✅ human-reviewed{% endif %}</span>
+    {% endif %}
+  </div>
+  {% if v.translation and v.translation.note %}<p class="no-print mb-3 text-sm text-amber-800">{{ v.translation.note }}</p>{% endif %}
+  {% if v.doc and not v.verification.ok %}
+  <p class="no-print mb-3 rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm text-amber-900">⚠️ {{ v.verification.summary }}{% if v.translation and v.translation.suggestion %}<br>{{ v.translation.suggestion }}{% endif %}</p>
+  {% endif %}
+{% set qf = ((v.verification.quality or {}).flags or []) %}
+  {% if qf %}<div class="no-print mb-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-950" role="status">
+    <p class="font-semibold">Please have someone who reads {{ v.info.name }} check {{ 'this line' if qf|length == 1 else 'these lines' }} (the numbers are fine):</p>
+    <ul class="mt-1 list-disc ps-5">{% for f in qf %}<li>{{ f.text }}{% if f.back %} <span class="text-slate-700">Reads back as: “{{ f.back }}”</span>{% endif %}</li>{% endfor %}</ul>
+  </div>{% endif %}
+  {% set back = (v.translation.back or {}).doc if v.translation else none %}
+  {% if v.code != 'en' and v.doc and back and not (v.verification.meaning or {}).stale %}
+  <details class="no-print mb-3 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm">
+    <summary class="cursor-pointer font-semibold text-brand-700">Read it back in English {% if (v.verification.meaning or {}).checked %}<span class="font-normal text-slate-600">· meaning check {{ '✓ every line goes the same direction' if v.verification.meaning.ok else '⚠️ a line changed direction' }}</span>{% endif %}</summary>
+    <p class="mt-2 text-xs text-slate-600">Machine back-translation, rough by nature: legal terms can come back oddly. Use it to spot a changed meaning, not to judge the wording.</p>
+    <div class="mt-2 space-y-1" lang="en">
+      <p><strong>{{ back.headline }}</strong></p><p>{{ back.summary }}</p>
+      <ul class="list-disc ps-5">{% for b in back.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+      {% if back.followup %}<p>{{ back.followup }}</p>{% endif %}<p>{{ back.officer_section }}</p><p>{{ back.closing }}</p>
+    </div>
+  </details>
+  {% endif %}
+  {% if v.code != 'en' and v.doc and not (v.verification.meaning or {}).checked %}
+  <p class="no-print mb-3 text-xs text-slate-600">Meaning check (read back in English) not run{% if (v.verification.meaning or {}).stale %}: the text changed since it was read back{% else %}: it needs Azure Translator and an internet connection{% endif %}. Numbers and alphabet were checked.</p>
+  {% endif %}
+  {% if v.code != 'en' %}
+  {% set src = v.doc or rec.english %}
+  <div class="no-print mb-4 flex flex-wrap items-start gap-3">
+    <form method="post" action="/publish/{{ rec.id }}/retry/{{ v.code }}">
+      <button type="submit" class="btn-secondary text-sm" title="Ask the translator for a fresh translation of this language">↻ Translate again</button>
+    </form>
+    <details class="edit-tr min-w-0 flex-1 rounded-lg border border-slate-200 bg-white" {% if not v.doc %}open{% endif %}>
+      <summary class="cursor-pointer px-4 py-2 text-sm font-semibold text-brand-800">✎ {{ 'Edit this translation' if v.doc else 'Paste a translation' }} <span class="font-normal text-slate-500">(e.g. from a community translator; every check still applies)</span></summary>
+      <form method="post" action="/publish/{{ rec.id }}/edit/{{ v.code }}" class="space-y-3 px-4 pb-4" lang="{{ v.code }}" dir="{{ 'rtl' if v.info.rtl else 'ltr' }}">
+        <label class="block text-sm"><span class="field-label">Headline</span><input class="input" name="headline" value="{{ src.headline }}"></label>
+        <label class="block text-sm"><span class="field-label">Summary</span><textarea class="input" name="summary" rows="3">{{ src.summary }}</textarea></label>
+        <label class="block text-sm"><span class="field-label">Category lines (one per line)</span><textarea class="input" name="bullets" rows="6">{{ src.bullets|join('\n') }}</textarea></label>
+        <label class="block text-sm"><span class="field-label">From your officers</span><textarea class="input" name="officer_section" rows="3">{{ src.officer_section }}</textarea></label>
+        <label class="block text-sm"><span class="field-label">Closing</span><textarea class="input" name="closing" rows="2">{{ src.closing }}</textarea></label>
+        {% if src.followup %}<label class="block text-sm"><span class="field-label">Since last month</span><textarea class="input" name="followup" rows="2">{{ src.followup }}</textarea></label>{% endif %}
+        <label class="flex items-start gap-2 text-sm" dir="ltr"><input type="checkbox" name="human_reviewed" value="1" class="mt-1 h-4 w-4" {% if v.translation and v.translation.human_reviewed %}checked{% endif %}>
+          <span>A human translator has reviewed this translation <span class="text-slate-500">(changes the notice on the bulletin)</span></span></label>
+        <button type="submit" class="btn-primary text-sm">Save &amp; re-check</button>
+      </form>
+    </details>
+  </div>
+  {% endif %}
+  <div class="sheet">
+    {% include "_bulletin.html" %}
+  </div>
+  <p class="no-print mt-2 text-xs text-slate-500"><a class="underline" href="/bulletin/{{ rec.id }}/{{ v.code }}" target="_blank">Open this language on its own page</a>
+    · <a class="underline" href="/bulletin/{{ rec.id }}/{{ v.code }}?large=1&amp;print=1" target="_blank">Large print (bigger type, 2 pages)</a>
+    · The numbers behind this bulletin: <a class="underline" href="/bulletin/{{ rec.id }}/numbers.csv">CSV (spreadsheet)</a> · <a class="underline" href="/bulletin/{{ rec.id }}/numbers.json">JSON</a></p>
+</section>
+{% endfor %}
+{% if rec.audit %}
+<details class="no-print mt-6 card">
+  <summary class="cursor-pointer font-semibold text-brand-700">History of this bulletin ({{ rec.audit|length }})</summary>
+  <ol class="mt-3 space-y-1 text-sm">
+    {% for e in rec.audit|reverse %}<li><span class="text-slate-600">{{ e.at|fmt_dt }}</span> · <strong>{{ e.action|capitalize }}</strong>{% if e.who %} by {{ e.who }}{% if e.role %} ({{ e.role }}){% endif %}{% endif %}{% if e.detail %}: {{ e.detail }}{% endif %}</li>{% endfor %}
+  </ol>
+</details>
+{% endif %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/app.js"></script>
+<script>NB.initPublish();</script>
+{% endblock %}

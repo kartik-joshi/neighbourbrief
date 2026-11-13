@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}How it works · NeighbourBrief TO{% endblock %}
+{% block content %}
+<p class="text-sm font-semibold uppercase tracking-wide text-brand-600">How it works</p>
+<h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">From open data to a checked bulletin in every language</h1>
+<figure class="mt-6 card p-3 sm:p-5">
+<div class="overflow-x-auto" role="region" aria-label="Diagram (scrolls sideways on small screens)" tabindex="0">
+<svg viewBox="0 0 1200 560" class="w-full h-auto min-w-[56rem]" role="img" aria-labelledby="hiw-title hiw-desc" font-family="Noto Sans, system-ui, sans-serif">
+  <title id="hiw-title">How NeighbourBrief works</title>
+  <desc id="hiw-desc">Six steps from left to right: open data, code counts every number, the officer's own words, AI writes the sentences only, every number and meaning is checked, then publish. Guardrails listed underneath.</desc>
+  <defs>
+    <marker id="hiw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e8c"/></marker>
+  </defs>
+  {% set boxes = [
+    (10, '1', 'Open data', ['TPS crime: this year', 'and past years;', 'collisions, officers,', 'services, boundaries;', 'City 2021 Census']),
+    (210, '2', 'Code counts', ['Every number, by', 'report date in', 'Toronto time; small', 'numbers stay counts']),
+    (410, '3', 'Your words', ['This month\'s priority,', 'what was done,', 'since last month', '(you said, we did)']),
+    (610, '4', 'AI writes', ['Plain sentences', 'around the numbers', 'and translations;', 'never the numbers']),
+    (810, '5', 'Every check', ['Same numbers, right', 'category and %, right', 'alphabet, same', 'meaning read back']),
+    (1010, '6', 'Publish', ['1 page per language,', 'WhatsApp, image,', 'large print, site,', 'feeds, embed card'])] %}
+  {% for x, n, head, lines in boxes %}
+  <g>
+    <rect x="{{ x }}" y="40" width="180" height="250" rx="14" fill="{{ '#0c2242' if n in ('2', '5') else '#eef3fb' }}" stroke="#1f4e8c" stroke-width="2"/>
+    <circle cx="{{ x + 30 }}" cy="76" r="18" fill="#f2b705"/>
+    <text x="{{ x + 30 }}" y="83" text-anchor="middle" font-size="20" font-weight="700" fill="#0c2242">{{ n }}</text>
+    <text x="{{ x + 56 }}" y="83" font-size="19" font-weight="700" fill="{{ '#ffffff' if n in ('2', '5') else '#0c2242' }}">{{ head }}</text>
+    {% for l in lines %}<text x="{{ x + 14 }}" y="{{ 130 + loop.index0 * 30 }}" font-size="15" fill="{{ '#d9e4f5' if n in ('2', '5') else '#1e293b' }}">{{ l }}</text>{% endfor %}
+  </g>
+  {% if not loop.last %}<line x1="{{ x + 182 }}" y1="165" x2="{{ x + 206 }}" y2="165" stroke="#1f4e8c" stroke-width="3" marker-end="url(#hiw-arrow)"/>{% endif %}
+  {% endfor %}
+  <path d="M 900 292 C 900 330, 520 330, 520 292" fill="none" stroke="#b42318" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#hiw-arrow)"/>
+  <text x="710" y="345" text-anchor="middle" font-size="16" fill="#b42318" font-weight="700">Anything wrong? Publishing is blocked until it's fixed</text>
+  <rect x="10" y="380" width="1180" height="160" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="34" y="418" font-size="20" font-weight="700" fill="#0c2242">Guardrails</text>
+  {% set rails = ['No rankings, no incident maps, no personal data', 'Counts only; small numbers never become percentages',
+                  'Half-loaded open data is refused; the last good copy is kept', 'Every count reproducible with the TPS portal\'s own query',
+                  'Runs on one laptop; works offline; no accounts', 'AI translations labelled until a person reviews them'] %}
+  {% for r in rails %}<text x="{{ 34 + (loop.index0 % 2) * 590 }}" y="{{ 458 + (loop.index0 // 2) * 32 }}" font-size="17" fill="#1e293b">✓ {{ r }}</text>{% endfor %}
+</svg>
+</div>
+</figure>
+<section class="mt-6 max-w-3xl" aria-labelledby="hiw-text">
+  <h2 id="hiw-text" class="text-xl font-bold text-ink">The same, in words</h2>
+  <ol class="mt-2 list-decimal ps-6 space-y-1 text-slate-800">
+    <li><strong>Open data:</strong> Toronto Police Service crime (this year and history), traffic collisions, yearly counts, Neighbourhood Community Officers, community services and boundaries; City of Toronto 2021 Census languages.</li>
+    <li><strong>Code counts every number</strong> by report date in Toronto time, one per report and category; percentages only when both numbers are 10 or more.</li>
+    <li><strong>The officer adds their own words:</strong> this month's priority, what was done, and what happened since last month.</li>
+    <li><strong>AI writes plain-language sentences</strong> around the numbers and translates them; it never supplies a number.</li>
+    <li><strong>Every check:</strong> same numbers in every language, right category and percentage, right alphabet, same meaning when read back in English, safety wording, and optionally a second person's sign-off. Anything wrong blocks publishing.</li>
+    <li><strong>Publish:</strong> one printed page per language, WhatsApp and newsletter text, an image to share, large print, a static public site, feeds and an embed card.</li>
+  </ol>
+  <p class="mt-3 text-sm text-slate-600"><a class="underline" href="/how-we-count">How we count</a> · <a class="underline" href="/privacy-ai">Privacy and AI</a> · <a class="underline" href="/data-health">Data health</a></p>
+</section>
+{% endblock %}

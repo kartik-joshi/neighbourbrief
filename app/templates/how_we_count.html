@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}How we count · NeighbourBrief TO{% endblock %}
+{% block content %}
+<article class="max-w-3xl">
+  <p class="text-sm font-semibold uppercase tracking-wide text-brand-600">Methodology</p>
+  <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">How we count</h1>
+  <p class="mt-2 text-slate-700">Every number in a NeighbourBrief bulletin is computed by code from open data. The AI only writes sentences around those numbers, and nothing can be published until every number, in every language, matches.</p>
+
+  <p class="mt-3"><a class="underline font-semibold text-brand-700" href="/how-it-works">See the whole process in one diagram</a></p>
+  <h2 class="mt-8 text-xl font-bold text-ink">What a number means</h2>
+  <ul class="mt-2 space-y-2 text-slate-700 list-disc ps-5">
+    <li><strong>Reports to police, not proven crimes.</strong> A report does not mean anyone was charged.</li>
+    <li><strong>Counted by the date the report was made</strong>, in Toronto time, not the date it happened. Report dates don't change later, so the numbers are stable.</li>
+    <li><strong>One per occurrence and category.</strong> An incident with several victims counts once in each category it falls under.</li>
+    <li><strong>Month</strong> = the last complete calendar month. <strong>Year to date</strong> = January 1 to the end of that month, compared with the same days last year.</li>
+  </ul>
+
+  <h2 class="mt-8 text-xl font-bold text-ink">Rules that keep it fair</h2>
+  <ul class="mt-2 space-y-2 text-slate-700 list-disc ps-5">
+    <li><strong>Small numbers:</strong> a percent change is shown only when both counts are {{ small }} or more. Otherwise we show the two counts ("12 vs 9"), because a jump from 2 to 4 isn't a "100% increase" anyone should worry about.</li>
+    <li><strong>Shootings and homicides:</strong> counts only, never a percent change.</li>
+    <li><strong>Not included:</strong> {{ excluded|join(', ') }} (sensitive, and no comparable history in the open data).</li>
+    <li><strong>No rankings, maps of incidents, predictions or "dangerous" labels.</strong> Places are never compared with each other.</li>
+    <li><strong>No personal information.</strong> Bulletins show only contact details the police publish for residents.</li>
+  </ul>
+
+  <h2 class="mt-8 text-xl font-bold text-ink">Categories</h2>
+  <table class="mt-2 w-full text-left text-sm">
+    <thead class="text-slate-500"><tr><th class="py-1">On the bulletin</th><th>In the open data</th></tr></thead>
+    <tbody>{% for key, label in categories %}<tr class="border-t border-slate-100"><td class="py-1">{{ label }}</td><td>{{ key }}</td></tr>{% endfor %}</tbody>
+  </table>
+
+  <h2 class="mt-8 text-xl font-bold text-ink">How numbers are checked</h2>
+  <ul class="mt-2 space-y-2 text-slate-700 list-disc ps-5">
+    <li>Every number in the English text must be one the code computed (or one the officer typed).</li>
+    <li>Each category line may only use its own category's numbers.</li>
+    <li>Each translated line must carry exactly the same numbers as its English line, and a percentage must stay a percentage.</li>
+    <li>Each translation must use the right alphabet for its language (for example, no Hindi letters in Urdu).</li>
+    <li>Each translation is read back in English, and every line must still go the same direction ("down" can't become "up").</li>
+    <li>If any check fails, publishing is blocked until it's fixed or a person confirms a manual review.</li>
+  </ul>
+  <p class="mt-3 text-slate-700"><strong>Check any number yourself.</strong> Each neighbourhood profile and each bulletin's numbers file links every count to a query on the Toronto Police Service open data portal that returns the same number (distinct reports per category, by report date in Toronto time).</p>
+
+  <h2 id="data" class="mt-8 text-xl font-bold text-ink">Data sources</h2>
+  <ul class="mt-2 space-y-2 text-slate-700 list-disc ps-5">
+    <li>Toronto Police Service Public Safety Data Portal (Open Government Licence – Ontario): {{ layers|join(', ') }}.</li>
+    <li>City of Toronto Neighbourhood Profiles, 2021 Census (mother tongue), for suggested languages.</li>
+    <li>Every bulletin offers "The numbers behind this bulletin" as a spreadsheet (CSV).</li>
+  </ul>
+
+  <h2 class="mt-8 text-xl font-bold text-ink">Translations</h2>
+  <p class="mt-2 text-slate-700">Translations are AI-assisted and say so on every page until a human translator has reviewed them. Numbers are protected during translation and re-checked afterwards.</p>
+
+  <p class="mt-8 text-sm text-slate-500">NeighbourBrief TO is an independent prototype, not affiliated with or endorsed by the Toronto Police Service. Code under the MIT licence.</p>
+</article>
+{% endblock %}

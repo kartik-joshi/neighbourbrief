@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Privacy and AI · NeighbourBrief TO{% endblock %}
+{% block content %}
+<div class="max-w-3xl">
+<h1 class="text-2xl sm:text-3xl font-bold text-ink">Privacy and how AI is used</h1>
+<p class="mt-3 text-slate-700">NeighbourBrief is an independent prototype built on open data. It is not affiliated with or endorsed by the Toronto Police Service.</p>
+
+<h2 class="mt-6 text-xl font-bold text-ink">What AI does, and what it never does</h2>
+<ul class="mt-2 list-disc ps-6 space-y-1 text-slate-800">
+  <li><strong>Numbers come from code, not AI.</strong> Counts are calculated directly from Toronto Police Service open data. The AI writer only phrases sentences around them.</li>
+  <li><strong>Every number is checked</strong> in English and in every language before publishing; a translation is also read back in English to make sure "down" didn't become "up". If anything doesn't match, publishing is blocked.</li>
+  <li><strong>A person is responsible.</strong> The officer reviews and edits every word; teams can require a second person to sign off.</li>
+  <li><strong>Translations are labelled</strong> as AI-assisted until a human translator reviews them.</li>
+  <li><strong>The AI never</strong> predicts crime, profiles people or groups, ranks neighbourhoods, or decides anything about anyone.</li>
+  <li>By default the writer is a model running on the officer's own computer (nothing is sent anywhere). Translation can use Microsoft Azure Translator; it receives only the bulletin text, which contains no personal information about residents.</li>
+</ul>
+
+<h2 class="mt-6 text-xl font-bold text-ink">Privacy</h2>
+<ul class="mt-2 list-disc ps-6 space-y-1 text-slate-800">
+  <li><strong>No personal information about residents</strong> is collected, stored or published, and no incident locations are shown: counts only, by neighbourhood.</li>
+  <li><strong>No accounts, no cookies, no tracking.</strong> The tool runs on one computer and answers only that computer.</li>
+  <li>The only names in a bulletin are Neighbourhood Community Officers as Toronto Police publishes them in "Find My NCO". Names typed for a bulletin's history (author, reviewer) stay on that computer and are never printed.</li>
+  <li><strong>"Use my location"</strong> is worked out inside your browser; your position is never sent or stored.</li>
+  <li>When online, pages load fonts from Google Fonts and map pages load map images from OpenStreetMap; both see your internet address, as with any website. In offline mode nothing leaves the computer.</li>
+</ul>
+
+<h2 class="mt-6 text-xl font-bold text-ink">The data</h2>
+<p class="mt-2 text-slate-700">Toronto Police Service and City of Toronto open data, under the Open Government Licence – Ontario and Open Government Licence – Toronto. A report to police is not proof that a crime happened or that anyone was charged. See <a class="underline" href="/how-we-count">How we count</a> and <a class="underline" href="/data-health">Data health</a>.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Do you have any questions? Contact the local police department listed below. Call {0} in case of emergency.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "질문 있으신가요? 아래에 나열된 지역 경찰서에 연락하세요. 긴급 상황 시 {0}에 전화하세요."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Do you have any questions? Consult with the local community officers listed below. Contact {0} in case of emergency.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "질문 있으신가요? 아래에 나열된 지역 커뮤니티 담당관과 상담하세요. 긴급 상황 시 {0}에 연락하세요."
+ }
+}

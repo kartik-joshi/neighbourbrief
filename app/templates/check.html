@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Check my numbers · NeighbourBrief TO{% endblock %}
+{% block content %}{% set selected = selected or '' %}
+<p class="text-sm font-semibold uppercase tracking-wide text-brand-600">Fact-check</p>
+<h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">Check my numbers</h1>
+<p class="mt-2 max-w-3xl text-slate-700">Paste a newsletter, release or social post about a neighbourhood. Every number is checked against Toronto Police Service open data (reported crime and traffic collisions): is it real, is it the right category, and does it go the right direction? Dates, times, phone numbers and addresses are skipped.</p>
+
+<form method="post" action="/check" class="mt-6 card space-y-4">
+  <div class="grid gap-4 sm:grid-cols-[1fr_16rem]">
+    <div><label for="ck-hood" class="field-label">Neighbourhood</label>
+      <input id="ck-hood" name="neighbourhood" list="ck-hood-list" required class="input" value="{{ selected or '' }}" placeholder="e.g. Thorncliffe Park" autocomplete="off">
+      <datalist id="ck-hood-list">{% for h in hoods %}<option value="{{ h.name }}">{% endfor %}</datalist></div>
+    <div><label for="ck-month" class="field-label">Month</label>
+      <select id="ck-month" name="month" class="input">{% for m in months %}<option value="{{ m.strftime('%Y-%m') }}" {% if selected_month == m.strftime('%Y-%m') %}selected{% endif %}>{{ m.strftime('%B %Y') }}{% if loop.first %} (latest){% endif %}</option>{% endfor %}</select></div>
+  </div>
+  <div><label for="ck-text" class="field-label">Your text</label>
+    <textarea id="ck-text" name="text" rows="8" maxlength="6000" class="input" placeholder="e.g. Assaults were down 7% this year, with 95 reports so far.">{{ text }}</textarea></div>
+  <div class="flex flex-wrap items-center gap-3">
+    <button type="submit" class="btn-primary">Check my numbers</button>
+    <a class="text-sm underline text-brand-700" id="ck-example" href="/check?hood={{ (selected or (hoods[0].name if hoods else ''))|urlencode }}&amp;example=1">Try an example with deliberate mistakes</a>
+  </div>
+</form>
+
+{% if error %}<p class="mt-4 rounded-lg bg-red-50 px-4 py-2 text-sm text-red-900" role="alert">{{ error }}</p>{% endif %}
+
+{% if result %}
+<section class="mt-6" aria-labelledby="ck-result">
+  <h2 id="ck-result" class="text-xl font-bold text-ink">
+    {% if not result['items'] %}No numbers to check in this text{% elif result.counts.match + result.counts.wrong_category + result.counts.direction + result.counts.not_found == 0 %}No statistics to check: only dates, times, phone numbers or addresses{% elif result.ok %}✅ Every number checks out{% else %}⚠️ {{ result.counts.wrong_category + result.counts.direction + result.counts.not_found }} number{{ 's' if (result.counts.wrong_category + result.counts.direction + result.counts.not_found) != 1 }} to fix{% endif %}
+  </h2>
+  <p class="text-sm text-slate-600">Against {{ facts.neighbourhood.name }}, {{ facts.period.month_label }} (year to date {{ facts.period.ytd_label }}). {{ result.counts.match }} match · {{ result.counts.wrong_category }} wrong category · {{ result.counts.direction }} wrong direction · {{ result.counts.not_found }} not in the data · {{ result.counts.skipped }} skipped</p>
+  <div class="mt-3 card leading-8" aria-label="Your text with numbers marked">{{ rendered }}</div>
+  <ul class="mt-4 grid gap-2">
+    {% for it in result['items'] if it.verdict != 'skipped' %}
+    <li class="card py-3 flex gap-3 text-sm">
+      <span aria-hidden="true">{{ {'match': '✅', 'wrong_category': '⚠️', 'direction': '⚠️', 'not_found': '❌'}[it.verdict] }}</span>
+      <div><strong>{{ it.text }}</strong> <span class="text-slate-500">{{ {'match': 'matches the data', 'wrong_category': 'wrong category', 'direction': 'wrong direction', 'not_found': 'not in the data'}[it.verdict] }}</span><br>{{ it.detail }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="mt-3 text-xs text-slate-500">Checks numbers against TPS open data only (reports to police by report date). It can't check claims that aren't numbers. <a class="underline" href="/how-we-count">How we count</a></p>
+</section>
+{% endif %}
+{% endblock %}

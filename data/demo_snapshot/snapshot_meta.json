@@ -1,0 +1,62 @@
+{
+ "snapshot_date": "2026-10-24",
+ "saved_at": "2026-10-24T15:04:07-04:00",
+ "neighbourhoods": [
+  "Thorncliffe Park",
+  "Milliken",
+  "Westminster-Branson",
+  "Steeles"
+ ],
+ "files": [
+  "Bicycle_Thefts_Open_Data_035_2025.json",
+  "Bicycle_Thefts_Open_Data_055_2025.json",
+  "Bicycle_Thefts_Open_Data_130_2025.json",
+  "Theft_From_Motor_Vehicle_Open_Data_035_2025.json",
+  "Theft_From_Motor_Vehicle_Open_Data_055_2025.json",
+  "Theft_From_Motor_Vehicle_Open_Data_130_2025.json",
+  "assets_035.json",
+  "assets_055.json",
+  "assets_116.json",
+  "assets_130.json",
+  "azure_languages.json",
+  "boundaries_158.json",
+  "collisions_035_2026.json",
+  "collisions_055_2026.json",
+  "collisions_130_2026.json",
+  "crime_trend_all.json",
+  "hoods_ytd.json",
+  "mci_035_2025.json",
+  "mci_055_2025.json",
+  "mci_116_2025.json",
+  "mci_130_2025.json",
+  "nco_all.json",
+  "schema_Community_Assets_TO.json",
+  "schema_Major_Crime_Indicators_Open_Data.json",
+  "schema_NCO_Neighbourhoods_WM_A.json",
+  "schema_Neighbourhood_Crime_Rates_Open_Data.json",
+  "schema_Traffic_Collisions_Open_Data.json",
+  "schema_YTD_CRIME_WM.json",
+  "ytd_035.json",
+  "ytd_055.json",
+  "ytd_116.json",
+  "ytd_130.json"
+ ],
+ "saved": {
+  "055": {
+   "name": "Thorncliffe Park",
+   "date": "2026-10-24"
+  },
+  "130": {
+   "name": "Milliken",
+   "date": "2026-10-24"
+  },
+  "035": {
+   "name": "Westminster-Branson",
+   "date": "2026-10-24"
+  },
+  "116": {
+   "name": "Steeles",
+   "date": "2026-09-29"
+  }
+ }
+}

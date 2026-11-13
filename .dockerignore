@@ -1,0 +1,14 @@
+.venv
+.git
+.env
+data/bulletins/*
+!data/bulletins/demo-*.json
+data/cache
+data/feedback
+data/usage
+public_site
+demo_video
+test_artifacts
+__pycache__
+*.pyc
+tools

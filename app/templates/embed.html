@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if b %}{{ b.hood.name }} safety bulletin{% else %}Neighbourhood safety bulletin{% endif %}</title>
+<style>
+  body { margin: 0; font: 15px/1.45 "Noto Sans", system-ui, sans-serif; color: #0f172a; background: #fff; }
+  .card { border: 1px solid #c9d6e8; border-radius: 12px; padding: 14px 16px; }
+  .k { font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1f4e8c; margin: 0; }
+  h1 { font-size: 18px; margin: 4px 0 6px; color: #0c2242; }
+  ul { margin: 6px 0; padding-left: 18px; } li { margin: 2px 0; }
+  a { color: #173d70; font-weight: 700; }
+  .langs a { margin-right: 10px; display: inline-block; }
+  .fine { font-size: 11px; color: #475569; margin-top: 8px; }
+</style>
+</head>
+<body>
+{% set is_auto = not b and auto_b %}{% set b = b or auto_b %}
+<main class="card">
+  <p class="k">Neighbourhood safety update</p>
+  {% if b %}
+  <h1>{{ b.hood.name }}, {{ b.month }}</h1>
+  <ul>
+    {% for line in b.rec.facts.display[:3] %}{% set c = (b.rec.facts.categories | selectattr('key', 'equalto', line) | first) %}{% if c %}<li>{{ c.label }}: {{ c.month }} in {{ b.month.split(' ')[0] }}, {{ c.ytd }} so far this year</li>{% endif %}{% endfor %}
+  </ul>
+  {% if is_auto %}<p class="fine">Automatic summary from open data (no note from officers this month).</p>{% endif %}
+  <p class="langs">Read it in: {% for c in b.codes %}<a href="/bulletin/{{ b.id }}/{{ c }}" target="_blank" rel="noopener" lang="{{ c }}">{{ lang_info(c).native }}</a>{% endfor %}</p>
+  {% else %}
+  <h1>No bulletin published yet</h1>
+  <p>Check back next month.</p>
+  {% endif %}
+  <p class="fine">{% if publisher.name %}Published by {{ publisher.name }}. {% endif %}Reports to police, Toronto Police Service open data. Not affiliated with or endorsed by the Toronto Police Service.</p>
+</main>
+</body>
+</html>

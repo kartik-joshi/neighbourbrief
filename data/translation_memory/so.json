@@ -1,0 +1,56 @@
+{
+ "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In September, there were {0} police reports sent to {name}. A report sent to the police does not mean that a person has been charged.",
+  "created": "2026-10-24",
+  "en": "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In September, there were 24 reports to police in Elms-Old Rexdale. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Bishii Sebtembar, waxaa jiray warbixin {0} ah oo booliska loo diray {name}. Warbixin loo diray booliska macnaheedu ma aha in qof lagu soo oogay dacwad."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Talk to your neighborhood community officials, listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Su'aalo? La hadal Saraakiisha Bulshada Xaafaddaada, kuwaas oo hoos ku taxan. Xaalad degdeg ah, wac {0}."
+ },
+ "Stolen vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in September. {1} this year, down {2}% compared to {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in September. 15 this year, down 6% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Gaadiidka la xaday: {0} warbixin bishii Sebtembar. {1} sanadkan, hoos {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in September. {1} this year, an increase of {2}% compared to {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in September. 39 this year, up 18% from 33 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Gaadiidka la xaday: {0} warbixin bishii Sebtembar. {1} sanadkan, koror {2}% marka loo eego {3} waqtigan sanadkii hore."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, {2}% more than {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 7 reports in September. 44 this year, up 63% from 27 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Gaadiidka la xaday: {0} warbixin bishii Sebtembar. {1} sanadkan, {2}% ka badan {3} waqtigan sanadkii hore."
+ },
+ "{name}: safety update for September {0} |other": {
+  "back": "{name}: safety update in September {0}",
+  "created": "2026-10-24",
+  "en": "{name}: safety update for September {0}",
+  "example": "Elms-Old Rexdale: safety update for September 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: cusbooneysiinta badbaadada ee Sebtembar {0}"
+ }
+}

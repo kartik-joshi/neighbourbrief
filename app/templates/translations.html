@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Translations to review · NeighbourBrief TO{% endblock %}
+{% block content %}
+<p class="text-sm font-semibold uppercase tracking-wide text-brand-600">For community translators</p>
+<h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">Translations to review</h1>
+<p class="mt-2 max-w-3xl text-slate-700">Every translation starts as AI-assisted and says so on the page. A person who reads the language can check it here, side by side with the English and a rough translation back into English, fix anything, and confirm it. The bulletin then says "Translation reviewed by a human translator".</p>
+<form method="get" class="mt-4 flex flex-wrap items-end gap-2">
+  <div><label for="tr-lang" class="field-label">Language</label>
+    <select id="tr-lang" name="lang" class="input"><option value="">All languages</option>{% for c, n in langs %}<option value="{{ c }}" {% if c == lang %}selected{% endif %}>{{ n }}</option>{% endfor %}</select></div>
+  <button class="btn-secondary" type="submit">Show</button>
+</form>
+<p class="mt-3 text-sm text-slate-700" role="status">{{ todo }} of {{ rows|length }} need a review. Standard lines are reviewed once for every bulletin in the <a class="underline font-semibold" href="/translations/memory">translation memory</a>.</p>
+{% if rows %}
+<div class="relative mt-3 card overflow-x-auto p-0" role="region" aria-label="Translations table" tabindex="0">
+  <table class="data-table">
+    <thead><tr><th scope="col">Language</th><th scope="col">Bulletin</th><th scope="col">Checks</th><th scope="col">Review</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
+    <tbody>{% for x in rows %}<tr>
+      <th scope="row"><span lang="{{ x.code }}">{{ x.lang.native }}</span> <span class="font-normal text-slate-600">· {{ x.lang.name }}</span></th>
+      <td>{{ x.hood }}, {{ x.month }} <span class="text-xs text-slate-600">({{ x.status }})</span></td>
+      <td>{% if not x.checks_ok %}⚠️ needs fixing{% elif x.flags %}👀 {{ x.flags }} line{{ 's' if x.flags != 1 }} to look at{% else %}✅ numbers, alphabet, meaning{% endif %}</td>
+      <td>{% if x.reviewed %}✅ Reviewed{% if x.reviewed_by %} by {{ x.reviewed_by }}{% endif %}{% else %}Not yet{% if x.edited %} (edited by hand){% endif %}{% endif %}</td>
+      <td><a class="btn-secondary text-sm" href="/translations/{{ x.bid }}/{{ x.code }}">{{ 'Open' if x.reviewed else 'Review' }}<span class="sr-only"> {{ x.lang.name }}, {{ x.hood }}</span></a></td>
+    </tr>{% endfor %}</tbody>
+  </table>
+</div>
+{% else %}<p class="mt-3 card text-slate-700">No translations yet.</p>{% endif %}
+{% endblock %}

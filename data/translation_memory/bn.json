@@ -1,0 +1,83 @@
+{
+ "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 7 reports in September. 41 this year, down 18% from 50 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "হামলা: সেপ্টেম্বরে {0} রিপোর্ট। {1} এ বছর গত বছরের এই সময়ে {3} থেকে {2}% কমেছে।"
+ },
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Contact your local police department listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "প্রশ্ন? নীচে তালিকাভুক্ত আপনার স্থানীয় পুলিশ বিভাগের সাথে যোগাযোগ করুন। জরুরি অবস্থায়, কল করুন {0}।"
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Talk to your neighborhood community officers listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "প্রশ্ন? নীচে তালিকাভুক্ত আপনার প্রতিবেশী কমিউনিটি অফিসারদের সাথে কথা বলুন। জরুরি অবস্থায়, কল করুন {0}।"
+ },
+ "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Robbery: {0} report in September. {1} this year compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in September. 8 this year, compared with 10 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |one,one,other": {
+  "back": "Robbery: {0} reported in September. {1} this year compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in September. 1 this year, compared with 3 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Robbery: {0} reported in September. {1} this year compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in September. 5 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robbery: {0} reported in September. {1} this year compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 2 reports in September. 10 this year, compared with 5 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। গত বছরের এই সময়ে {2} তুলনায় এ বছর {1}।"
+ },
+ "Robberies: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": null,
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Robberies: 2 reports in September. 10 this year, down 17% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। এই বছর {1}, গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% কমেছে।"
+ },
+ "Robberies: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: {0} reported in September. {1} this year, up from {3} to {2}% during this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 4 reports in September. 12 this year, up 9% from 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ডাকাতি: সেপ্টেম্বরে {0} রিপোর্ট। এই বছর {1}, গত বছরের এই সময়ের মধ্যে {3} থেকে {2}% বেড়েছে।"
+ }
+}

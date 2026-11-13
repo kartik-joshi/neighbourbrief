@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ v.code }}{% endblock %}
+{% block title %}{{ v.title }}{% if large %} (large print){% endif %}{% endblock %}
+{% block body_class %}bg-slate-100 standalone{% if large %} large-print{% endif %}{% endblock %}
+{% block chrome %}{% if public %}
+<nav aria-label="Bulletin" class="no-print mx-auto max-w-[8.5in] px-2 pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm" lang="en" dir="ltr">
+  {% if rec.auto %}<a href="/neighbourhoods/{{ rec.facts.neighbourhood.id }}" class="text-brand-700 underline">← {{ rec.facts.neighbourhood.name }}</a>{% else %}<a href="/public" class="text-brand-700 underline">← All bulletins</a>{% endif %}
+  {% if large %}<a href="/bulletin/{{ rec.id }}/{{ v.code }}" class="text-brand-700 underline">Regular print</a>{% else %}<a href="/bulletin/{{ rec.id }}/{{ v.code }}?large=1" class="text-brand-700 underline">Large print</a>{% endif %}
+  <a href="/bulletin/{{ rec.id }}/easy" class="text-brand-700 underline" lang="en">Easy Read</a>
+  <a href="/bulletin/{{ rec.id }}/numbers.csv" class="text-brand-700 underline">The numbers (CSV)</a>
+  {% if rec.officer and rec.officer.meeting %}<a href="/bulletin/{{ rec.id }}/meeting.ics" class="text-brand-700 underline">📅 Add the meeting to a calendar</a>{% endif %}
+  {% if v.doc %}<a class="btn-secondary ms-auto" id="wa-share" href="https://wa.me/" target="_blank" rel="noopener"
+     data-text="{{ v.title }}&#10;{{ v.doc.headline }}&#10;{{ v.doc.summary }}">Share on WhatsApp</a>
+  <button type="button" class="btn-secondary" id="native-share" hidden>Share…</button>{% endif %}
+  <button type="button" class="btn-secondary{% if not v.doc %} ms-auto{% endif %}" id="qr-btn" aria-controls="qr-panel" aria-expanded="false">QR code</button>
+  <button type="button" class="btn-secondary" data-listen="{{ v.code }}" hidden>🔊 Listen</button>
+  <button type="button" class="btn-secondary" onclick="window.print()">Print / Save PDF</button>
+</nav>
+<aside id="qr-panel" aria-label="QR code for this page" class="no-print mx-auto max-w-[8.5in] px-2 pt-3 hidden" lang="en" dir="ltr">
+  <div class="card flex flex-wrap items-center gap-4"><div id="qr-code" class="w-40 h-40" role="img" aria-label="QR code for this page"></div>
+    <p class="text-sm text-slate-700 max-w-sm">Show this at a meeting: residents scan it to open this bulletin on their phone ("All bulletins" lists every language).</p></div>
+</aside>{% endif %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block main_class %}py-6 px-2 sm:px-4{% endblock %}
+{% block content %}
+<div class="sheet">{% include "_bulletin.html" %}</div>
+{% if feedback_on and (rec.auto or rec.status == 'published') and not large %}{% with hid = rec.facts.neighbourhood.id, fb_lang = v.code, fb_back = request.url.path %}{% include "_feedback.html" %}{% endwith %}{% endif %}
+{% endblock %}
+{% block scripts %}<script src="/static/app.js"></script>{% if public %}<script src="/static/vendor/qrcode.min.js"></script>
+<script>
+(function () {  // share this page: the bulletin's headline and summary in its language, then the link
+  const wa = document.getElementById('wa-share');
+  if (!wa) return;
+  const url = location.href.split('#')[0].split('?')[0], text = wa.dataset.text + '\n' + url;
+  wa.href = 'https://wa.me/?text=' + encodeURIComponent(text);
+  const ns = document.getElementById('native-share');
+  if (navigator.share) {
+    ns.hidden = false;
+    ns.addEventListener('click', () => navigator.share({title: document.title, text: wa.dataset.text, url: url}).catch(() => {}));
+  }
+})();
+document.getElementById('qr-btn').addEventListener('click', function () {
+  const panel = document.getElementById('qr-panel'), open = panel.classList.toggle('hidden') === false;
+  this.setAttribute('aria-expanded', String(open));
+  if (open && !document.getElementById('qr-code').firstChild) {
+    const qr = qrcode(0, 'M'); qr.addData(location.href.split('#')[0]); qr.make();
+    document.getElementById('qr-code').innerHTML = qr.createSvgTag({cellSize: 4, margin: 2, scalable: true});
+  }
+});
+</script>{% endif %}
+{% if auto_print %}<script>window.addEventListener('load', () => setTimeout(() => window.print(), 300));</script>{% endif %}{% endblock %}

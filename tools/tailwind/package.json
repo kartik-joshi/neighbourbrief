@@ -1,0 +1,7 @@
+{
+  "name": "neighbourbrief-css",
+  "private": true,
+  "description": "Builds app/static/tw.css (pre-built Tailwind) so pages don't compile styles in the browser.",
+  "scripts": { "build": "tailwindcss -c tailwind.config.js -i input.css -o ../../app/static/tw.css --minify" },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}

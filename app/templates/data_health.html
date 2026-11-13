@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Data health · NeighbourBrief TO{% endblock %}
+{% block content %}
+<p class="text-sm font-semibold uppercase tracking-wide text-brand-600">Open data</p>
+<h1 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">Data health</h1>
+<p class="mt-2 max-w-3xl text-slate-700">Every open dataset NeighbourBrief uses, checked on {{ h.checked }}: when it was last updated, whether every field the app relies on is still there, how many records it has and the date of the newest one. If a publisher renames a field or a feed stops updating, it shows up here before it shows up in a bulletin.</p>
+{% if offline %}<p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-950" role="status">Offline mode: showing the saved copies, not live checks.</p>{% endif %}
+<p class="mt-4 flex flex-wrap gap-2 text-sm" role="status">
+  <span class="badge-ok">✓ {{ h.counts.ok }} healthy</span>
+  {% if h.counts.warn %}<span class="badge-warn">⚠️ {{ h.counts.warn }} stale</span>{% endif %}
+  {% if h.counts.bad %}<span class="badge-bad">✗ {{ h.counts.bad }} changed shape</span>{% endif %}
+  {% if h.counts.unknown %}<span class="badge-unknown">? {{ h.counts.unknown }} not reachable</span>{% endif %}
+</p>
+<div class="mt-4 card overflow-x-auto p-0" role="region" aria-label="Datasets" tabindex="0">
+  <table class="data-table">
+    <thead><tr><th scope="col">Dataset</th><th scope="col">Status</th><th scope="col">Last updated</th><th scope="col">Newest record</th><th scope="col" class="num">Records</th></tr></thead>
+    <tbody>
+    {% for i in h['items'] %}
+      <tr>
+        <th scope="row"><a class="underline" href="{{ i.url }}" rel="noopener">{{ i.label }}</a><br><span class="text-xs font-normal text-slate-600">{{ i.publisher }}</span></th>
+        <td>{% if i.state == 'ok' %}<span class="badge-ok">✓ Healthy</span>{% elif i.state == 'warn' %}<span class="badge-warn">⚠️ Stale</span>{% elif i.state == 'bad' %}<span class="badge-bad">✗ Changed</span>{% else %}<span class="badge-unknown">? Unknown</span>{% endif %}
+          {% for pr in i.problems %}<p class="mt-1 max-w-xs whitespace-normal text-xs text-slate-700">{{ pr }}</p>{% endfor %}</td>
+        <td>{{ i.updated or 'unknown' }}{% if i.age_days is not none %}<br><span class="text-xs text-slate-600">{{ i.age_days }} day{{ 's' if i.age_days != 1 }} ago</span>{% endif %}</td>
+        <td>{{ i.latest or 'n/a' }}</td>
+        <td class="num">{{ "{:,}".format(i.count) if i.count is not none else 'n/a' }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<section class="mt-8" aria-labelledby="dh-explain">
+  <h2 id="dh-explain" class="text-xl font-bold text-ink">About each dataset, in plain language</h2>
+  <div class="mt-3 grid gap-2 md:grid-cols-2">
+    {% for i in h['items'] if i.explain %}
+    <details class="card py-3 text-sm"><summary class="cursor-pointer font-semibold text-ink">{{ i.label }}</summary>
+      <dl class="mt-2 space-y-1">
+        <div><dt class="inline font-semibold">One record is: </dt><dd class="inline">{{ i.explain[0] }}</dd></div>
+        <div><dt class="inline font-semibold">Used for: </dt><dd class="inline">{{ i.explain[1] }}</dd></div>
+        <div><dt class="inline font-semibold">Keep in mind: </dt><dd class="inline">{{ i.explain[2] }}</dd></div>
+      </dl></details>
+    {% endfor %}
+    <details class="card py-3 text-sm"><summary class="cursor-pointer font-semibold text-ink">Neighbourhood Profiles 2021 (City of Toronto)</summary>
+      <dl class="mt-2 space-y-1">
+        <div><dt class="inline font-semibold">One record is: </dt><dd class="inline">A neighbourhood's 2021 Census answers, including mother tongue (the first language learned at home).</dd></div>
+        <div><dt class="inline font-semibold">Used for: </dt><dd class="inline">Suggesting each bulletin's languages and showing languages on profiles.</dd></div>
+        <div><dt class="inline font-semibold">Keep in mind: </dt><dd class="inline">From 2021 and based on a sample; a starting point the officer can change.</dd></div>
+      </dl></details>
+  </div>
+</section>
+
+<section class="mt-8" aria-labelledby="dh-findings">
+  <h2 id="dh-findings" class="text-xl font-bold text-ink">What we noticed while joining the data</h2>
+  <p class="text-sm text-slate-600">Feedback for the data publishers, and the reason some numbers show "n/a".</p>
+  <ul class="mt-3 grid gap-2">
+    {% for x in h.findings %}<li class="card py-3 text-sm"><strong>{{ x.dataset }}</strong> <span class="text-slate-600">· {{ x.kind }}</span><br>{{ x.text }}</li>{% endfor %}
+  </ul>
+  <p class="mt-3 text-sm text-slate-700">Machine-readable: <a class="underline" href="/data-health.json">data-health.json</a></p>
+</section>
+{% endblock %}

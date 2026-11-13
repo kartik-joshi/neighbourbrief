@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Review {{ info.name }} · {{ rec.facts.neighbourhood.name }} · NeighbourBrief TO{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="text-sm text-slate-600"><a class="underline" href="/translations">Translations to review</a> › {{ info.name }}</nav>
+<h1 class="mt-2 text-2xl sm:text-3xl font-bold text-ink">{{ info.name }} · {{ rec.facts.neighbourhood.name }}, {{ rec.facts.period.month_label }}</h1>
+<p class="mt-2 text-slate-700">Read each line in {{ info.name }}. Does it say the same thing as the English? Fix it in place if not. The numbers, alphabet and meaning checks run again when you save.</p>
+<p class="mt-2 text-sm">{% if verification.ok %}<span class="badge-ok">✓ Checks pass</span>{% else %}<span class="badge-bad">✗ {{ verification.summary }}</span>{% endif %}
+  {% if t.human_reviewed %}<span class="badge-ok">Reviewed{% if t.reviewed_by %} by {{ t.reviewed_by }}{% endif %}</span>{% endif %}</p>
+
+<div class="mt-3">{% set qf = ((verification.quality or {}).flags or []) %}
+  {% if qf %}<div class="no-print mb-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-950" role="status">
+    <p class="font-semibold">Please have someone who reads {{ info.name }} check {{ 'this line' if qf|length == 1 else 'these lines' }} (the numbers are fine):</p>
+    <ul class="mt-1 list-disc ps-5">{% for f in qf %}<li>{{ f.text }}{% if f.back %} <span class="text-slate-700">Reads back as: “{{ f.back }}”</span>{% endif %}</li>{% endfor %}</ul>
+  </div>{% endif %}</div>
+<form method="post" action="/publish/{{ rec.id }}/edit/{{ code }}" class="mt-4 space-y-3">
+  <input type="hidden" name="next" value="/translations/{{ rec.id }}/{{ code }}">
+  {% for name in ['headline', 'summary', 'followup', 'officer_section', 'closing'] %}{% if name not in rows|map(attribute='key')|list %}<input type="hidden" name="{{ name }}" value="{{ tr[name] }}">{% endif %}{% endfor %}
+  <input type="hidden" id="tr-bullets" name="bullets" value="{{ tr.bullets|join('\n') }}">
+  {% for row in rows %}
+  <div class="card grid gap-3 lg:grid-cols-3 {% if row.flag %}border-red-300 bg-red-50{% endif %}">
+    <div><p class="text-xs font-semibold uppercase tracking-wide text-slate-600">{{ row.label }} · English</p><p class="mt-1 text-ink" lang="en">{{ row.en }}</p></div>
+    <div><label class="text-xs font-semibold uppercase tracking-wide text-slate-600" for="f-{{ loop.index }}">{{ info.name }}</label>
+      <textarea id="f-{{ loop.index }}" class="input mt-1" rows="3" lang="{{ code }}" dir="{{ 'rtl' if info.rtl else 'ltr' }}" data-key="{{ row.key }}" {% if not row.key.startswith('bullets.') %}name="{{ row.key }}"{% endif %}>{{ row.tr }}</textarea></div>
+    <div><p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Read back in English (rough)</p><p class="mt-1 text-slate-700" lang="en">{{ row.back or 'Not available (offline or no Azure key)' }}</p>
+      {% if row.flag %}<p class="mt-1 text-sm font-semibold text-red-800">⚠️ The direction changed (up/down).</p>{% endif %}</div>
+  </div>
+  {% endfor %}
+  <div class="card space-y-3">
+    <div><label for="reviewer" class="field-label">Your name</label><input id="reviewer" name="reviewer" class="input sm:w-96" maxlength="60" value="{{ t.reviewed_by or '' }}" autocomplete="name"></div>
+    <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="human_reviewed" value="1" class="mt-0.5 h-4 w-4" {% if t.human_reviewed %}checked{% endif %}>
+      <span>I read the whole {{ info.name }} translation and it says the same thing as the English.</span></label>
+    <button type="submit" class="btn-primary">Save</button>
+    <p class="text-xs text-slate-600">If the bulletin was already published and you change the text, it goes back to draft so the officer can publish it again.</p>
+  </div>
+</form>
+<script>
+  // Lines are edited one by one but saved as one "bullets" field.
+  document.querySelector('form[action*="/edit/"]').addEventListener('submit', () => {
+    const lines = [...document.querySelectorAll('textarea[data-key^="bullets."]')].map(t => t.value.replace(/\n+/g, ' ').trim());
+    document.getElementById('tr-bullets').value = lines.join('\n');
+  });
+</script>
+{% endblock %}

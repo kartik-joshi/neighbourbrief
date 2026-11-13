@@ -1,0 +1,74 @@
+{
+ "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 27 reports in September. 229 this year, down 2% from 233 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "હુમલાઓ: સપ્ટેમ્બરમાં {0} અહેવાલો. આ વર્ષે {1}, ગયા વર્ષે આ સમય સુધીમાં {3} કરતા {2}% ઓછા છે."
+ },
+ "Assaults: {0} reports in September. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Attacks: {0} reported in September. {1} this year, the same as at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, the same as by this time last year.",
+  "example": "Assaults: 14 reports in September. 135 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "હુમલાઓ: સપ્ટેમ્બરમાં {0} અહેવાલ. આ વર્ષે {1} , ગયા વર્ષે આ સમય જેટલું જ છે."
+ },
+ "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 6 reports in September. 112 this year, up 14% from 98 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "હુમલાઓ: સપ્ટેમ્બરમાં {0} અહેવાલો. આ વર્ષે {1}, ગયા વર્ષે આ સમય સુધીમાં {3} કરતા {2}% છે."
+ },
+ "Homicides: {0} reports in September. {1} this year. |one,one": {
+  "back": "Homicides: {0} reported in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "હત્યાઓ: સપ્ટેમ્બરમાં {0} અહેવાલ. આ વર્ષે {1} ."
+ },
+ "Homicides: {0} reports in September. {1} this year. |one,other": {
+  "back": "Homicides: {0} reported in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "હત્યાઓ: સપ્ટેમ્બરમાં {0} અહેવાલ. આ વર્ષે {1} ."
+ },
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Contact your local police department listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "પ્રશ્નો? નીચે સૂચિબદ્ધ તમારા સ્થાનિક પોલીસ વિભાગનો સંપર્ક કરો. કટોકટીમાં, {0} પર કૉલ કરો."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Talk to your neighborhood community officials listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "પ્રશ્નો? નીચે સૂચિબદ્ધ તમારા પડોશી સમુદાય અધિકારીઓ સાથે વાત કરો. કટોકટીમાં, {0} પર કૉલ કરો."
+ },
+ "Robberies: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Robbery: {0} reports in September. {1} This year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Robberies: 4 reports in September. 21 this year, up 24% from 17 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "લૂંટ: સપ્ટેમ્બરમાં {0} અહેવાલો. {1} આ વર્ષે ગયા વર્ષે આ સમય સુધીમાં {3} કરતા {2}% વધારે છે."
+ }
+}

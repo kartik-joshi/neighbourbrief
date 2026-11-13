@@ -1,0 +1,92 @@
+{
+ "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 27 reports in September. 229 this year, down 2% from 233 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਹਮਲੇ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. ਇਸ ਸਾਲ {1}, ਪਿਛਲੇ ਸਾਲ ਇਸ ਸਮੇਂ ਤੱਕ {3} ਤੋਂ {2}% ਘੱਟ ਹੈ."
+ },
+ "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 11 reports in September. 97 this year, up 3% from 94 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਹਮਲੇ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. {1} ਇਸ ਸਾਲ, ਪਿਛਲੇ ਸਾਲ ਇਸ ਸਮੇਂ ਤੱਕ {3} ਤੋਂ {2}% ਵੱਧ ਹੈ."
+ },
+ "Homicides: {0} reports in September. {1} this year. |one,one": {
+  "back": "Murder: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਕਤਲ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. ਇਸ ਸਾਲ {1} ."
+ },
+ "Homicides: {0} reports in September. {1} this year. |one,other": {
+  "back": "Homicide: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 3 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਕਤਲ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. ਇਸ ਸਾਲ {1} ."
+ },
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Contact your local police division listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਪ੍ਰਸ਼ਨ? ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਆਪਣੇ ਸਥਾਨਕ ਪੁਲਿਸ ਡਿਵੀਜ਼ਨ ਨਾਲ ਸੰਪਰਕ ਕਰੋ. ਐਮਰਜੈਂਸੀ ਵਿੱਚ, {0} ਨੂੰ ਕਾਲ ਕਰੋ."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Talk to your neighborhood community officers listed below. In an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਪ੍ਰਸ਼ਨ? ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਆਪਣੇ ਨੇਬਰਹੁੱਡ ਕਮਿ communityਨਿਟੀ ਅਫਸਰਾਂ ਨਾਲ ਗੱਲ ਕਰੋ. ਐਮਰਜੈਂਸੀ ਵਿੱਚ, {0} ਨੂੰ ਕਾਲ ਕਰੋ."
+ },
+ "Shootings: {0} report in September. {1} this year. |one,other": {
+  "back": "Shootings: {0} report in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} report in September. {1} this year.",
+  "example": "Shootings: 1 report in September. 7 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਗੋਲੀਬਾਰੀ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟ. ਇਸ ਸਾਲ {1} ."
+ },
+ "Shootings: {0} reports in September. {1} this year. |one,other": {
+  "back": "Shootings: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} reports in September. {1} this year.",
+  "example": "Shootings: 0 reports in September. 4 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਗੋਲੀਬਾਰੀ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. ਇਸ ਸਾਲ {1} ."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 3 reports in September. 55 this year, down 4% from 57 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਚੋਰੀ ਹੋਏ ਵਾਹਨ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. {1} ਇਸ ਸਾਲ, ਪਿਛਲੇ ਸਾਲ ਇਸ ਸਮੇਂ ਤੱਕ {3} ਤੋਂ {2}% ਘੱਟ ਹੈ."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, the same as by this time last year. |other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, the same as this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, the same as by this time last year.",
+  "example": "Stolen vehicles: 40 reports in September. 337 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "ਚੋਰੀ ਹੋਏ ਵਾਹਨ: ਸਤੰਬਰ ਵਿੱਚ {0} ਰਿਪੋਰਟਾਂ. ਇਸ ਸਾਲ {1} , ਪਿਛਲੇ ਸਾਲ ਦੇ ਇਸ ਸਮੇਂ ਵਾਂਗ ਹੀ ਹੈ."
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Assaults: 5 reports in September. 34 this year, down 32% from 50 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Επιθέσεις: {0} αναφορές τον Σεπτέμβριο. {1} φέτος, μειωμένο κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Attacks: {0} reports in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Assaults: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 4 reports in September. 81 this year, up 12% from 72 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Επιθέσεις: {0} αναφορές τον Σεπτέμβριο. {1} φέτος, αυξημένη κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Bicycle thefts: {0} reports in September. {1} this year, compared to {2} such time last year.",
+  "created": "2026-10-24",
+  "en": "Bike thefts: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Bike thefts: 0 reports in September. 7 this year, compared with 3 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλοπές ποδηλάτων: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, σε σύγκριση με {2} τέτοια εποχή πέρυσι."
+ },
+ "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Burglaries: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 7 reports in September. 15 this year, compared with 8 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Διαρρήξεις: {0} αναφορές τον Σεπτέμβριο. {1} φέτος, σε σύγκριση με {2} τέτοια εποχή πέρυσι."
+ },
+ "Break-ins: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Burglaries: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 5 reports in September. 18 this year, down 42% from 31 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Διαρρήξεις: {0} αναφορές τον Σεπτέμβριο. {1} φέτος, μειωμένο κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Break-ins: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Burglaries: {0} reports in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Break-ins: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Break-ins: 0 reports in September. 12 this year, up 9% from 11 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Διαρρήξεις: {0} αναφορές τον Σεπτέμβριο. {1} φέτος, αυξημένη κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Homicides: {0} reports in September. {1} this year. |other,one": {
+  "back": "Homicides: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Homicides: {0} reports in September. {1} this year.",
+  "example": "Homicides: 0 reports in September. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Ανθρωποκτονίες: {0} αναφορές τον Σεπτέμβριο. {1} φέτος."
+ },
+ "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "In September, there were {0} reports to the police in {name}. A report to the police does not mean that anyone has been charged.",
+  "created": "2026-10-24",
+  "en": "In September, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In September, there were 16 reports to police in Broadview North. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Τον Σεπτέμβριο, υπήρξαν {0} αναφορές στην αστυνομία στο {name}. Μια αναφορά στην αστυνομία δεν σημαίνει ότι κατηγορήθηκε κανείς."
+ },
+ "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Contact your local police station, listed below. In case of an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Contact your local police division, listed below. In an emergency, call {0}.",
+  "example": "Questions? Contact your local police division, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Ερωτήσεις; Επικοινωνήστε με το τοπικό αστυνομικό τμήμα, που αναφέρεται παρακάτω. Σε περίπτωση έκτακτης ανάγκης, καλέστε {0}."
+ },
+ "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}. |other": {
+  "back": "Questions? Speak with your Neighborhood Community Officers, listed below. In case of an emergency, call {0}.",
+  "created": "2026-10-24",
+  "en": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call {0}.",
+  "example": "Questions? Talk to your Neighbourhood Community Officers, listed below. In an emergency, call 911.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Ερωτήσεις; Μιλήστε με τους Αξιωματικούς της Κοινότητας της Γειτονιάς σας, που αναφέρονται παρακάτω. Σε περίπτωση έκτακτης ανάγκης, καλέστε {0}."
+ },
+ "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Robberies: {0} exhibition in September. {1} this year, compared to {2} such time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in September. 5 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Ληστείες: {0} έκθεση τον Σεπτέμβριο. {1} φέτος, σε σύγκριση με {2} τέτοια εποχή πέρυσι."
+ },
+ "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Robberies: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Robberies: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 0 reports in September. 6 this year, compared with 4 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Ληστείες: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, σε σύγκριση με {2} τέτοια εποχή πέρυσι."
+ },
+ "Shootings: {0} report in September. {1} this year. |one,other": {
+  "back": "Shootings: {0} report in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} report in September. {1} this year.",
+  "example": "Shootings: 1 report in September. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Πυροβολισμοί: {0} έκθεση τον Σεπτέμβριο. {1} φέτος."
+ },
+ "Shootings: {0} reports in September. {1} this year. |other,one": {
+  "back": "Shootings: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} reports in September. {1} this year.",
+  "example": "Shootings: 0 reports in September. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Πυροβολισμοί: {0} αναφορές τον Σεπτέμβριο. {1} φέτος."
+ },
+ "Shootings: {0} reports in September. {1} this year. |other,other": {
+  "back": "Shootings: {0} reports in September. {1} this year.",
+  "created": "2026-10-24",
+  "en": "Shootings: {0} reports in September. {1} this year.",
+  "example": "Shootings: 0 reports in September. 2 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Πυροβολισμοί: {0} αναφορές τον Σεπτέμβριο. {1} φέτος."
+ },
+ "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} report in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 1 report in September. 17 this year, up 21% from 14 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλεμμένα οχήματα: {0} έκθεση τον Σεπτέμβριο. {1} φέτος, αυξημένα κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in September. 9 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλεμμένα οχήματα: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, σε σύγκριση με {2} τέτοια εποχή πέρυσι."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 0 reports in September. 13 this year, down 35% from 20 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλεμμένα οχήματα: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, μειωμένο κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} such times last year.",
+  "created": "2026-10-24",
+  "en": "Stolen vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 5 reports in September. 21 this year, up 75% from 12 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλεμμένα οχήματα: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, αυξημένα κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Theft from vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Thefts from vehicles: {0} report in September. {1} this year, down {2}% from {3} last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} report in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 1 report in September. 19 this year, down 46% from 35 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλοπές από οχήματα: {0} έκθεση τον Σεπτέμβριο. {1} φέτος, μειωμένη {2}% από {3} πέρυσι."
+ },
+ "Theft from vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Thefts from vehicles: {0} reports in September. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} reports in September. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 0 reports in September. 13 this year, compared with 9 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλοπές από οχήματα: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, σε σύγκριση με {2} τέτοια εποχή πέρυσι."
+ },
+ "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Thefts from vehicles: {0} reports in September. {1} this year, down {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} reports in September. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 2 reports in September. 15 this year, down 6% from 16 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλοπές από οχήματα: {0} αναφορές τον Σεπτέμβριο. {1} φέτος, μειωμένο κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "Theft from vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
+  "back": "Thefts from vehicles: {0} reports in September. {1} this year, up {2}% from {3} at this time last year.",
+  "created": "2026-10-24",
+  "en": "Theft from vehicles: {0} reports in September. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Theft from vehicles: 5 reports in September. 22 this year, up 47% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Κλοπές από οχήματα: {0} αναφέρει τον Σεπτέμβριο. {1} φέτος, αυξημένη κατά {2}% από {3} τέτοια εποχή πέρυσι."
+ },
+ "{name}: safety update for September {0} |other": {
+  "back": "{name}: security update for September {0}",
+  "created": "2026-10-24",
+  "en": "{name}: safety update for September {0}",
+  "example": "Broadview North: safety update for September 2026",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "{name}: ενημέρωση ασφαλείας για τον Σεπτέμβριο του {0}"
+ }
+}

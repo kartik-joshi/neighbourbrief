@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Wards · NeighbourBrief TO{% endblock %}
+{% block content %}
+<h1 class="text-2xl sm:text-3xl font-bold text-ink">Ward briefs</h1>
+<p class="mt-2 max-w-3xl text-slate-700">For city councillors and their staff: the neighbourhoods in each of Toronto's 25 wards, with each neighbourhood's own counts and its plain-language monthly bulletin to share with residents.</p>
+<ul class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {% for w in wards %}<li class="card py-4"><a class="font-bold text-brand-700 underline" href="/wards/{{ w.number }}">{{ w.label }}</a><p class="text-sm text-slate-700">{{ w.mostly }} neighbourhood{{ 's' if w.mostly != 1 }} mostly in the ward{% if w.partly %}, {{ w.partly }} partly{% endif %}</p></li>{% endfor %}
+</ul>
+<p class="mt-4 text-xs text-slate-600">Ward boundaries: City of Toronto open data (25-ward model). Ward and neighbourhood boundaries don't line up, so a neighbourhood can be in more than one ward.</p>
+{% endblock %}
