@@ -1,6 +1,6 @@
 {
- "id": "demo-westminster-branson-2026-09",
- "created_at": "2026-10-24T14:21:43-04:00",
+ "id": "demo-westminster-branson-2026-10",
+ "created_at": "2026-11-14T19:53:57-05:00",
  "status": "published",
  "facts": {
   "neighbourhood": {
@@ -10,26 +10,26 @@
    "division": "32 Division"
   },
   "period": {
-   "month_label": "September 2026",
-   "month_start": "2026-09-01",
-   "month_end": "2026-09-30",
-   "month_number": 9,
-   "month_last_day": 30,
-   "days_in_month": 30,
+   "month_label": "October 2026",
+   "month_start": "2026-10-01",
+   "month_end": "2026-10-31",
+   "month_number": 10,
+   "month_last_day": 31,
+   "days_in_month": 31,
    "year": 2026,
    "prev_year": 2025,
-   "ytd_label": "January 1 – September 30, 2026",
-   "ytd_prev_label": "January 1 – September 30, 2025",
+   "ytd_label": "January 1 – October 31, 2026",
+   "ytd_prev_label": "January 1 – October 31, 2025",
    "basis": "report date (when the report was made to police), Toronto time"
   },
   "categories": [
    {
     "key": "Assault",
     "label": "Assaults",
-    "month": 7,
-    "ytd": 83,
-    "ytd_prev": 92,
-    "pct_change": -10,
+    "month": 5,
+    "ytd": 88,
+    "ytd_prev": 100,
+    "pct_change": -12,
     "direction": "down",
     "counts_only": false,
     "mci": true
@@ -37,10 +37,10 @@
    {
     "key": "Break and Enter",
     "label": "Break-ins",
-    "month": 3,
-    "ytd": 20,
-    "ytd_prev": 11,
-    "pct_change": 82,
+    "month": 2,
+    "ytd": 22,
+    "ytd_prev": 13,
+    "pct_change": 69,
     "direction": "up",
     "counts_only": false,
     "mci": true
@@ -48,10 +48,10 @@
    {
     "key": "Auto Theft",
     "label": "Stolen vehicles",
-    "month": 5,
-    "ytd": 33,
-    "ytd_prev": 38,
-    "pct_change": -13,
+    "month": 2,
+    "ytd": 35,
+    "ytd_prev": 40,
+    "pct_change": -12,
     "direction": "down",
     "counts_only": false,
     "mci": true
@@ -59,11 +59,11 @@
    {
     "key": "Theft from Motor Vehicle",
     "label": "Theft from vehicles",
-    "month": 1,
-    "ytd": 17,
-    "ytd_prev": null,
-    "pct_change": null,
-    "direction": null,
+    "month": 6,
+    "ytd": 23,
+    "ytd_prev": 32,
+    "pct_change": -28,
+    "direction": "down",
     "counts_only": false,
     "mci": false
    },
@@ -72,7 +72,7 @@
     "label": "Robberies",
     "month": 0,
     "ytd": 4,
-    "ytd_prev": 5,
+    "ytd_prev": 6,
     "pct_change": null,
     "direction": "down",
     "counts_only": false,
@@ -81,9 +81,9 @@
    {
     "key": "Theft Over",
     "label": "Thefts over $5,000",
-    "month": 2,
-    "ytd": 5,
-    "ytd_prev": 4,
+    "month": 1,
+    "ytd": 6,
+    "ytd_prev": 5,
     "pct_change": null,
     "direction": "up",
     "counts_only": false,
@@ -94,9 +94,9 @@
     "label": "Bike thefts",
     "month": 0,
     "ytd": 5,
-    "ytd_prev": null,
+    "ytd_prev": 6,
     "pct_change": null,
-    "direction": null,
+    "direction": "down",
     "counts_only": false,
     "mci": false
    },
@@ -114,8 +114,8 @@
    {
     "key": "Homicide",
     "label": "Homicides",
-    "month": 0,
-    "ytd": 0,
+    "month": 1,
+    "ytd": 1,
     "ytd_prev": null,
     "pct_change": null,
     "direction": null,
@@ -128,12 +128,12 @@
    "Break and Enter",
    "Auto Theft",
    "Theft from Motor Vehicle",
-   "Theft Over",
-   "Shooting"
+   "Shooting",
+   "Homicide"
   ],
   "totals": {
-   "month": 18,
-   "ytd": 169
+   "month": 17,
+   "ytd": 186
   },
   "excluded": [
    "Sexual Violation"
@@ -253,10 +253,10 @@
    }
   ],
   "freshness": {
-   "tps_updated": "2026-10-24T12:12:10.273000-04:00",
-   "tps_updated_label": "October 24, 2026, 12:12 p.m.",
-   "latest_report_date": "2026-10-21",
-   "fetched_at": "2026-10-24T14:21:06-04:00"
+   "tps_updated": "2026-11-14T17:13:39.752000-05:00",
+   "tps_updated_label": "November 14, 2026, 5:13 p.m.",
+   "latest_report_date": "2026-11-13",
+   "fetched_at": "2026-11-14T19:53:21-05:00"
   },
   "source": {
    "name": "Toronto Police Service Public Safety Data Portal",
@@ -274,25 +274,25 @@
    "0",
    "1",
    "2",
-   "3",
    "4",
    "5",
+   "6",
    "7",
-   "9",
    "10",
-   "11",
+   "12",
    "13",
    "17",
-   "18",
-   "20",
-   "30",
+   "22",
+   "23",
+   "28",
+   "31",
    "32",
-   "33",
-   "38",
-   "82",
-   "83",
-   "92",
-   "169",
+   "35",
+   "40",
+   "69",
+   "88",
+   "100",
+   "186",
    "911",
    "2025",
    "2026",
@@ -302,14 +302,14 @@
  "officer": {
   "priority": "Bike thefts from apartment bike rooms.",
   "action_taken": "We met building managers about bike room locks and cameras.",
-  "meeting_note": "Wednesday, November 11 at 7 p.m., Community room, Centennial branch library",
+  "meeting_note": "Wednesday, December 2 at 7 p.m., Community room, Centennial branch library",
   "tip": "Lock your bike frame and wheel to a fixed rack with a U-lock, and register the serial number.",
   "prev_priority": "Break-ins to storage lockers in apartment buildings.",
   "followup": "Managers of 4 buildings improved locker lighting and locks.",
   "tip_id": "bike",
   "followup_status": "done",
   "meeting": {
-   "date": "2026-11-11",
+   "date": "2026-12-02",
    "time": "19:00",
    "place": "Community room, Centennial branch library"
   }
@@ -321,41 +321,41 @@
  ],
  "english": {
   "headline": "Westminster-Branson Neighbourhood Safety Bulletin",
-  "summary": "There were 18 reports to police this month. A report to police does not mean anyone was charged.",
+  "summary": "There were 17 reports to police this month. A report to police does not mean anyone was charged.",
   "bullets": [
-   "Assaults: 7 reports in September. 83 this year, down 10% from 92 by this time last year.",
-   "Break-ins: 3 reports in September. 20 this year, up 82% from 11 by this time last year.",
-   "Stolen vehicles: 5 reports in September. 33 this year, down 13% from 38 by this time last year.",
-   "Theft from vehicles: 1 report in September. 17 this year.",
-   "Thefts over $5,000: 2 reports in September. 5 this year, compared with 4 by this time last year.",
-   "Shootings: 0 reports in September. 2 this year."
+   "Assaults: 5 reports in October. 88 this year, down 12% from 100 by this time last year.",
+   "Break-ins: 2 reports in October. 22 this year, compared with 13 by this time last year.",
+   "Stolen vehicles: 2 reports in October. 35 this year, compared with 40 by this time last year.",
+   "Theft from vehicles: 6 reports in October. 23 this year, compared with 32 by this time last year.",
+   "Shootings: 0 reports in October. 2 this year.",
+   "Homicides: 1 report in October. 1 this year."
   ],
   "officer_section": "This month's priority: Bike thefts from apartment bike rooms.\nWhat we did: We met building managers about bike room locks and cameras.",
-  "closing": "The next meeting is Wednesday, November 11 at 7 p.m., Community room, Centennial branch library. Tip: Lock your bike frame and wheel to a fixed rack with a U-lock, and register the serial number. In an emergency, call 911.",
+  "closing": "The next meeting is Wednesday, December 2 at 7 p.m., Community room, Centennial branch library. Tip: Lock your bike frame and wheel to a fixed rack with a U-lock, and register the serial number. In an emergency, call 911.",
   "followup": "Last month's priority: Break-ins to storage lockers in apartment buildings. Since then: Managers of 4 buildings improved locker lighting and locks. This is done."
  },
  "draft_source": "ai",
- "draft_note": "AI draft (36.5 s)",
+ "draft_note": "AI draft (36.3 s)",
  "draft_info": {
   "attempts": 1,
   "errors": [],
-  "seconds": 36.5
+  "seconds": 36.3
  },
  "translations": {
   "ru": {
    "doc": {
-    "headline": "Бюллетень безопасности района Вестминстер-Брансон",
-    "summary": "В этом месяце было 18 сообщений в полицию. Заявление в полицию не означает, что кому-то было предъявлено обвинение.",
+    "headline": "Westminster-Branson Бюллетень по безопасности районов",
+    "summary": "В этом месяце было 17 сообщений в полицию. Заявление в полицию не означает, что кому-то было предъявлено обвинение.",
     "bullets": [
-     "Нападения: 7 сообщений в сентябре. 83 в этом году, на 10% меньше, чем 92 к этому же времени прошлого года.",
-     "Взломы: 3 сообщений в сентябре. 20 в этом году, это 82% больше, чем 11 к этому же времени прошлого года.",
-     "Угнанные автомобили: 5 сообщений в сентябре. 33 в этом году, 13% меньше, чем 38 к этому же времени прошлого года.",
-     "Кража из автомобилей: 1 отчет в сентябре. 17 в этом году.",
-     "Кражи свыше5,000долларов: 2 отчеты в сентябре. 5 в этом году, по сравнению с 4 к этому же времени прошлого года.",
-     "Стрельбы: 0 сообщения в сентябре. 2 в этом году."
+     "Нападения: 5 отчёты в октябре. 88 в этом году, на 12% меньше, чем 100 к этому же времени прошлого года.",
+     "Кражи со взломом: 2 отчёты в октябре. 22 в этом году, по сравнению с 13 к этому же времени в прошлом году.",
+     "Угоны автомобилей: 2 отчёты в октябре. 35 в этом году, по сравнению с 40 к этому же времени в прошлом году.",
+     "Кражи из автомобилей: 6 отчёты в октябре. 23 в этом году, по сравнению с 32 к этому же времени в прошлом году.",
+     "Случаи стрельбы: 0 отчёты в октябре. 2 в этом году.",
+     "Убийства: 1 отчет в октябре. 1 в этом году."
     ],
     "officer_section": "Приоритет этого месяца: Кражи велосипедов из комнат для велосипедов в квартирах. \nЧто мы сделали: Мы встретились с управляющими зданиями по поводу замков и камер в велосипедных комнатах.",
-    "closing": "Следующая встреча состоится в среду, 11 ноября, в 7 вечера, в общественной комнате, филиал библиотеки Centennial. Совет: зафиксируйте раму и колесо велосипеда на фиксированном багажнике с U-образным замком и зарегистрируйте серийный номер. В экстренной ситуации позвоните 911.",
+    "closing": "Следующая встреча состоится в среду, 2 декабря, в 7 вечера, в общественной комнате, филиал библиотеки Centennial. Совет: зафиксируйте раму и колесо велосипеда на фиксированном багажнике с U-образным замком и зарегистрируйте серийный номер. В экстренной ситуации позвоните 911.",
     "followup": "Приоритет прошлого месяца: взломы складских шкафчиков в многоквартирных домах. С тех пор: менеджеры 4 зданий улучшили освещение и замки шкафов. Это сделано."
    },
    "note": "",
@@ -363,43 +363,49 @@
    "attempts": 1,
    "problems": [],
    "engine_label": "Azure Translator",
-   "seconds": 0.5,
+   "seconds": 0.6,
+   "memory": {
+    "lines": 11,
+    "from_memory": 2,
+    "reviewed": 0,
+    "all_reviewed": false
+   },
    "script_ok": true,
-   "translated_at": "2026-10-24T14:21:43-04:00",
+   "translated_at": "2026-11-14T19:53:58-05:00",
    "back": {
     "doc": {
-     "headline": "Westminster-Brunson Area Safety Bulletin",
-     "summary": "There have been 18 reports to the police this month. Reporting to the police does not mean that someone has been charged.",
+     "headline": "Westminster-Branson Neighbourhood Safety Bulletin",
+     "summary": "There have been 17 reports to the police this month. Reporting to the police does not mean that someone has been charged.",
      "bullets": [
-      "Attacks: 7 reports in September. 83 this year, down 10% from 92 at the same time last year.",
-      "Hacks: 3 reports in September. 20 this year, that's 82% more than 11 by the same time last year.",
-      "Stolen cars: 5 posts in September. 33 this year, 13% less than 38 by the same time last year.",
-      "Theft from cars: 1 report in September. 17 this year.",
-      "Thefts Over $5,000: 2 reports in September. 5 this year, up from 4 by the same time last year.",
-      "Shootings: 0 posts in September. 2 this year."
+      "Attacks: 5 reports in October. 88 this year, down 12% from 100 at the same time last year.",
+      "Burglaries: 2 reports in October. 22 this year, up from 13 at the same time last year.",
+      "Car thefts: 2 reports in October. 35 this year, up from 40 at the same time last year.",
+      "Thefts from cars: 6 reports in October. 23 this year, up from 32 by the same time last year.",
+      "Shooting cases: 0 reports in October. 2 this year.",
+      "Murders: 1 report in October. 1 this year."
      ],
      "officer_section": "This month's priority: Stealing bicycles from bike rooms in apartments.  \nWhat we did: We met with building managers about locks and cells in bike rooms.",
-     "closing": "The next meeting will be on Wednesday, November 11 at 7 p.m., in the Community Room, Centennial Library Branch. Tip: Secure the frame and wheel of the bike to the fixed U-lock rack and register the serial number. In an emergency, call 911.",
+     "closing": "The next meeting will be on Wed, December 2 at 7 p.m., in the Community Room, Centennial Library branch. Tip: Secure the bike frame and wheel to the fixed U-lock rack and register the serial number. In an emergency, call 911.",
      "followup": "Last month's priority: break-ins of warehouse lockers in apartment buildings. Since then: 4 building managers have improved lighting and cabinet locks. It's done."
     },
-    "for": "3a4b8cdae7047a69",
-    "at": "2026-10-24T14:21:44-04:00"
+    "for": "583ac72b208f526d",
+    "at": "2026-11-14T19:53:58-05:00"
    }
   },
   "fil": {
    "doc": {
-    "headline": "Bulletin ng Kaligtasan sa Kapitbahayan ng Westminster-Branson",
-    "summary": "May 18 ulat sa pulisya ngayong buwan. Ang ulat sa pulisya ay hindi nangangahulugang may kinasuhan.",
+    "headline": "Westminster-Branson Bulletin ng Kaligtasan sa Kapitbahayan",
+    "summary": "May 17 ulat sa pulisya ngayong buwan. Ang ulat sa pulisya ay hindi nangangahulugang may kinasuhan.",
     "bullets": [
-     "Mga pananakit: 7 ulat noong Setyembre. 83 ngayong taon, bumaba ng 10% mula sa 92 noong nakaraang taon.",
-     "Mga pagnanakaw: 3 ulat noong Setyembre. 20 ngayong taon, tumaas ng 82% mula sa 11 noong nakaraang taon.",
-     "Ninakaw na sasakyan: 5 ulat noong Setyembre. 33 ngayong taon, bumaba ng 13% mula sa 38 noong nakaraang taon.",
-     "Pagnanakaw mula sa mga sasakyan: 1 ulat noong Setyembre. 17 ngayong taon.",
-     "Pagnanakaw na higit sa $5,000: 2 ulat noong Setyembre. 5 ngayong taon, kumpara sa 4 noong nakaraang taon.",
-     "Mga pamamaril: 0 ulat noong Setyembre. 2 ngayong taon."
+     "Pananakit: 5 ulat noong Oktubre. 88 ngayong taon, bumaba ng 12% mula sa 100 noong nakaraang taon.",
+     "Panloloob: 2 ulat noong Oktubre. 22 ngayong taon, kumpara sa 13 noong nakaraang taon.",
+     "Mga ninakaw na sasakyan: 2 ulat noong Oktubre. 35 ngayong taon, kumpara sa 40 noong nakaraang taon.",
+     "Pagnanakaw mula sa sasakyan: 6 ulat noong Oktubre. 23 ngayong taon, kumpara sa 32 noong nakaraang taon.",
+     "Pamamaril: 0 ulat sa Oktubre. 2 ngayong taon.",
+     "Pagpatay: 1 ulat sa Oktubre. 1 ngayong taon."
     ],
     "officer_section": "Prayoridad ngayong buwan: Pagnanakaw ng bisikleta mula sa mga apartment bike room. \nAng ginawa namin: Nakipagkita kami sa mga building manager tungkol sa bike room locks at mga camera.",
-    "closing": "Ang susunod na pagpupulong ay sa Miyerkules, Nobyembre 11 ng alas- 7 ng gabi, Community room, Centennial branch library. Tip: I-lock ang frame at manibela ng iyong bisikleta sa isang fixed rack na may U-lock, at irehistro ang serial number. Sa emergency, tawagan ang 911.",
+    "closing": "Ang susunod na pulong ay sa Miyerkules, Disyembre 2 ng alas- 7 ng gabi, Community room, Centennial branch library. Tip: I-lock ang frame at manibela ng iyong bisikleta sa isang fixed rack na may U-lock, at irehistro ang serial number. Sa emergency, tumawag sa 911.",
     "followup": "Prayoridad noong nakaraang buwan: Pagpasok sa mga storage locker sa mga gusali ng apartment. Mula noon: Pinabuti ng mga tagapamahala ng 4 gusali ang ilaw at mga kandado ng locker. Tapos na ito."
    },
    "note": "",
@@ -407,27 +413,33 @@
    "attempts": 1,
    "problems": [],
    "engine_label": "Azure Translator",
-   "seconds": 0.5,
+   "seconds": 0.3,
+   "memory": {
+    "lines": 11,
+    "from_memory": 3,
+    "reviewed": 0,
+    "all_reviewed": false
+   },
    "script_ok": true,
-   "translated_at": "2026-10-24T14:21:44-04:00",
+   "translated_at": "2026-11-14T19:53:59-05:00",
    "back": {
     "doc": {
      "headline": "Westminster-Branson Neighborhood Safety Bulletin",
-     "summary": "There have been 18 police reports this month. A police report does not necessarily mean someone has been charged.",
+     "summary": "There have been 17 police reports this month. A police report does not necessarily mean someone has been charged.",
      "bullets": [
-      "Assaults: 7 reported in September. 83 this year, down 10% from 92 last year.",
-      "Robberies: 3 reports in September. 20 this year, up 82% from 11 last year.",
-      "Stolen vehicles: 5 reports in September. 33 this year, down 13% from 38 last year.",
-      "Theft from vehicles: 1 report in September. 17 this year.",
-      "Theft over $5,000: 2 reported in September. 5 this year, compared to 4 last year.",
-      "Shootings: 0 reports in September. 2 this year."
+      "Pain: 5 reports in October. 88 this year, down 12% from 100 last year.",
+      "Burglaries: 2 reports in October. 22 this year, compared to 13 last year.",
+      "Stolen vehicles: 2 reports in October. 35 this year, compared to 40 last year.",
+      "Theft from vehicle: 6 reports in October. 23 this year, compared to 32 last year.",
+      "Shootings: 0 reports in October. 2 this year.",
+      "Murders: 1 report in October. 1 this year."
      ],
      "officer_section": "Priority this month: Stealing bikes from apartment bike rooms.  \nWhat we did: We met with building managers about bike room locks and cameras.",
-     "closing": "The next meeting is on Wednesday, Nov. 11 at 7 p.m., Community room, Centennial branch library. Tip: Lock your bike's frame and steering wheel to a fixed rack with a U-lock, and register the serial number. In an emergency, call 911.",
+     "closing": "The next meeting is on Wednesday, Dec. 2 at 7 p.m., Community room, Centennial branch library. Tip: Lock your bike's frame and steering wheel in a fixed rack with a U-lock, and register the serial number. In an emergency, call 911.",
      "followup": "Last month's priority: Getting into storage lockers in apartment buildings. Since then: Managers of 4 buildings have improved lighting and locker locks. It's done."
     },
-    "for": "514c6f3e3a12425f",
-    "at": "2026-10-24T14:21:45-04:00"
+    "for": "f9dfddb82ea3c346",
+    "at": "2026-11-14T19:54:00-05:00"
    }
   }
  },
@@ -441,11 +453,11 @@
  "author": "",
  "manual_override": false,
  "timings": {
-  "draft_seconds": 36.5,
+  "draft_seconds": 36.4,
   "draft_model": "gemma3:12b (local)",
   "translate_seconds": {
-   "ru": 0.5,
-   "fil": 0.5
+   "ru": 0.6,
+   "fil": 0.3
   }
  },
  "verification": {
@@ -456,29 +468,26 @@
    "numbers": {
     "ok": true,
     "numbers": [
-     "18",
-     "7",
-     "83",
-     "10",
-     "92",
-     "3",
-     "20",
-     "82",
-     "11",
-     "5",
-     "33",
-     "13",
-     "38",
-     "1",
      "17",
-     "5000",
-     "2",
      "5",
-     "4",
+     "88",
+     "12",
+     "100",
+     "2",
+     "22",
+     "13",
+     "2",
+     "35",
+     "40",
+     "6",
+     "23",
+     "32",
      "0",
      "2",
+     "1",
+     "1",
      "4",
-     "11",
+     "2",
      "7",
      "911"
     ],
@@ -499,6 +508,10 @@
     "checked": false,
     "ok": true,
     "issues": []
+   },
+   "quality": {
+    "blocking": [],
+    "flags": []
    }
   },
   "ru": {
@@ -508,29 +521,26 @@
    "numbers": {
     "ok": true,
     "numbers": [
-     "18",
-     "7",
-     "83",
-     "10",
-     "92",
-     "3",
-     "20",
-     "82",
-     "11",
-     "5",
-     "33",
-     "13",
-     "38",
-     "1",
      "17",
-     "5000",
-     "2",
      "5",
-     "4",
+     "88",
+     "12",
+     "100",
+     "2",
+     "22",
+     "13",
+     "2",
+     "35",
+     "40",
+     "6",
+     "23",
+     "32",
      "0",
      "2",
+     "1",
+     "1",
      "4",
-     "11",
+     "2",
      "7",
      "911"
     ],
@@ -552,6 +562,10 @@
     "ok": true,
     "issues": [],
     "stale": false
+   },
+   "quality": {
+    "blocking": [],
+    "flags": []
    }
   },
   "fil": {
@@ -561,29 +575,26 @@
    "numbers": {
     "ok": true,
     "numbers": [
-     "18",
-     "7",
-     "83",
-     "10",
-     "92",
-     "3",
-     "20",
-     "82",
-     "11",
-     "5",
-     "33",
-     "13",
-     "38",
-     "1",
      "17",
-     "5000",
-     "2",
      "5",
-     "4",
+     "88",
+     "12",
+     "100",
+     "2",
+     "22",
+     "13",
+     "2",
+     "35",
+     "40",
+     "6",
+     "23",
+     "32",
      "0",
      "2",
+     "1",
+     "1",
      "4",
-     "11",
+     "2",
      "7",
      "911"
     ],
@@ -605,50 +616,65 @@
     "ok": true,
     "issues": [],
     "stale": false
+   },
+   "quality": {
+    "blocking": [],
+    "flags": [
+     {
+      "kind": "meaning_score",
+      "field": "headline",
+      "index": null,
+      "text": "The headline doesn't seem to say the same as the English (meaning score 0.79, usually above 0.85).",
+      "en": "Westminster-Branson Neighbourhood Safety Bulletin",
+      "back": "",
+      "strong": false,
+      "score": 0.7941
+     }
+    ]
    }
   }
  },
  "audit": [
   {
-   "at": "2026-10-24T14:21:43-04:00",
+   "at": "2026-11-14T19:53:57-05:00",
    "action": "drafted",
    "who": "",
    "role": "Author",
-   "detail": "AI draft for September 2026"
+   "detail": "AI draft for October 2026"
   },
   {
-   "at": "2026-10-24T14:21:45-04:00",
+   "at": "2026-11-14T19:54:00-05:00",
    "action": "published",
    "who": "",
    "role": "",
    "detail": "Published without a second check"
   }
  ],
- "updated_at": "2026-10-24T14:21:45-04:00",
+ "updated_at": "2026-11-14T19:54:00-05:00",
  "job": {
   "status": "done",
-  "started": 1792866103.154359,
+  "started": 1794704037.718872,
   "engine": "Azure Translator",
   "langs": {
    "ru": {
     "status": "done",
-    "started": 1792866103.156266,
-    "seconds": 0.5
+    "started": 1794704037.7198021,
+    "seconds": 0.6
    },
    "fil": {
     "status": "done",
-    "started": 1792866104.3568158,
-    "seconds": 0.5
+    "started": 1794704039.492343,
+    "seconds": 0.3
    }
   },
   "todo": [
    "ru",
    "fil"
   ],
-  "finished": 1792866105.287721
+  "finished": 1794704040.67777
  },
  "published_review": null,
- "published_at": "2026-10-24T14:21:45-04:00",
+ "published_at": "2026-11-14T19:54:00-05:00",
  "manual_override_langs": [],
  "manual_override_content": [],
  "demo": true

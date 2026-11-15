@@ -143,6 +143,15 @@
   "status": "machine",
   "tr": "سرقة الدراجات: {0} تقارير في سبتمبر. {1} هذا العام، بانخفاض {2}% عن {3} في مثل هذا الوقت من العام الماضي."
  },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |few,many,many": {
+  "back": "Home and shop burglary: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-14",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 29 this year, compared with 14 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السطو على المنازل والمحلات: {0} تقارير في أكتوبر. {1} هذا العام، مقارنة ب {2} في مثل هذا الوقت من العام الماضي."
+ },
  "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |zero,few,many": {
   "back": "Home and shop burglary: {0} reports in October. {1} this year, compared to {2} at this time last year.",
   "created": "2026-11-13",
@@ -466,6 +475,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "السيارات المسروقة: {0} تقارير في سبتمبر. {1} هذا العام، بزيادة {2}% عن {3} في مثل هذا الوقت من العام الماضي."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |few,many,many": {
+  "back": "Car theft: {0} reports in October. {1} this year, compared to {2} at this time last year.",
+  "created": "2026-11-14",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 5 reports in October. 41 this year, compared with 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "السرقة من السيارات: {0} تقارير في أكتوبر. {1} هذا العام، مقارنة ب {2} في مثل هذا الوقت من العام الماضي."
  },
  "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,many,many,many": {
   "back": "Car theft: {0} reports in October. {1} this year, up {2}% from {3} at this time last year.",

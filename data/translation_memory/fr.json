@@ -674,6 +674,15 @@
   "status": "machine",
   "tr": "Vols qualifiés: {0} rapports en octobre. {1} cette année, en baisse {2}% par rapport à {3} à la même période l’an dernier."
  },
+ "Robberies: {0} reports in October. {1} this year, the same as by this time last year. |one,other": {
+  "back": "Robberies: {0} reports in October. {1} this year, as in the same period last year.",
+  "created": "2026-11-14",
+  "en": "Robberies: {0} reports in October. {1} this year, the same as by this time last year.",
+  "example": "Robberies: 0 reports in October. 12 this year, the same as by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Vols qualifiés: {0} rapports en octobre. {1} cette année, comme à la même période l’an dernier."
+ },
  "Robberies: {0} reports in October. {1} this year, the same as by this time last year. |other,other": {
   "back": "Robberies: {0} reports in October. {1} this year, as in the same period last year.",
   "created": "2026-11-13",

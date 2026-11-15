@@ -413,6 +413,15 @@
   "status": "machine",
   "tr": "துப்பாக்கிச் சூடுகள்: செப்டம்பரில் {0} அறிக்கைகள். இந்த ஆண்டு {1} ."
  },
+ "Stolen vehicles: {0} report in October. {1} this year, compared with {2} by this time last year. |one,other,other": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year compared to {2} at the same time last year.",
+  "created": "2026-11-14",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 7 this year, compared with 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "திருடப்பட்ட வாகனங்கள்: அக்டோபரில் {0} அறிக்கை. கடந்த ஆண்டு இதே நேரத்தில் {2} உடன் ஒப்பிடும்போது இந்த ஆண்டு {1}."
+ },
  "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
   "back": "Stolen vehicles: {0} report in October. {1} This year, {3} is down {2}% at the same time last year.",
   "created": "2026-11-13",

@@ -206,6 +206,15 @@
   "status": "machine",
   "tr": "Кражи со взломом: {0} отчет в сентябре. {1} в этом году, на {2}% меньше, чем {3} к этому же времени прошлого года."
  },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |few,few,many": {
+  "back": "Burglaries: {0} reports in October. {1} this year, up from {2} at the same time last year.",
+  "created": "2026-11-14",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 2 reports in October. 22 this year, compared with 13 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи со взломом: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
  "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |few,few,few,many": {
   "back": "Burglary: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
   "created": "2026-11-13",
@@ -260,6 +269,15 @@
   "status": "machine",
   "tr": "Кражи со взломом: {0} отчёты в сентябре. {1} в этом году, это на {2}% больше, чем {3} к этому же времени прошлого года."
  },
+ "Homicides: {0} reports in October. {1} this year. |many,one": {
+  "back": "Murders: {0} reports in October. {1} this year.",
+  "created": "2026-11-14",
+  "en": "Homicides: {0} reports in October. {1} this year.",
+  "example": "Homicides: 0 reports in October. 1 this year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Убийства: {0} отчёты в октябре. {1} в этом году."
+ },
  "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |few": {
   "back": "In October, {name} received {0} reports to the police. Reporting to the police does not mean that someone has been charged.",
   "created": "2026-11-13",
@@ -286,6 +304,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Вопросы? Свяжитесь с местным полицейским отделом, указанным ниже. В экстренной ситуации звоните {0}."
+ },
+ "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year. |one,many,many": {
+  "back": "Robberies: {0} report in October. {1} this year, up from {2} at the same time last year.",
+  "created": "2026-11-14",
+  "en": "Robberies: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Robberies: 1 report in October. 19 this year, compared with 7 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Грабежи: {0} отчет в октябре. {1} в этом году, по сравнению с {2} к этому же времени прошлого года."
  },
  "Robberies: {0} report in September. {1} this year, compared with {2} by this time last year. |one,many,many": {
   "back": "Robberies: {0} report in September. {1} this year, compared to {2} by the same time last year.",
@@ -359,6 +386,15 @@
   "status": "machine",
   "tr": "Угоны автомобилей: {0} отчёт в сентябре. {1} в этом году, это {2}% больше, чем {3} к этому же времени прошлого года."
  },
+ "Stolen vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |few,many,many": {
+  "back": "Car thefts: {0} reports in October. {1} this year, up from {2} at the same time last year.",
+  "created": "2026-11-14",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 2 reports in October. 35 this year, compared with 40 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
  "Stolen vehicles: {0} reports in October. {1} this year, down {2}% from {3} by this time last year. |few,many,many,many": {
   "back": "Car thefts: {0} reports in October. {1} this year, down {2}% from {3} at the same time last year.",
   "created": "2026-11-13",
@@ -391,6 +427,15 @@
   "created": "2026-11-13",
   "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
   "example": "Stolen vehicles: 2 reports in October. 18 this year, up 20% from 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |many,many,many,few": {
+  "back": "Car thefts: {0} reports in October. {1} this year is {2}% more than {3} by this time last year.",
+  "created": "2026-11-14",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 13 reports in October. 106 this year, up 26% from 84 by this time last year.",
   "reviewed_by": "",
   "status": "machine",
   "tr": "Угоны автомобилей: {0} отчёты в октябре. {1} в этом году это {2}% больше, чем {3} к этому времени прошлого года."
@@ -445,6 +490,15 @@
   "created": "2026-11-13",
   "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
   "example": "Theft from vehicles: 4 reports in October. 8 this year, compared with 19 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |many,few,few": {
+  "back": "Thefts from cars: {0} reports in October. {1} this year, up from {2} by the same time last year.",
+  "created": "2026-11-14",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 6 reports in October. 23 this year, compared with 32 by this time last year.",
   "reviewed_by": "",
   "status": "machine",
   "tr": "Кражи из автомобилей: {0} отчёты в октябре. {1} в этом году, по сравнению с {2} к этому же времени в прошлом году."

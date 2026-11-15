@@ -1358,6 +1358,15 @@
   "status": "machine",
   "tr": "Pamamaril: {0} ulat noong Setyembre. {1} ngayong taon."
  },
+ "Stolen vehicles: {0} report in October. {1} this year, compared with {2} by this time last year. |one,one,one": {
+  "back": "Stolen vehicles: {0} report in October. {1} this year, compared to {2} last year.",
+  "created": "2026-11-14",
+  "en": "Stolen vehicles: {0} report in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Stolen vehicles: 1 report in October. 7 this year, compared with 15 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, kumpara sa {2} noong nakaraang taon."
+ },
  "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,one,one": {
   "back": "Stolen vehicles: {0} report in October. {1} this year, down {2}% from {3} last year.",
   "created": "2026-11-13",
@@ -1579,6 +1588,15 @@
   "created": "2026-11-13",
   "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
   "example": "Stolen vehicles: 10 reports in October. 74 this year, up 14% from 65 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."
+ },
+ "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} last year.",
+  "created": "2026-11-14",
+  "en": "Stolen vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Stolen vehicles: 13 reports in October. 106 this year, up 26% from 84 by this time last year.",
   "reviewed_by": "",
   "status": "machine",
   "tr": "Mga ninakaw na sasakyan: {0} ulat noong Oktubre. {1} ngayong taon, tumaas ng {2}% mula sa {3} noong nakaraang taon."

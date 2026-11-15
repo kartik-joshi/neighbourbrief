@@ -17,6 +17,15 @@
   "status": "machine",
   "tr": "بریدونه: {0} په سپتمبر کې راپور ورکوی. {1} کال، د تیر کال {3} {2}% کمه ده."
  },
+ "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Entry for theft: {0} reported in October. {1} years, compared to {2} years at the same time.",
+  "created": "2026-11-14",
+  "en": "Break-ins: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Break-ins: 3 reports in October. 29 this year, compared with 14 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "د غلا لپاره ننوتل: {0} په اکتوبر کې راپور ورکوی. {1} کال، په پرتله {2} کال په همدې وخت کې."
+ },
  "Break-ins: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Entry for burglary: {0} reported in October. {1} years, up {3},{2}% from last year.",
   "created": "2026-11-13",
@@ -106,6 +115,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "غلا شوي موټرونه: {0} په سپتمبر کې راپور ورکوی. {1} کال، د تیر کال {3} {2}% کمه ده."
+ },
+ "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year. |other,other,other": {
+  "back": "Car thefts: {0} reported in October. {1} years, compared to {2} years in the same time.",
+  "created": "2026-11-14",
+  "en": "Theft from vehicles: {0} reports in October. {1} this year, compared with {2} by this time last year.",
+  "example": "Theft from vehicles: 5 reports in October. 41 this year, compared with 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "له موټرو غلا: {0} په اکتوبر کې راپور ورکوی. {1} کال، په پرتله {2} کال په همدې وخت کې."
  },
  "Theft from vehicles: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Car thefts: {0} reported in October. {1} years, up {3}.{2}% from last year.",

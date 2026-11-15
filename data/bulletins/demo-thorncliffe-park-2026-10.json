@@ -1,0 +1,851 @@
+{
+ "id": "demo-thorncliffe-park-2026-10",
+ "created_at": "2026-11-14T19:52:34-05:00",
+ "status": "published",
+ "facts": {
+  "neighbourhood": {
+   "id": "055",
+   "name": "Thorncliffe Park",
+   "division_code": "D53",
+   "division": "53 Division"
+  },
+  "period": {
+   "month_label": "October 2026",
+   "month_start": "2026-10-01",
+   "month_end": "2026-10-31",
+   "month_number": 10,
+   "month_last_day": 31,
+   "days_in_month": 31,
+   "year": 2026,
+   "prev_year": 2025,
+   "ytd_label": "January 1 – October 31, 2026",
+   "ytd_prev_label": "January 1 – October 31, 2025",
+   "basis": "report date (when the report was made to police), Toronto time"
+  },
+  "categories": [
+   {
+    "key": "Assault",
+    "label": "Assaults",
+    "month": 16,
+    "ytd": 111,
+    "ytd_prev": 113,
+    "pct_change": -2,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Break and Enter",
+    "label": "Break-ins",
+    "month": 3,
+    "ytd": 29,
+    "ytd_prev": 14,
+    "pct_change": 107,
+    "direction": "up",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Auto Theft",
+    "label": "Stolen vehicles",
+    "month": 7,
+    "ytd": 45,
+    "ytd_prev": 60,
+    "pct_change": -25,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Theft from Motor Vehicle",
+    "label": "Theft from vehicles",
+    "month": 5,
+    "ytd": 41,
+    "ytd_prev": 32,
+    "pct_change": 28,
+    "direction": "up",
+    "counts_only": false,
+    "mci": false
+   },
+   {
+    "key": "Robbery",
+    "label": "Robberies",
+    "month": 1,
+    "ytd": 13,
+    "ytd_prev": 16,
+    "pct_change": -19,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Theft Over",
+    "label": "Thefts over $5,000",
+    "month": 1,
+    "ytd": 9,
+    "ytd_prev": 12,
+    "pct_change": null,
+    "direction": "down",
+    "counts_only": false,
+    "mci": true
+   },
+   {
+    "key": "Bike Theft",
+    "label": "Bike thefts",
+    "month": 0,
+    "ytd": 7,
+    "ytd_prev": 3,
+    "pct_change": null,
+    "direction": "up",
+    "counts_only": false,
+    "mci": false
+   },
+   {
+    "key": "Shooting",
+    "label": "Shootings",
+    "month": 0,
+    "ytd": 2,
+    "ytd_prev": null,
+    "pct_change": null,
+    "direction": null,
+    "counts_only": true,
+    "mci": false
+   },
+   {
+    "key": "Homicide",
+    "label": "Homicides",
+    "month": 0,
+    "ytd": 0,
+    "ytd_prev": null,
+    "pct_change": null,
+    "direction": null,
+    "counts_only": true,
+    "mci": false
+   }
+  ],
+  "display": [
+   "Assault",
+   "Break and Enter",
+   "Auto Theft",
+   "Theft from Motor Vehicle",
+   "Robbery",
+   "Shooting"
+  ],
+  "totals": {
+   "month": 33,
+   "ytd": 257
+  },
+  "excluded": [
+   "Sexual Violation"
+  ],
+  "nco": {
+   "has_nco": true,
+   "officers": [
+    {
+     "name": "PC Marcie Beaven-Brindle",
+     "badge": "5313",
+     "phone": "647-220-3257",
+     "email": "5313@tps.ca"
+    },
+    {
+     "name": "PC Timothy Chiu",
+     "badge": "11488",
+     "phone": "416-805-9281",
+     "email": "11488@tps.ca"
+    },
+    {
+     "name": "PC Robert Meloche",
+     "badge": "8291",
+     "phone": "437-421-1067",
+     "email": "8291@tps.ca"
+    },
+    {
+     "name": "PC Anthony Redigonda",
+     "badge": "10915",
+     "phone": "437-326-6704",
+     "email": "10915@tps.ca"
+    },
+    {
+     "name": "SGT Husandeep Sidhu",
+     "badge": "90492",
+     "phone": "647-355-3798",
+     "email": "90492@tps.ca"
+    },
+    {
+     "name": "SGT Jesse Riley",
+     "badge": "9226",
+     "phone": "416-808-5261",
+     "email": "9226@tps.ca"
+    }
+   ],
+   "division": {
+    "name": "53 Division",
+    "phone": "416-808-5300",
+    "address": "75 Eglinton Av W",
+    "email": ""
+   }
+  },
+  "services": [
+   {
+    "id": "69795098",
+    "name": "Don Valley Community Legal Services",
+    "category": "Legal Services (Abuse,Safety)",
+    "address": "1 Leaside Park Dr",
+    "phone": "416-441-1764",
+    "lat": 43.70254,
+    "lon": -79.35157
+   },
+   {
+    "id": "69800971",
+    "name": "Cypriot Community of Toronto",
+    "category": "Newcomers-Ethnocultural",
+    "address": "6 Thorncliffe Park Dr",
+    "phone": "416-696-7400",
+    "lat": 43.70581,
+    "lon": -79.35056
+   },
+   {
+    "id": "69794221",
+    "name": "Thorncliffe Food Bank",
+    "category": "Food",
+    "address": "1 Leaside Park Dr",
+    "phone": "647-428-9755",
+    "lat": 43.70254,
+    "lon": -79.35157
+   },
+   {
+    "id": "69797963",
+    "name": "East York Medical Health Centre: Walk-in Clinic",
+    "category": "Health",
+    "address": "45 Overlea Blvd",
+    "phone": "416-696-9836",
+    "lat": 43.7058,
+    "lon": -79.34603
+   },
+   {
+    "id": "69797644",
+    "name": "TNO: Ontario Employment Services",
+    "category": "Employment-Education",
+    "address": "1 Leaside Park Dr",
+    "phone": "416-467-0126",
+    "lat": 43.70254,
+    "lon": -79.35157
+   },
+   {
+    "id": "69798992",
+    "name": "East York East Toronto Family Resources Organization: Healthy Begin…",
+    "category": "Child Care,Family & Youth",
+    "address": "Jenner Jean Marie Community Centre; 48 Thorncliffe Park Dr",
+    "phone": "416-686-3390",
+    "lat": 43.70293,
+    "lon": -79.34273
+   },
+   {
+    "id": "69796262",
+    "name": "March of Dimes Canada: Employment Services, Head Office",
+    "category": "Disability",
+    "address": "10 Overlea Blvd",
+    "phone": "",
+    "lat": 43.70351,
+    "lon": -79.35245
+   },
+   {
+    "id": "69801459",
+    "name": "Ontario Motor Vehicle Industry Council",
+    "category": "Government",
+    "address": "65 Overlea Blvd",
+    "phone": "416-226-4500",
+    "lat": 43.70734,
+    "lon": -79.34277
+   },
+   {
+    "id": "69798087",
+    "name": "WoodGreen Community Services: Health Services",
+    "category": "Health",
+    "address": "12 Thorncliffe Park Dr",
+    "phone": "416-572-3575",
+    "lat": 43.70449,
+    "lon": -79.34827
+   },
+   {
+    "id": "70092343",
+    "name": "March of Dimes Canada [Durham Region location]: March of Dimes Cana…",
+    "category": "Disability",
+    "address": "10 Overlea Blvd",
+    "phone": "416-425-3463",
+    "lat": 43.70351,
+    "lon": -79.35245
+   }
+  ],
+  "languages": [
+   {
+    "language": "Urdu",
+    "code": "ur",
+    "share": 20.8
+   },
+   {
+    "language": "Pashto",
+    "code": "ps",
+    "share": 6.7
+   },
+   {
+    "language": "Arabic",
+    "code": "ar",
+    "share": 4.7
+   }
+  ],
+  "freshness": {
+   "tps_updated": "2026-11-14T17:13:39.752000-05:00",
+   "tps_updated_label": "November 14, 2026, 5:13 p.m.",
+   "latest_report_date": "2026-11-13",
+   "fetched_at": "2026-11-14T19:51:15-05:00"
+  },
+  "source": {
+   "name": "Toronto Police Service Public Safety Data Portal",
+   "licence": "Open Government Licence – Ontario",
+   "layers": [
+    "YTD_CRIME_WM",
+    "Major_Crime_Indicators_Open_Data",
+    "NCO_Neighbourhoods_WM_A",
+    "Community_Assets_TO"
+   ],
+   "attribution": "Prototype built on Toronto Police Service open data (Open Government Licence – Ontario). Not affiliated with or endorsed by the Toronto Police Service."
+  },
+  "data_warnings": [],
+  "allowed_numbers": [
+   "0",
+   "1",
+   "2",
+   "3",
+   "5",
+   "7",
+   "9",
+   "10",
+   "12",
+   "13",
+   "14",
+   "16",
+   "19",
+   "25",
+   "28",
+   "29",
+   "31",
+   "32",
+   "33",
+   "41",
+   "45",
+   "53",
+   "60",
+   "107",
+   "111",
+   "113",
+   "257",
+   "911",
+   "2025",
+   "2026",
+   "5000"
+  ]
+ },
+ "officer": {
+  "priority": "Package thefts from apartment lobbies in the afternoon.",
+  "action_taken": "Building visits with property managers about lobby doors and parcel rooms.",
+  "meeting_note": "Tuesday, December 1 at 7 p.m., Thorncliffe Park Public Library",
+  "tip": "Have packages delivered when someone is home, or use a pickup point.",
+  "prev_priority": "Car break-ins near the plaza parking lots in the evening.",
+  "followup": "Evening patrols continued and the tenant association shared lock-your-car tips.",
+  "tip_id": "packages",
+  "followup_status": "ongoing",
+  "meeting": {
+   "date": "2026-12-01",
+   "time": "19:00",
+   "place": "Thorncliffe Park Public Library"
+  }
+ },
+ "officer_warnings": [],
+ "languages": [
+  "ur",
+  "ps",
+  "ar"
+ ],
+ "english": {
+  "headline": "Thorncliffe Park Neighbourhood Safety Bulletin",
+  "summary": "There were 33 reports to police this month. A report to police does not mean anyone was charged.",
+  "bullets": [
+   "Assaults: 16 reports in October. 111 this year, down 2% from 113 by this time last year.",
+   "Break-ins: 3 reports in October. 29 this year, compared with 14 by this time last year.",
+   "Stolen vehicles: 7 reports in October. 45 this year, down 25% from 60 by this time last year.",
+   "Theft from vehicles: 5 reports in October. 41 this year, compared with 32 by this time last year.",
+   "Robberies: 1 report in October. 13 this year, down 19% from 16 by this time last year.",
+   "Shootings: 0 reports in October. 2 this year."
+  ],
+  "officer_section": "This month's priority: Package thefts from apartment lobbies in the afternoon.\nWhat we did: Building visits with property managers about lobby doors and parcel rooms.\nTip: Have packages delivered when someone is home, or use a pickup point.\nNext meeting: Tuesday, December 1 at 7 p.m., Thorncliffe Park Public Library",
+  "closing": "We hope to see you there. Tip: Have packages delivered when someone is home, or use a pickup point. In an emergency, call 911.",
+  "followup": "Last month's priority: Car break-ins near the plaza parking lots in the evening. Since then: Evening patrols continued and the tenant association shared lock-your-car tips. We are still working on it."
+ },
+ "draft_source": "ai",
+ "draft_note": "AI draft (78.0 s)",
+ "draft_info": {
+  "attempts": 2,
+  "errors": [
+   "It is 200 words; the limit is 180. Shorten every line; keep all numbers."
+  ],
+  "seconds": 78.0,
+  "too_long_first": 200
+ },
+ "translations": {
+  "ur": {
+   "doc": {
+    "headline": "Thorncliffe Park نیبرہڈ سیفٹی بلیٹن",
+    "summary": "اس ماہ پولیس کو 33 رپورٹس موصول ہوئیں۔ پولیس کو رپورٹ کرنے کا مطلب یہ نہیں کہ کسی پر فرد جرم عائد کی گئی ہے۔",
+    "bullets": [
+     "حملے: اکتوبر میں 16 رپورٹس ہیں۔ اس سال 111، جو پچھلے سال اسی وقت تک 113 سے 2% کم ہے۔",
+     "نقب زنی: 3 اکتوبر میں رپورٹ کرے گا۔ اس سال 29 ہے، پچھلے سال اسی وقت تک 14 کے مقابلے میں۔",
+     "چوری شدہ گاڑیاں: اکتوبر میں 7 رپورٹس ہیں۔ اس سال 45، جو پچھلے سال اسی وقت تک 60 سے 25% کم ہے۔",
+     "گاڑیوں سے چوری: 5 اکتوبر میں رپورٹ کرے گا۔ اس سال 41 ہے، پچھلے سال اسی وقت تک 32 کے مقابلے میں۔",
+     "ڈکیتی: اکتوبر میں رپورٹ 1 ہے۔ 13 اس سال، پچھلے سال 16 سے 19% کم۔",
+     "فائرنگ: 0 رپورٹ اکتوبر میں ہے۔ 2 اس سال۔"
+    ],
+    "officer_section": "اس مہینے کی ترجیح: دوپہر کے وقت اپارٹمنٹ لابی سے پیکج چوری۔ \nہم نے کیا کیا: پراپرٹی مینیجرز کے ساتھ لابی کے دروازوں اور پارسل رومز کے بارے میں ملاقاتیں کیں۔ \nمشورہ: جب کوئی گھر پر ہو تو پیکجز پہنچائیں، یا پک اپ پوائنٹ استعمال کریں۔ \nاگلا اجلاس: منگل، 1 دسمبر کو شام 7 بجے، Thorncliffe Park پبلک لائبریری",
+    "closing": "ہم امید کرتے ہیں کہ آپ وہاں ملیں گے۔ مشورہ: جب کوئی گھر پر ہو تو پیکجز پہنچائیں، یا پک اپ پوائنٹ استعمال کریں۔ ہنگامی صورت میں، 911 کال کریں۔",
+    "followup": "گزشتہ ماہ کی ترجیح: شام کے وقت پلازہ پارکنگ لاٹس کے قریب گاڑیوں میں چوری کے واقعات ہوئے۔ اس کے بعد سے: شام کی گشت جاری رہی اور کرایہ داروں کی ایسوسی ایشن نے اپنی گاڑی کو لاک کرنے کے مشورے شیئر کیے۔ ہم ابھی بھی اس پر کام کر رہے ہیں۔"
+   },
+   "note": "",
+   "engine": "azure",
+   "attempts": 1,
+   "problems": [],
+   "engine_label": "Azure Translator",
+   "seconds": 0.6,
+   "memory": {
+    "lines": 11,
+    "from_memory": 4,
+    "reviewed": 0,
+    "all_reviewed": false
+   },
+   "script_ok": true,
+   "translated_at": "2026-11-14T19:52:34-05:00",
+   "back": {
+    "doc": {
+     "headline": "Thorncliffe Park Neighborhood Safety Bulletin",
+     "summary": "This month, the police received 33 reports. Reporting to the police does not mean that someone has been charged.",
+     "bullets": [
+      "Attacks: There are 16 reports in October. 111 this year, down 2% from 113 at the same time last year.",
+      "Update: Will report on October 3. This year is 29, compared to 14 so far last year.",
+      "Stolen vehicles: There are 7 reports in October. 45 this year, down 60% to 25% from the same time last year.",
+      "Thefts from vehicles: Will report on October 5. This year is 41, compared to 32 so far last year.",
+      "Robbery: Report 1 in October. 13 this year, down 16% from last year.",
+      "Firing: 0 reports in October. 2 this year."
+     ],
+     "officer_section": "This month's preference: stealing packages from the apartment lobby in the afternoon.  \nWhat we did: Held meetings with property managers about lobby doors and parcel rooms.  \nTip: Deliver packages when someone is at home, or use a pickup point.  \nNext Session: Tuesday, December 1 at 7 p.m., Thorncliffe Park Public Library",
+     "closing": "We hope to meet you there. Advice: Deliver packages when someone is home, or use a pickup point. In case of an emergency, call 911.",
+     "followup": "Last month's priority: There were vehicle theft incidents near the plaza parking lots in the evening. Since then: Evening patrols continued and the tenants' association shared tips on locking their vehicle. We are still working on it."
+    },
+    "for": "a29b45e76ddcaf45",
+    "at": "2026-11-14T19:52:35-05:00"
+   }
+  },
+  "ps": {
+   "doc": {
+    "headline": "Thorncliffe Park د ګاونډ د خوندیتوب خبرتیا",
+    "summary": "په دې میاشت کې پولیسو ته 33 راپورونه ورکړل شوی وو. پولیسو ته راپور ورکول معنی نه لری چې څوک تورن شوی وی.",
+    "bullets": [
+     "بریدونه: 16 په اکتوبر کې راپور ورکوی. 111 کال، د تیر کال 113 2% کمه ده.",
+     "د غلا لپاره ننوتل: 3 په اکتوبر کې راپور ورکوی. 29 کال، په پرتله 14 کال په همدې وخت کې.",
+     "غلا شوي موټرونه: 7 په اکتوبر کې راپور ورکوی. 45 کال، د تیر کال 60 25% کمه ده.",
+     "له موټرو غلا: 5 په اکتوبر کې راپور ورکوی. 41 کال، په پرتله 32 کال په همدې وخت کې.",
+     "لوټ مار: 1 راپور په اکتوبر کې دی. 13 کال، د تیر کال په همدې وخت 19% 16 کمه ده.",
+     "ډزې: 0 په اکتوبر کې راپور ورکوی. 2 کال."
+    ],
+    "officer_section": "د دې میاشتې لومړیتوب: د اپارتمان د لابی څخه د ماسپښین بسته غلا. \nموږ څه وکړل: د ملکیت مدیرانو سره د لابی دروازو او پارسل خونې په اړه لیدنې وکړې. \nمشوره: کله چې څوک کور کې وی، بسته وسپارئ، یا د اخیستلو ځای وکاروئ. \nراتلونکی غونډه: سه شنبه، دسمبر 1 د ماښام 7 بجې، Thorncliffe Park عامه کتابتون",
+    "closing": "هیله لرو هلته مو ووینو. مشوره: کله چې څوک کور ته وی، بسته وسپارئ، یا د اخیستلو ځای وکاروه. په بیړنی حالت کې، اړیکه ونیسئ 911",
+    "followup": "د تیر میاشتې لومړیتوب: د ماښام په وخت کې د پلازا پارکینګ ته نږدې د موټرو غلا. له هغه وروسته: د ماښام ګزمې دوام درلود او د کرایه دارانو ټولنې د موټر قلف کولو مشورې شریکې کړې. موږ لا هم پرې کار کوو."
+   },
+   "note": "",
+   "engine": "azure",
+   "attempts": 1,
+   "problems": [],
+   "engine_label": "Azure Translator",
+   "seconds": 0.4,
+   "memory": {
+    "lines": 11,
+    "from_memory": 4,
+    "reviewed": 0,
+    "all_reviewed": false
+   },
+   "script_ok": true,
+   "translated_at": "2026-11-14T19:52:37-05:00",
+   "back": {
+    "doc": {
+     "headline": "Thorncliffe Park Neighborhood Safety Notice",
+     "summary": "There were 33 reports to police this month. Reporting to the police does not mean who has been charged.",
+     "bullets": [
+      "Attacks: 16 reported in October. 111, down 1132% from last year.",
+      "Entry for theft: 3 reported in October. 29 years, compared to 14 years at the same time.",
+      "Stolen cars: 7 reported in October. 45 years, down 25% from 60% last year.",
+      "Car thefts: 5 reported in October. 41 years, compared to 32 years in the same time.",
+      "Loot: 1 report is in October. 13 years, down 19% from the same time last year.",
+      "Shoots: 0 reported in October. 2 years."
+     ],
+     "officer_section": "This year's top priority: stealing an afternoon package from the lobby of the apartment.  \nWhat we did: Meetings with property managers about lobby doors and parcel rooms.  \nTip: When someone is at home، hand over the package، or use the pick-up area.  \nNext Session: Tuesday، December 1 at 7 p.m.، Thorncliffe Park Public Library",
+     "closing": "We hope to see you there. Advice: When someone is home, drop off the package, or use a pick-up location. In an emergency, call 911.",
+     "followup": "Last month's priority: Car thefts near the Plaza parking lot in the evening. Aftermath: Evening patrols continued and the tenants' association shared tips on locking cars. We're still working on it."
+    },
+    "for": "47a0a86b91ca91d8",
+    "at": "2026-11-14T19:52:38-05:00"
+   }
+  },
+  "ar": {
+   "doc": {
+    "headline": "Thorncliffe Park نشرة سلامة الحي",
+    "summary": "تم إرسال 33 بلاغات للشرطة هذا الشهر. الإبلاغ للشرطة لا يعني أن أحدا تم توجيه تهم.",
+    "bullets": [
+     "الاعتداءات: 16 تقارير في أكتوبر. 111 هذا العام، انخفض 2% عن 113 في مثل هذا الوقت من العام الماضي.",
+     "السطو على المنازل والمحلات: 3 تقارير في أكتوبر. 29 هذا العام، مقارنة ب 14 في مثل هذا الوقت من العام الماضي.",
+     "السيارات المسروقة: 7 تقارير في أكتوبر. 45 هذا العام، انخفض 25% عن 60 في مثل هذا الوقت من العام الماضي.",
+     "السرقة من السيارات: 5 تقارير في أكتوبر. 41 هذا العام، مقارنة ب 32 في مثل هذا الوقت من العام الماضي.",
+     "السرقة بالإكراه: 1 التقرير في أكتوبر. 13 هذا العام، انخفض 19% عن 16 في مثل هذا الوقت من العام الماضي.",
+     "حوادث إطلاق النار: 0 تقارير في أكتوبر. 2 هذا العام."
+    ],
+    "officer_section": "أولوية هذا الشهر: سرقات الطرود من غرف الشقق في فترة بعد الظهر. \nما فعلناه: بناء زيارات مع مديري العقارات حول أبواب الردهات وغرف الأطراف. \nنصيحة: قم بتوصيل الطرود عندما يكون شخص ما في المنزل، أو استخدم نقطة استلام. \nالاجتماع القادم: الثلاثاء 1 ديسمبر الساعة 7 مساء، مكتبة Thorncliffe Park العامة",
+    "closing": "نأمل أن نراك هناك. نصيحة: قم بتوصيل الطرود عندما يكون أحدهم في المنزل، أو استخدم نقطة استلام. في حالة الطوارئ، اتصل 911.",
+    "followup": "أولوية الشهر الماضي: اقتحامات السيارات بالقرب من مواقف البلازا في المساء. منذ ذلك الحين: استمرت الدوريات المسائية وشاركت جمعية المستأجرين نصائح حول قفل سيارتك. ما زلنا نعمل على ذلك."
+   },
+   "note": "",
+   "engine": "azure",
+   "attempts": 1,
+   "problems": [],
+   "engine_label": "Azure Translator",
+   "seconds": 0.7,
+   "memory": {
+    "lines": 11,
+    "from_memory": 4,
+    "reviewed": 0,
+    "all_reviewed": false
+   },
+   "script_ok": true,
+   "translated_at": "2026-11-14T19:52:39-05:00",
+   "back": {
+    "doc": {
+     "headline": "Thorncliffe Park Neighbourhood Safety Bulletin",
+     "summary": "33 reports were sent to the police this month. Reporting to the police does not mean that no one has been charged.",
+     "bullets": [
+      "Assaults: 16 reports in October. 111 this year, down 2% from 113 at this time last year.",
+      "Home and shop burglary: 3 reports in October. 29 this year, compared to 14 at this time last year.",
+      "Stolen cars: 7 reports in October. 45 This year, 25% are down from 60 at this time last year.",
+      "Car theft: 5 reports in October. 41 this year, compared to 32 at this time last year.",
+      "Robbery by coercion: 1 report in October. 13 This year, 19% is down from 16 at the same time last year.",
+      "Shooting incidents: 0 reports in October. 2 this year."
+     ],
+     "officer_section": "This month's priority: parcel thefts from apartment rooms in the afternoon.  \nWhat we did: Build visits with property managers around the doors of the lobbies and the end rooms.  \nTip: Deliver packages when someone is home, or use a pick-up point.  \nNext meeting: Tuesday, December 1 at 7 p.m., Thorncliffe Park Public Library",
+     "closing": "We hope to see you there. Tip: Deliver packages when someone is home, or use a pick-up point. In an emergency, call 911.",
+     "followup": "Last month's priority: car break-ins near the plaza parking lots in the evening. Since then: Evening patrols have continued and the Tenants Association has shared tips on locking your car. We're still working on it."
+    },
+    "for": "2264a00d2d2e2d24",
+    "at": "2026-11-14T19:52:39-05:00"
+   }
+  }
+ },
+ "services_shown": [
+  "69795098",
+  "69800971",
+  "69794221",
+  "69797963"
+ ],
+ "signoff": "",
+ "author": "",
+ "manual_override": false,
+ "timings": {
+  "draft_seconds": 78.0,
+  "draft_model": "gemma3:12b (local)",
+  "translate_seconds": {
+   "ur": 0.6,
+   "ps": 0.4,
+   "ar": 0.7
+  }
+ },
+ "verification": {
+  "en": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "33",
+     "16",
+     "111",
+     "2",
+     "113",
+     "3",
+     "29",
+     "14",
+     "7",
+     "45",
+     "25",
+     "60",
+     "5",
+     "41",
+     "32",
+     "1",
+     "13",
+     "19",
+     "16",
+     "0",
+     "2",
+     "1",
+     "7",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Latin"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": false,
+    "ok": true,
+    "issues": []
+   },
+   "quality": {
+    "blocking": [],
+    "flags": []
+   }
+  },
+  "ur": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "33",
+     "16",
+     "111",
+     "113",
+     "2",
+     "3",
+     "29",
+     "14",
+     "7",
+     "45",
+     "60",
+     "25",
+     "5",
+     "41",
+     "32",
+     "1",
+     "13",
+     "16",
+     "19",
+     "0",
+     "2",
+     "1",
+     "7",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Arabic"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": true,
+    "ok": true,
+    "issues": [],
+    "stale": false
+   },
+   "quality": {
+    "blocking": [],
+    "flags": [
+     {
+      "kind": "meaning_score",
+      "field": "bullets",
+      "index": 1,
+      "text": "Line 2 doesn't seem to say the same as the English (meaning score 0.75, usually above 0.77).",
+      "en": "Break-ins: 3 reports in October. 29 this year, compared with 14 by this time last year.",
+      "back": "",
+      "strong": false,
+      "score": 0.7549
+     }
+    ]
+   }
+  },
+  "ps": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "33",
+     "16",
+     "111",
+     "113",
+     "2",
+     "3",
+     "29",
+     "14",
+     "7",
+     "45",
+     "60",
+     "25",
+     "5",
+     "41",
+     "32",
+     "1",
+     "13",
+     "19",
+     "16",
+     "0",
+     "2",
+     "1",
+     "7",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Arabic"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": true,
+    "ok": true,
+    "issues": [],
+    "stale": false
+   },
+   "quality": {
+    "blocking": [],
+    "flags": []
+   }
+  },
+  "ar": {
+   "ok": true,
+   "status": "verified",
+   "summary": "All numbers match TPS data",
+   "numbers": {
+    "ok": true,
+    "numbers": [
+     "33",
+     "16",
+     "111",
+     "2",
+     "113",
+     "3",
+     "29",
+     "14",
+     "7",
+     "45",
+     "25",
+     "60",
+     "5",
+     "41",
+     "32",
+     "1",
+     "13",
+     "19",
+     "16",
+     "0",
+     "2",
+     "1",
+     "7",
+     "911"
+    ],
+    "not_allowed": [],
+    "missing": [],
+    "extra": []
+   },
+   "script": {
+    "ok": true,
+    "issues": [],
+    "scripts": [],
+    "expected": [
+     "Arabic"
+    ]
+   },
+   "binding": [],
+   "meaning": {
+    "checked": true,
+    "ok": true,
+    "issues": [],
+    "stale": false
+   },
+   "quality": {
+    "blocking": [],
+    "flags": []
+   }
+  }
+ },
+ "audit": [
+  {
+   "at": "2026-11-14T19:52:34-05:00",
+   "action": "drafted",
+   "who": "",
+   "role": "Author",
+   "detail": "AI draft for October 2026"
+  },
+  {
+   "at": "2026-11-14T19:52:40-05:00",
+   "action": "published",
+   "who": "",
+   "role": "",
+   "detail": "Published without a second check"
+  }
+ ],
+ "updated_at": "2026-11-14T19:52:40-05:00",
+ "job": {
+  "status": "done",
+  "started": 1794703954.031174,
+  "engine": "Azure Translator",
+  "langs": {
+   "ur": {
+    "status": "done",
+    "started": 1794703954.033212,
+    "seconds": 0.6
+   },
+   "ps": {
+    "status": "done",
+    "started": 1794703957.3977869,
+    "seconds": 0.4
+   },
+   "ar": {
+    "status": "done",
+    "started": 1794703958.842541,
+    "seconds": 0.7
+   }
+  },
+  "todo": [
+   "ur",
+   "ps",
+   "ar"
+  ],
+  "finished": 1794703960.231893
+ },
+ "published_review": null,
+ "published_at": "2026-11-14T19:52:40-05:00",
+ "manual_override_langs": [],
+ "manual_override_content": [],
+ "demo": true
+}

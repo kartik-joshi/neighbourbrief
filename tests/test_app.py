@@ -144,7 +144,8 @@ def urdu_translator(system, user, json=False, **kw):
         raise llm.LLMUnavailable("writer not faked in this test")
     def tr(t):
         toks = re.findall(r"⟦N\d+⟧%?", t)  # keep a percent sign with its number, like a real translation
-        return ("خبر " + " ".join(toks) + "۔").strip()
+        # a word between numbers, as in any real sentence ("16 111" would rightly read as one number, 16 111)
+        return ("خبر " + " اور ".join(toks) + "۔").strip()
     return _json.dumps({k: ([tr(x) for x in v] if isinstance(v, list) else tr(v)) for k, v in data.items()},
                        ensure_ascii=False)
 
