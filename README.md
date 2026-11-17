@@ -1,266 +1,162 @@
-# NeighbourBrief TO (prototype)
+# NeighbourBrief TO
 
-A one-page, plain-language, multilingual **monthly neighbourhood safety bulletin** for every one of
-Toronto's 158 neighbourhoods, with every number checked against TPS open data. Neighbourhood Community
-Officers (NCOs) add their own priorities and follow-up; elsewhere the bulletin is written automatically
-from the open data.
+**Turns Toronto Police Service open data into plain-language, multilingual neighbourhood safety bulletins, with every number checked by code before anything is published.**
 
-> Prototype built on Toronto Police Service open data (Open Government Licence – Ontario).
-> Not affiliated with or endorsed by the Toronto Police Service.
+**Live demo:** https://kartik-joshi.github.io/neighbourbrief-to/ (the static public site, rebuilt from this repo)
 
-## What it does
+> Independent prototype. Not affiliated with or endorsed by the Toronto Police Service or the City of Toronto.
 
-1. **Facts from TPS open data (code, not AI).** Last full month's reports to police, year to date,
-   and the same period last year for one of Toronto's 158 neighbourhoods. Counted by report date in
-   Toronto time, one per occurrence and category. Small-number rule: percent change only when both
-   counts are ≥ 10; shootings and homicides are counts only.
-2. **Plain-language draft.** A local AI model (Ollama `gemma3:12b` by default) writes a Grade 6
-   draft around the officer's own "priority" and "what we did". If the model is unavailable or
-   invents a number, a template writer produces the same structure from the facts.
-3. **Translation** into the neighbourhood's main languages (2021 Census), by Azure Translator when a
-   key is set, otherwise by the AI model. Numbers are protected during translation.
-4. **Verification.** Every number in English and every translation must match the facts, and each
-   translation must use the right script (e.g. no Devanagari in Urdu). Each translation is also **read back in English**
-   (Azure) and every line must keep its direction: "down 3%" can't become "up 3%". Publishing is blocked until
-   checks pass or the officer confirms a manual review.
-5. **Plain-language & safety checks** on the text you'll publish (tone, personal information,
-   statements about groups, "report ≠ charge" reminder, length, reading level), plus warnings when
-   the TPS data may not cover the whole month.
-6. **Fix any language**: translate one language again, or edit/paste a translation (e.g. from a
-   community translator) and mark it human-reviewed; all checks still apply.
-7. **Print / PDF, WhatsApp, email**: one language, **all languages at once** (one page each, for
-   meeting handouts), or **large print** (14 pt, two pages). Email/WhatsApp text is kept short enough
-   for every app and always keeps the translation notice.
-8. **Monthly workflow helpers**: pick any complete month this year; **reuse** last month's priority,
-   actions, meeting, languages and sign-off; optional **prevention tip** (10 vetted tips, the ones
-   matching this month's categories first) and **"Prepared by"** line (only officers TPS lists for the
-   neighbourhood); **local support services** (up to 4, from TPS community assets data).
-9. **History**: search, filter drafts/published, "New from this", delete to a recoverable trash.
-10. **Status page** (`/status`): pre-flight check before a meeting: TPS reachable, data freshness,
-    AI model, translator, offline snapshot; **save any neighbourhood for offline use**.
-11. **The numbers behind each bulletin**: CSV / JSON download with every category and the rules.
-12. **You said, we did**: an optional follow-up on last month's priority (what happened, done or still
-    working on it), written by code in the officer's words, then translated and checked like the rest.
-13. **Neighbourhood map**: the City boundary and numbered pins for nearby community services, with
-    "Use my location" (worked out in the browser; the position is never sent or stored). Never
-    incident locations, heatmaps or "hot" areas. Offline: a plain outline with the same pins.
+![Home page of the public site, listing the latest bulletins in several languages](docs/images/home.png)
 
-14. **Two-person check** (no accounts): a second person signs off on the Publish page by name and
-    role; the sign-off is tied to the exact text and goes stale if anything changes. Every bulletin
-    keeps a history (drafted, edited, reviewed, published, by whom). `REQUIRE_REVIEW=true` blocks
-    publishing without a current sign-off; role labels via `ROLE_AUTHOR` / `ROLE_REVIEWER` (e.g.
-    Officer / Sergeant, or Volunteer / CPLC chair).
+## The problem
 
-15. **Translator review queue** (`/translations`): side-by-side English, translation and back-translation;
-    a community translator fixes and confirms, and the bulletin then says it was reviewed by a person.
-16. **Monthly routine on Home**: which neighbourhoods still need this month's bulletin, one click to
-    start from last month's text. **Version history** with restore. **Add the meeting to a calendar**
-    (.ics). **Image to share** (a square card per language for WhatsApp groups). **Listen** (read aloud).
-17. **Help** (`/help`) and **How it works** (`/how-it-works`, a one-slide diagram).
+Toronto Police Service (TPS) publishes detailed crime and collision data for all 158 of the city's
+neighbourhoods. But it is published as ArcGIS layers and dashboards, in English, and the people who need it are at
+community meetings and in WhatsApp groups. In many neighbourhoods a large share of residents speak another language at home: Urdu is 20.8% of
+Thorncliffe Park (2021 Census), and Tamil, Punjabi and Gujarati lead in others.
 
-### Open data tools (for residents, the City and community groups)
+Writing a monthly update by hand, in several languages, is slow. Doing it with a language model is fast but
+risky: a translated "down 3%" that becomes "up 3%", or an invented count, damages trust in exactly the
+communities where trust matters most. NeighbourBrief is built around one rule: **code counts, AI only
+phrases, and nothing is published unless every number in every language matches the data.**
 
-- **Automatic bulletins for all 158 neighbourhoods** (`app/auto.py`): written from the open data alone
-  (no AI for the English), in English, the neighbourhood's top home languages and French; same checks and
-  publish gate as officers' bulletins (a language that fails any check is left out). On every profile
-  ("This month in plain language"); an officer's bulletin for the month replaces it.
-- **Easy Read** (`/bulletin/{id}/easy`): one short sentence per line with pictures, no percentages.
-- **Residents' voice**: "What should your officers focus on next month?" on bulletins and profiles,
-  anonymous (no names, contacts, IPs or cookies; comments with contact details or links refused), shown
-  to staff when they start the next bulletin. Never published.
-- **Ward briefs** (`/wards`): each ward's neighbourhoods with their own counts and bulletins, for
-  councillors (counts never split or summed across boundaries that don't line up).
-- **Share**: WhatsApp and the phone's share sheet, in the bulletin's language.
-- **Usage counts** on a public deployment: totals per day by page type and language, nothing else.
+## How it works
 
-- **Neighbourhood profiles** (`/neighbourhoods`, all 158): reported crime this month and year to date,
-  **road safety** (TPS Traffic Collisions: injuries, pedestrians, cyclists, fatal; 12-month chart that
-  marks a month still being filled in), **twelve years of yearly counts** (TPS Neighbourhood Crime
-  Rates), languages (2021 Census), officers, services and map. Each block names its dataset and date.
-  Same numbers as open JSON: `/neighbourhoods/{id}/data.json`.
-- **Check my numbers** (`/check`): paste any newsletter, release or post; every number is checked
-  against the open data: matches, wrong category, wrong direction ("up" when it went down) or not in
-  the data. Dates, times, phone numbers and addresses are skipped.
-- **Data health** (`/data-health`): each of the 8 open data layers with last update, newest record,
-  record count and a check that every field the app relies on still exists; plus what we noticed
-  while joining them (feedback for the publishers).
-- **Division summaries** (`/divisions`): a division's neighbourhoods A to Z with combined counts, for
-  Community Police Liaison Committees (sums of neighbourhood counts, labelled as such).
-- **Impact** (`/impact`): bulletins, pages, numbers checked and residents reached in their home
-  language, measured from saved records.
-- **Static public site** (`scripts/build_public_site.py`): published bulletins in every language
-  (regular and large print), neighbourhood profiles, How we count, Data health, an accessibility
-  statement, Atom feeds (all and per neighbourhood), an **embed card** partner websites can iframe, and an
-  in-browser **Check a text** on every profile (a JavaScript port of Check my numbers, kept identical by
-  `scripts/js_parity_check.py`). Plain files for any web
-  host; no server, no login.
+```mermaid
+flowchart LR
+    A[TPS + City of Toronto<br/>open data<br/>8 ArcGIS layers, 2021 Census] -->|fetch, cache,<br/>offline snapshot| B[Facts<br/>counts computed in code]
+    B --> C[Writer<br/>local LLM or template]
+    C --> D[Translator<br/>Azure, numbers protected]
+    D --> E{Verification}
+    B --> E
+    E -->|every number matches,<br/>right script, same direction<br/>when read back in English| F[Publish gate<br/>optional two-person sign-off]
+    E -->|any check fails| G[Language left out<br/>or sent for human review]
+    F --> H[Web pages, print/PDF,<br/>WhatsApp, Easy Read]
+    F --> I[Static site<br/>GitHub Pages]
+    B --> J[Ask: RAG over the facts<br/>Cohere or local, with a number guard]
+```
 
-## Setup (macOS)
+1. **Facts (no AI).** `app/data/` pulls TPS layers (crime, collisions, officers, community services,
+   boundaries) and City data (wards, home languages), and computes last month, year to date and the
+   same period last year. Small-number rules: no percentages below 10, shootings and homicides as counts only.
+2. **Writing.** A local model (Ollama, `gemma3:12b`) drafts a Grade 6 text around the officer's own
+   priority. If the model is down or invents a number, a template writer produces the same structure.
+   Automatic bulletins for all 158 neighbourhoods use the template only.
+3. **Translation** into the neighbourhood's top home languages (23 supported) with Azure Translator,
+   numbers protected.
+4. **Verification** (`app/verify/`). Every number in English and in each translation must match the facts. Each
+   translation must be in the right script (no Devanagari in Urdu), and it is read back in English
+   so a direction can't flip. Tone, personal information and statements about groups are checked too.
+   A language that fails is left out or goes to a human translator queue.
+5. **Ask** (`app/rag/`): questions in any language, answered from the same facts with Cohere
+   (Embed, Rerank, Command A with citations) or a local model. Ranking questions ("which area is
+   most dangerous?") are declined, and any answer containing a number not found in the retrieved documents is held back.
+   Details: [docs/COHERE.md](docs/COHERE.md).
+
+The staff app (FastAPI) runs on the officer's own computer and listens on localhost only. The public site is
+plain static files built by `scripts/build_public_site.py`.
+
+## Results
+
+These are measured, not projected. Sources are linked.
+
+- **Numbers match the source.** 450 counts on 18 neighbourhood profiles (including the 3 demo
+  neighbourhoods) all matched the TPS portal's own queries (November 2026).
+- **Ask evaluation** ([docs/COHERE.md](docs/COHERE.md), questions generated from live facts for 3 neighbourhoods):
+  the local model was correct on 96% of 24 questions and the extractive fallback on 100%. Both cited the right source 100% of the time, and the number guard passed 100% of the time. The same question
+  asked in 21 languages was answered correctly 20/21 times by the local model and 21/21 by the extractive fallback. The Cohere engine is
+  implemented but has not been evaluated yet (no API key during development).
+- **Translations.** In the end-to-end run with the real model and Azure, 8/8 languages were verified and meaning-checked
+  and 3/3 bulletins published ([docs/TEST_REPORT.md](docs/TEST_REPORT.md), round 6).
+- **Public site.** 1,993 pages in all (158 profiles, automatic bulletins, ward briefs, feeds). A live crawl found
+  every one of its 2,643 files and 2,165 internal links working, and the required licence attribution on every page.
+- **Quality gates.** 274 automated tests, which run offline. axe-core reports 0 WCAG 2.1 AA
+  violations, and a keyboard-only test passes. A visual check fails the build if a bulletin doesn't fit one printed page.
+
+| Urdu bulletin (right to left, numbers verified) | |
+|---|---|
+| ![Thorncliffe Park October bulletin in Urdu](docs/images/bulletin-ur.png) | Each bulletin is also available as large print, Easy Read, a CSV of the numbers, a calendar invite for the next community meeting, a QR code and an embeddable card. |
+
+## Run it
+
+Requires Python 3.12. Ollama is optional: without it, drafts use the template writer and Ask quotes its sources.
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-cp .env.example .env
-ollama pull gemma3:12b        # if not already pulled
+cp .env.example .env            # add keys here only (Azure Translator, Cohere): never in code
+.venv/bin/uvicorn app.main:app --port 8000
 ```
 
-## Run
+Open http://127.0.0.1:8000. To run with no internet, set `DEMO_OFFLINE=true` in `.env`. The app then uses the snapshot in `data/demo_snapshot/`.
 
 ```bash
-.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+.venv/bin/python -m pytest -q                         # 274 tests, offline
+.venv/bin/python scripts/build_public_site.py --hoods all   # build the static site into public_site/
 ```
 
-Open http://127.0.0.1:8000 (use another port, e.g. `--port 8010`, if 8000 is busy). The server only listens on 127.0.0.1. No login, no personal data.
+Docker, offline demos, Azure and Cohere setup, and troubleshooting are covered in **[docs/GUIDE.md](docs/GUIDE.md)**.
 
-**Offline demo (venue Wi-Fi):** set `DEMO_OFFLINE=true` in `.env` and restart. The app then uses
-only `data/demo_snapshot/` (Thorncliffe Park, Milliken, Westminster-Branson) and makes no internet
-requests; the local Ollama model still works. Refresh the snapshot the day before with:
+## Tech stack
 
-```bash
-.venv/bin/python scripts/snapshot_demo.py
-```
+- **Backend:** Python 3.12, FastAPI, Jinja2, httpx
+- **Data:** TPS Public Safety Data Portal (ArcGIS REST), City of Toronto Open Data, cached on disk, with an offline snapshot
+- **AI:** Ollama (`gemma3:12b`, `bge-m3`) locally. Cohere Embed, Rerank and Command A for Ask. Azure Translator. A provider-agnostic
+  client that also supports Azure OpenAI and Anthropic.
+- **Frontend:** server-rendered HTML, pre-built Tailwind CSS, Leaflet maps. No JavaScript framework.
+- **Testing:** pytest, Playwright (visual and print fit), axe-core (accessibility), plus a parity check between the
+  JavaScript and Python number checkers
+- **Deploy:** static site on GitHub Pages; Docker image and a Cloudflare tunnel script for live demos
 
-(Downloads the data and pre-generates one full bulletin per demo neighbourhood, ≈10–15 minutes.)
+## Engineering decisions
 
-## Public demo link (from this Mac)
+- **The model never computes or supplies a number.** Counts come from code, and the model writes the sentences around them.
+  Every number is then extracted from the output and compared with the facts, in every language and script.
+- **Fail closed, per language.** A translation that fails a check is dropped or sent for human review. It is never
+  published with a warning.
+- **Fairness rules are in code, not in a prompt.** The app never ranks neighbourhoods or maps incident locations, and it gives no percentages on small counts.
+  Ranking questions to Ask are declined by a rule before any model runs.
+- **Local first.** The staff app listens on localhost and runs fully offline with a local model, for venues with no Wi-Fi.
+  The public output is static files that any host can serve.
+- Further choices and their reasons are logged in [docs/DECISIONS.md](docs/DECISIONS.md).
 
-```bash
-scripts/demo_tunnel.sh --hours 4 --background   # prints a https://….trycloudflare.com link (see deploy/logs/)
-scripts/demo_tunnel.sh --stop                   # close it early
-```
+## Limitations and next steps
 
-Runs the Docker image with `PUBLIC_DEPLOY=true` and opens a temporary Cloudflare quick-tunnel link (no
-account, no server). Visitors get the resident site; staff pages ask for the password in
-`deploy/.env.demo` (any user name). Before the link opens, the script checks from inside the container that
-it can't reach this Mac or the home network (a firewall in colima's VM), and that staff pages are closed.
-No API keys unless `--azure` / `--cohere`. It closes itself after `--hours` (max 12). For a permanent site, host the static `public_site/` or the image
-on a server instead.
+- **Prototype.** It has not been adopted or reviewed by TPS. The demo bulletins' officer text is sample text.
+- **Machine translation** is checked for numbers, script and meaning, but no community translator has reviewed
+  it yet. The review queue exists; it needs people.
+- **The live site is static**, so Ask, Check my numbers, staff tools and feedback need the running app.
+- **Not yet tested live:** the Cohere engine (eval to run once a key is available), and the Azure OpenAI and Anthropic writer paths.
+- **TPS data lags.** Current-year data reloads daily and quarterly data trails by a few months, so bulletins
+  say which period each number covers.
+- **Next:** CI on every push; a Cohere evaluation across all 23 languages; a pilot with one
+  Community Police Liaison Committee; a hosted deployment for Ask with the rate limits already in `app/ratelimit.py`.
 
-## Docker (optional)
-
-```bash
-docker build -t neighbourbrief .
-docker run --rm -p 127.0.0.1:8000:8000 --env-file .env -v "$PWD/data:/app/data" neighbourbrief
-```
-
-Publish the port on `127.0.0.1` only. The container reaches the local model on the host
-(`host.docker.internal:11434`) and treats Docker's bridge as "this computer" (`ALLOW_CLIENTS`);
-requests for any other host name are refused. Saved bulletins live in the mounted `data/` folder.
-
-## Troubleshooting
-
-| What you see | What to do |
-|---|---|
-| "Address already in use" | Another app has the port: add `--port 8010` (and open that port). |
-| Writer says "not available" / drafts use the template | Start Ollama (`ollama serve`) and check `ollama list` shows `gemma3:12b`. The template draft is still checked and usable. |
-| "Toronto Police open data is being refreshed right now" | TPS reloads its current-year layer daily (it empties for about 10 minutes). Wait and retry; neighbourhoods used earlier keep working from their last good copy. Status shows the reload. |
-| No internet at the venue | `DEMO_OFFLINE=true` in `.env`, restart. Thorncliffe Park, Milliken, Westminster-Branson and Steeles work fully; save more on Status → "Save for offline" beforehand. |
-| Translation fails or a tab shows ⚠️ | "Translate again" on that tab, or edit it by hand. With an Azure key set, check the key and region in `.env` (free tier limits bursts; the app waits and retries). |
-| Squares instead of letters in a language | Fonts come from Google Fonts when online; offline, macOS system fonts are used. Print from the browser after the page has fully loaded. |
-| "NeighbourBrief only works on the computer it runs on" | You opened it from another device. That's on purpose; set `ALLOW_LAN=true` only on a trusted network. |
-| A bulletin prints on two pages | The page scales itself to fit when printing; if it still spills, shorten the officer's text or the follow-up. |
-
-## Public site
-
-```bash
-scripts/publish_site.sh --owner kartik-joshi --ssh-host github-kartik   # build everything and publish to GitHub Pages
-.venv/bin/python scripts/build_public_site.py                  # published bulletins' neighbourhoods
-.venv/bin/python scripts/build_public_site.py --hoods all      # all 158 profiles, automatic bulletins, ward briefs
-.venv/bin/python scripts/check_public_site.py                  # crawl it like a web host would serve it
-```
-
-**Live:** https://kartik-joshi.github.io/neighbourbrief-to/ (rebuild and publish with
-`scripts/publish_site.sh`, e.g. the day before a demo, so it shows the latest month; only the built site
-is pushed, never the source, `.env`, drafts or feedback). Or copy `public_site/` to any static host. Set `PUBLISHER_NAME` (and optionally `PUBLISHER_CONTACT`) in `.env` so
-the site says who publishes it, e.g. a CPLC or residents' association (never TPS branding). Only bulletins that are published and still pass every
-number check are included; any link the site can't serve stops the build.
-
-## Tests
-
-```bash
-.venv/bin/python -m pytest -q
-```
-
-Visual check (Playwright + Chromium; screenshots and PDFs into `test_artifacts/`, fails if a
-bulletin doesn't fit one page or comes within 10 px of the limit):
-
-```bash
-.venv/bin/python -m playwright install chromium
-.venv/bin/python scripts/visual_check.py
-```
-
-Accessibility (axe-core, WCAG 2.1 AA, plus a keyboard test):
-
-```bash
-.venv/bin/python scripts/a11y_check.py
-```
-
-Live checks with real TPS data and the local model, and the offline check:
-
-```bash
-.venv/bin/python scripts/live_checks.py --round 4 --part all
-.venv/bin/python scripts/offline_check.py
-```
-
-## Switching to Azure (only `.env` changes)
-
-**Azure Translator** (recommended for translation quality):
+## Repository layout
 
 ```
-TRANSLATOR=auto                 # or: azure
-AZURE_TRANSLATOR_KEY=<key>
-AZURE_TRANSLATOR_REGION=<region, e.g. canadacentral>
-AZURE_TRANSLATOR_ENDPOINT=https://api.cognitive.microsofttranslator.com
+app/data/     TPS + City data fetch, facts, profiles      app/verify/  number, script, meaning and content checks
+app/ai/       writer, translator, LLM + Cohere clients    app/rag/     Ask: corpus, retrieval, guarded answers
+app/templates/ pages and the bulletin                     scripts/     site build, checks, evals, demo tools
+tests/        pytest suite                                docs/        guide, decisions, test report, RAG evaluation
 ```
 
-With `TRANSLATOR=auto`, the key alone switches translation to Azure. If Azure fails at runtime,
-that language falls back to the AI model and the tab says so.
-
-**Azure OpenAI** as the writer model:
-
-```
-LLM_PROVIDER=azure_openai
-AZURE_OPENAI_ENDPOINT=https://<resource>.openai.azure.com
-AZURE_OPENAI_API_KEY=<key>
-AZURE_OPENAI_DEPLOYMENT=<deployment name>
-AZURE_OPENAI_API_VERSION=2024-10-21
-```
-
-Restart the server after editing `.env`. The New-bulletin screen shows which writer and translator
-are active. (Anthropic is also supported: `LLM_PROVIDER=anthropic`, `ANTHROPIC_API_KEY`,
-`ANTHROPIC_MODEL`.) The Azure and Anthropic paths are implemented but were not tested live.
-
-## Layout
-
-```
-app/main.py            routes            app/data/tps.py    ArcGIS fetch + cache + snapshot
-app/data/facts.py      facts JSON        app/ai/llm.py      provider-agnostic complete()
-app/ai/writer.py       AI + template     app/ai/translate.py Azure / LLM translation
-app/verify/numbers.py  number checks     app/verify/script.py script (mixed-script) check
-app/templates/         screens + bulletin
-app/auto.py            automatic bulletins   app/feedback.py   residents' answers   app/usage.py  usage totals
-app/easyread.py        Easy Read             app/data/ward.py  ward briefs          app/rag/      Ask (RAG)
-config/neighbourhood_languages*.json, config/neighbourhood_wards.json   data/bulletins/   data/demo_snapshot/
-tools/tailwind/        pre-built CSS (npm install && npm run build → app/static/tw.css)
-```
-
-More in `docs/`: `DEMO.md` (demo script), `PITCH.md` (talk track), `DECISIONS.md` (choices made),
-`COHERE.md` (Ask with Cohere RAG), `TEST_REPORT.md` (test rounds), `VALIDATION.md` (15-minute user test kit).
+The built site is published to a separate repo, [kartik-joshi/neighbourbrief-to](https://github.com/kartik-joshi/neighbourbrief-to),
+which serves GitHub Pages. That repo is generated output; edit this one.
 
 ## Licence
 
-Code: [MIT](LICENSE). Third-party code bundled here keeps its own licence: see [app/static/vendor/THIRD_PARTY_NOTICES.txt](app/static/vendor/THIRD_PARTY_NOTICES.txt) (also published with the site).
+Code: [MIT](LICENSE). Bundled third-party code keeps its own licence: see
+[app/static/vendor/THIRD_PARTY_NOTICES.txt](app/static/vendor/THIRD_PARTY_NOTICES.txt).
 
-Data (the app downloads it; `data/demo_snapshot/` keeps a small copy for offline demos):
+Data (downloaded by the app; `data/demo_snapshot/` keeps a small copy for offline demos):
 
 - Toronto Police Service Public Safety Data Portal: Major Crime Indicators, Neighbourhood Crime Rates,
   year-to-date crime, Traffic Collisions, Theft from Motor Vehicle, Bicycle Thefts, Neighbourhood Community
-  Officers, Community Assets (local services), Neighbourhoods (158) boundaries. Contains information licensed under the [Open Government Licence – Ontario](https://www.ontario.ca/page/open-government-licence-ontario).
-- City of Toronto Open Data: City Wards (`config/neighbourhood_wards.json`) and Neighbourhood Profiles
-  (2021 Census languages, `config/neighbourhood_languages*.json`). Contains information licensed under the [Open Government Licence – Toronto](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-licence/).
+  Officers, Community Assets, Neighbourhoods (158) boundaries. Contains information licensed under the [Open Government Licence – Ontario](https://www.ontario.ca/page/open-government-licence-ontario).
+- City of Toronto Open Data: City Wards and Neighbourhood Profiles (2021 Census languages). Contains information licensed under the [Open Government Licence – Toronto](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-licence/).
 - Map tiles © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (shown on the map, not stored here).
 
-The data is provided by its publishers "as is", without warranty. This is an independent prototype: it uses no
-Toronto Police Service or City of Toronto names as branding, crests or logos, and is not affiliated with or
-endorsed by the Toronto Police Service or the City of Toronto. Translations in `data/translation_memory/` were
-made by machine (Azure Translator) from this project's own English text and passed its checks.
+The data is provided by its publishers "as is", without warranty. This project uses no Toronto Police Service or
+City of Toronto branding, crests or logos, and is not affiliated with or endorsed by either. Translations in
+`data/translation_memory/` were made by machine (Azure Translator) from this project's own English text and passed its checks.
