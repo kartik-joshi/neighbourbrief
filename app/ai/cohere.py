@@ -6,12 +6,15 @@ API shapes checked against docs.cohere.com (v2 /chat, /embed, /rerank) on Oct 23
 """
 from __future__ import annotations
 
+import json
 import logging
+import threading
 import time
+from datetime import datetime
 
 import httpx
 
-from app.config import get_settings
+from app.config import CACHE_DIR, get_settings
 
 log = logging.getLogger(__name__)
 BASE = "https://api.cohere.com/v2"
@@ -20,6 +23,35 @@ EMBED_BATCH = 96  # the API's limit per call
 
 class CohereUnavailable(RuntimeError):
     """Not configured, offline, or the API call failed. Callers fall back."""
+
+
+# Monthly budget: the key may be shared with other projects (a trial key has 1,000 calls a month in all),
+# so this app stops at COHERE_MONTHLY_CALLS and falls back to the local model or sources-only answers.
+USAGE_FILE = CACHE_DIR / "cohere_usage.json"
+_usage_lock = threading.Lock()
+
+
+def usage() -> dict:
+    """{"month": "YYYY-MM", "calls": n} for the current month (every request sent, retries included)."""
+    month = datetime.now().strftime("%Y-%m")
+    try:
+        data = json.loads(USAGE_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        data = {}
+    return data if data.get("month") == month else {"month": month, "calls": 0}
+
+
+def _spend_one_call() -> None:
+    limit = get_settings().cohere_monthly_calls
+    with _usage_lock:
+        u = usage()
+        if u["calls"] >= limit:
+            raise CohereUnavailable(f"This month's Cohere budget is used ({u['calls']}/{limit} calls; COHERE_MONTHLY_CALLS in .env).")
+        u["calls"] += 1
+        USAGE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        tmp = USAGE_FILE.with_suffix(".tmp")
+        tmp.write_text(json.dumps(u), encoding="utf-8")
+        tmp.replace(USAGE_FILE)
 
 
 def configured() -> bool:
@@ -41,6 +73,7 @@ def _post(path: str, body: dict, timeout: float = 60.0) -> dict:
     headers = {"Authorization": f"Bearer {s.cohere_api_key}", "Content-Type": "application/json",
                "Accept": "application/json", "X-Client-Name": "neighbourbrief-to"}
     for attempt in range(3):
+        _spend_one_call()
         try:
             r = httpx.post(f"{BASE}/{path}", json=body, headers=headers, timeout=timeout)
         except httpx.HTTPError as exc:
@@ -114,4 +147,7 @@ def status() -> dict:
         return {"ok": False, "detail": "Not set up (add COHERE_API_KEY to .env to use Cohere)."}
     if s.demo_offline:
         return {"ok": False, "detail": "Key set; not used in offline mode."}
-    return {"ok": True, "detail": f"Key set: chat {s.cohere_chat_model}, embed {s.cohere_embed_model}, rerank {s.cohere_rerank_model}."}
+    u = usage()
+    return {"ok": u["calls"] < s.cohere_monthly_calls,
+            "detail": f"Key set: chat {s.cohere_chat_model}, embed {s.cohere_embed_model}, rerank {s.cohere_rerank_model}. "
+                      f"This month: {u['calls']}/{s.cohere_monthly_calls} calls."}

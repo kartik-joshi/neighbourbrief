@@ -62,15 +62,18 @@ These are measured, not projected. Sources are linked.
 
 - **Numbers match the source.** 450 counts on 18 neighbourhood profiles (including the 3 demo
   neighbourhoods) all matched the TPS portal's own queries (November 2026).
-- **Ask evaluation** ([docs/COHERE.md](docs/COHERE.md), questions generated from live facts for 3 neighbourhoods):
-  the local model was correct on 96% of 24 questions and the extractive fallback on 100%. Both cited the right source 100% of the time, and the number guard passed 100% of the time. The same question
-  asked in 21 languages was answered correctly 20/21 times by the local model and 21/21 by the extractive fallback. The Cohere engine is
-  implemented but has not been evaluated yet (no API key during development).
+- **Ask evaluation** ([docs/COHERE.md](docs/COHERE.md), Nov 22, 2026; 24 questions generated from live facts for
+  3 neighbourhoods, plus one question asked in 22 languages):
+  - Cohere (Embed, Rerank, Command A): 92% correct (22/24), the right source cited every time, a median of 3.4 s. Across the languages
+    it got 19/22, including all 14 that Command A documents. The 3 misses (Pashto, Gujarati, Somali) are all languages it doesn't document.
+  - Local model (gemma3:12b): 96% correct (23/24) and 18/22 across the languages. In the 4 language misses it wrote "Sixteen" in words.
+  - Sources-only fallback (no generation): 96 to 100% correct over two runs and 22/22 across the languages.
+  - Ranking questions were declined every time, by every engine.
 - **Translations.** In the end-to-end run with the real model and Azure, 8/8 languages were verified and meaning-checked
   and 3/3 bulletins published ([docs/TEST_REPORT.md](docs/TEST_REPORT.md), round 6).
 - **Public site.** 1,993 pages in all (158 profiles, automatic bulletins, ward briefs, feeds). A live crawl found
   every one of its 2,643 files and 2,165 internal links working, and the required licence attribution on every page.
-- **Quality gates.** 274 automated tests, which run offline. axe-core reports 0 WCAG 2.1 AA
+- **Quality gates.** 276 automated tests, which run offline. axe-core reports 0 WCAG 2.1 AA
   violations, and a keyboard-only test passes. A visual check fails the build if a bulletin doesn't fit one printed page.
 
 | Urdu bulletin (right to left, numbers verified) | |
@@ -91,7 +94,7 @@ cp .env.example .env            # add keys here only (Azure Translator, Cohere):
 Open http://127.0.0.1:8000. To run with no internet, set `DEMO_OFFLINE=true` in `.env`. The app then uses the snapshot in `data/demo_snapshot/`.
 
 ```bash
-.venv/bin/python -m pytest -q                         # 274 tests, offline
+.venv/bin/python -m pytest -q                         # 276 tests, offline
 .venv/bin/python scripts/build_public_site.py --hoods all   # build the static site into public_site/
 ```
 
@@ -126,10 +129,13 @@ Docker, offline demos, Azure and Cohere setup, and troubleshooting are covered i
 - **Machine translation** is checked for numbers, script and meaning, but no community translator has reviewed
   it yet. The review queue exists; it needs people.
 - **The live site is static**, so Ask, Check my numbers, staff tools and feedback need the running app.
-- **Not yet tested live:** the Cohere engine (eval to run once a key is available), and the Azure OpenAI and Anthropic writer paths.
+- **Ask's number guard** catches invented numbers, not a real number attached to the wrong period. The evaluation found one
+  such answer: last year's year-to-date total was presented as last year's month. A binding check like the bulletins' would close the gap.
+- **Not yet tested live:** the Azure OpenAI and Anthropic writer paths. A Cohere evaluation run uses about 215 of a trial key's
+  1,000 monthly calls, so the app caps its own use at 300 a month (`COHERE_MONTHLY_CALLS`).
 - **TPS data lags.** Current-year data reloads daily and quarterly data trails by a few months, so bulletins
   say which period each number covers.
-- **Next:** CI on every push; a Cohere evaluation across all 23 languages; a pilot with one
+- **Next:** CI on every push; Aya or answer translation for the languages Command A doesn't document; a pilot with one
   Community Police Liaison Committee; a hosted deployment for Ask with the rate limits already in `app/ratelimit.py`.
 
 ## Repository layout

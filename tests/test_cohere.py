@@ -92,3 +92,25 @@ def test_cohere_as_llm_provider(key, monkeypatch):
     monkeypatch.setattr(cohere, "chat", fail)
     with pytest.raises(llm.LLMUnavailable):
         llm.complete("s", "u")
+
+
+def test_monthly_budget_stops_calls_and_counts_retries(key, monkeypatch):
+    monkeypatch.setenv("COHERE_MONTHLY_CALLS", "3")
+    sent = []
+
+    def post(url, json, headers, timeout):
+        sent.append(url)
+        return Resp(429, {}, {"Retry-After": "0"}) if len(sent) == 1 else Resp(200, {"message": {"content": []}})
+    monkeypatch.setattr(httpx, "post", post)
+    cohere.chat([{"role": "user", "content": "q"}])  # a 429 and its retry: 2 calls
+    assert cohere.usage()["calls"] == 2
+    cohere.chat([{"role": "user", "content": "q"}])  # 3 of 3
+    with pytest.raises(cohere.CohereUnavailable, match="budget"):
+        cohere.chat([{"role": "user", "content": "q"}])
+    assert len(sent) == 3 and cohere.usage()["calls"] == 3
+    assert "3/3 calls" in cohere.status()["detail"] and not cohere.status()["ok"]
+
+
+def test_budget_resets_each_month(key, monkeypatch):
+    cohere.USAGE_FILE.write_text('{"month": "2000-01", "calls": 999}', encoding="utf-8")
+    assert cohere.usage()["calls"] == 0

@@ -55,6 +55,7 @@ class Settings:
     cohere_chat_model: str = "command-a-03-2025"
     cohere_embed_model: str = "embed-multilingual-v3.0"
     cohere_rerank_model: str = "rerank-v5.0-fast"
+    cohere_monthly_calls: int = 300  # this app's share of the key's monthly quota (trial keys: 1,000 calls, shared)
     allow_clients: str = ""  # extra client networks, e.g. Docker's bridge: 172.16.0.0/12
     publisher_name: str = ""     # who publishes the public site, e.g. "53 Division CPLC" (never TPS branding)
     publisher_contact: str = ""  # e.g. an email or website for questions
@@ -92,6 +93,7 @@ def get_settings() -> Settings:
         cohere_chat_model=_env("COHERE_CHAT_MODEL", "command-a-03-2025"),
         cohere_embed_model=_env("COHERE_EMBED_MODEL", "embed-multilingual-v3.0"),
         cohere_rerank_model=_env("COHERE_RERANK_MODEL", "rerank-v5.0-fast"),
+        cohere_monthly_calls=int(_env("COHERE_MONTHLY_CALLS", "300") or 300),
         publisher_name=_env("PUBLISHER_NAME", "")[:80],
         publisher_contact=_env("PUBLISHER_CONTACT", "")[:120],
         require_review=_bool("REQUIRE_REVIEW", False),

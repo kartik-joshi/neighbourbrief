@@ -84,18 +84,38 @@ answers were held back, and the median time.
 ### Results
 
 <!-- rag-eval:start -->
-_Run 2026-10-24 01:28 on Thorncliffe Park, Milliken, Westminster-Branson (questions generated from the live facts)._
+_Run 2026-11-22 15:17 on Thorncliffe Park, Milliken, Westminster-Branson (questions generated from the live facts)._
 
 | Engine | Questions | Correct | Cited the right source | Number guard passed | Held back | Median s |
 |---|---|---|---|---|---|---|
-| local | 24 | 96% | 100% | 100% | 0 | 15.87 |
-| extractive | 24 | 100% | 100% | 100% | 0 | 0.18 |
+| local | 24 | 96% | 100% | 100% | 0 | 20.29 |
+| extractive | 24 | 96% | 90% | 100% | 0 | 0.22 |
 
 | Engine | count | ytd | direction | collisions | language | officers | urdu | rules | decline | out_of_scope |
 |---|---|---|---|---|---|---|---|---|---|---|
 | local | 3/3 | 3/3 | 2/3 | 3/3 | 3/3 | 1/1 | 3/3 | 2/2 | 2/2 | 1/1 |
-| extractive | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 1/1 | 3/3 | 2/2 | 2/2 | 1/1 |
+| extractive | 3/3 | 2/3 | 3/3 | 3/3 | 3/3 | 1/1 | 3/3 | 2/2 | 2/2 | 1/1 |
 <!-- rag-eval:end -->
+
+**Cohere run** (same questions, earlier the same day; kept here because each Cohere run uses about 215 of a
+trial key's 1,000 monthly calls, most of them retries after the trial's 10-a-minute rerank limit):
+
+_Run 2026-11-22 13:28 on Thorncliffe Park, Milliken, Westminster-Branson (questions generated from the live facts)._
+
+| Engine | Questions | Correct | Cited the right source | Number guard passed | Held back | Median s |
+|---|---|---|---|---|---|---|
+| cohere | 24 | 92% | 100% | 100% | 0 | 3.42 |
+| extractive | 24 | 100% | 95% | 100% | 0 | 3.62 |
+
+| Engine | count | ytd | direction | collisions | language | officers | urdu | rules | decline | out_of_scope |
+|---|---|---|---|---|---|---|---|---|---|---|
+| cohere | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 1/1 | 2/3 | 1/2 | 2/2 | 1/1 |
+| extractive | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 1/1 | 3/3 | 2/2 | 2/2 | 1/1 |
+
+The two English misses: "Does a report to police mean someone was charged?" was answered "No.", which is right;
+the grader looks for the word "not". The Urdu question for Westminster-Branson got the right October count (17)
+but called last year's year-to-date total "October 2025". Every number in it is in the documents, so the number
+guard let it through: the guard catches invented numbers, not real numbers attached to the wrong period.
 
 ## Language coverage (documented and measured)
 
@@ -118,10 +138,11 @@ answer had the right number and came back in the question's language, next to wh
 documents. Every miss is listed word for word.
 
 <!-- rag-lang:start -->
-_Run 2026-10-24 01:28: "How many assaults were reported in Thorncliffe Park last month?" in every language (translated by Azure Translator)._
+_Run 2026-11-22 15:17: "How many assaults were reported in Thorncliffe Park last month?" in every language (translated by Azure Translator)._
 
 | Language | Cohere Embed documents it | Command A documents it | local | extractive |
 |---|---|---|---|---|
+| French | yes | yes | ✗ | ✓ (via translation) |
 | Urdu | yes | **no** | ✓ (via translation) | ✓ (via translation) |
 | Pashto | **no** | **no** | ✓ (via translation) | ✓ (via translation) |
 | Arabic | yes | yes | ✓ (via translation) | ✓ (via translation) |
@@ -131,12 +152,12 @@ _Run 2026-10-24 01:28: "How many assaults were reported in Thorncliffe Park last
 | Tamil | yes | **no** | ✓ (via translation) | ✓ (via translation) |
 | Russian | yes | yes | ✓ (via translation) | ✓ (via translation) |
 | Filipino (Tagalog) | yes | **no** | ✓ (via translation) | ✓ (via translation) |
-| Italian | yes | yes | ✓ (via translation) | ✓ (via translation) |
+| Italian | yes | yes | ✗ | ✓ (via translation) |
 | Portuguese (Portugal) | yes | yes | ✓ (via translation) | ✓ (via translation) |
 | Spanish | yes | yes | ✓ (via translation) | ✓ (via translation) |
 | Korean | yes | yes | ✓ (via translation) | ✓ (via translation) |
 | Vietnamese | yes | yes | ✓ (via translation) | ✓ (via translation) |
-| Polish | yes | yes | ✓ (via translation) | ✓ (via translation) |
+| Polish | yes | yes | ✗ | ✓ (via translation) |
 | Bengali | yes | **no** | ✓ (via translation) | ✓ (via translation) |
 | Greek | yes | yes | ✗ | ✓ (via translation) |
 | Gujarati | yes | **no** | ✓ (via translation) | ✓ (via translation) |
@@ -144,12 +165,58 @@ _Run 2026-10-24 01:28: "How many assaults were reported in Thorncliffe Park last
 | Punjabi | yes | **no** | ✓ (via translation) | ✓ (via translation) |
 | Somali | yes | **no** | ✓ (via translation) | ✓ (via translation) |
 
-Correct: local: 20/21 · extractive: 21/21.
+Correct: local: 18/22 · extractive: 22/22.
 
 **Details of every miss**
 
-- **local, Greek** (expected 6). Q: Πόσες επιθέσεις αναφέρθηκαν στο Thorncliffe Park τον περασμένο μήνα; · A: Six assaults were reported in Thorncliffe Park in September [1]. This was part of a total of 23 reports to police that month [1]. There were 95 assaults reported so far in 2026 [1]. A report to police does not mean anyon
+- **local, French** (expected 16). Q: Combien d’agressions ont été signalées à Thorncliffe Park le mois dernier ? · A: Sixteen assaults were reported in October [1]. This was for the month of October [1]. There were 111 assaults reported so far in 2026 [1]. This is down 2% from 113 during the same period in 2025 [1].
+- **local, Italian** (expected 16). Q: Quanti attacchi sono stati segnalati a Thorncliffe Park il mese scorso? · A: There were 33 reports to police in October [2]. Sixteen assaults were reported in October [2]. There were also 3 break-ins, 7 stolen vehicles, and 5 thefts from vehicles reported in October [2]. A report to police does n
+- **local, Polish** (expected 16). Q: Ile napaści zgłoszono w Thorncliffe Park w zeszłym miesiącu? · A: Sixteen assaults were reported in Thorncliffe Park in October [1]. This was part of a total of 33 reports to police last month [1]. There were 111 assaults reported so far in 2026 [1].
+- **local, Greek** (expected 16). Q: Πόσες επιθέσεις αναφέρθηκαν στο Thorncliffe Park τον περασμένο μήνα; · A: Sixteen assaults were reported in Thorncliffe Park last month, which was October [1]. There were a total of 33 reports to police last month [2]. This number is part of 257 reports so far in 2026 [1].
 <!-- rag-lang:end -->
+
+**Cohere run, every language:**
+
+_Run 2026-11-22 13:28: "How many assaults were reported in Thorncliffe Park last month?" in every language (translated by Azure Translator)._
+
+| Language | Cohere Embed documents it | Command A documents it | cohere | extractive |
+|---|---|---|---|---|
+| French | yes | yes | ✓ | ✓ (via translation) |
+| Urdu | yes | **no** | ✓ | ✓ (via translation) |
+| Pashto | **no** | **no** | ✗ | ✓ (via translation) |
+| Arabic | yes | yes | ✓ | ✓ (via translation) |
+| Persian | yes | yes | ✓ | ✓ (via translation) |
+| Chinese (Traditional) | yes | yes | ✓ | ✓ (via translation) |
+| Chinese (Simplified) | yes | yes | ✓ | ✓ (via translation) |
+| Tamil | yes | **no** | ✓ | ✓ (via translation) |
+| Russian | yes | yes | ✓ | ✓ (via translation) |
+| Filipino (Tagalog) | yes | **no** | ✓ | ✓ (via translation) |
+| Italian | yes | yes | ✓ | ✓ (via translation) |
+| Portuguese (Portugal) | yes | yes | ✓ | ✓ (via translation) |
+| Spanish | yes | yes | ✓ | ✓ (via translation) |
+| Korean | yes | yes | ✓ | ✓ (via translation) |
+| Vietnamese | yes | yes | ✓ | ✓ (via translation) |
+| Polish | yes | yes | ✓ | ✓ (via translation) |
+| Bengali | yes | **no** | ✓ | ✓ (via translation) |
+| Greek | yes | yes | ✓ | ✓ (via translation) |
+| Gujarati | yes | **no** | ✗ | ✓ (via translation) |
+| Ukrainian | yes | yes | ✓ | ✓ (via translation) |
+| Punjabi | yes | **no** | ✓ | ✓ (via translation) |
+| Somali | yes | **no** | ✗ | ✓ (via translation) |
+
+Correct: cohere: 19/22 · extractive: 22/22.
+
+**Details of every miss**
+
+- **cohere, Pashto** (expected 16). Q: تېر میاشت په تورنکلیف پارک کې څو بریدونه راپور شوی دی؟ · A: په اګست 2026 کې، تورنکلیف پارک کې 33 بریدونه راپور شوی دی. د بریدونو شمېر په 2026 کال کې 257 دی.
+- **cohere, Gujarati** (expected 16). Q: ગયા મહિને થોર્નક્લિફ પાર્કમાં કેટલા હુમલાની જાણ થઈ હતી? · A: ગયા મહિને થોર્નક્લિફ પાર્કમાં કોઈ હુમલાની જાણ નથી થઈ.
+- **cohere, Somali** (expected 16). Q: Imisa weerar ayaa laga soo sheegay Thorncliffe Park bishii la soo dhaafay? · A: 33 waxyaabaha ay bishii October 2026 la soo sheegay Thorncliffe Park. Waxyaabaha la soo sheegay ayuu u dhaqmay in 257 bishii October 2026.
+
+Command A answered correctly, in the question's own language, in all 14 of our languages it documents, and in 5
+of the 8 it doesn't (Urdu, Tamil, Tagalog, Bengali, Punjabi). Its 3 misses
+(Pashto, Gujarati, Somali) are all languages it doesn't document. The local model's misses above are a different
+kind: it answered in English and wrote "Sixteen" in words despite the rule to use digits, which the grader
+(and the number guard) can't read as 16.
 
 What this means in the product:
 

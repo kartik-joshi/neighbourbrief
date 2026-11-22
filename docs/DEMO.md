@@ -9,24 +9,32 @@ A three-minute cut is marked ✂. Talk track and judging notes are in `docs/PITC
    Already cloned: `git pull`, then re-run the setup script.
 2. **`.env`**: copy `.env.example` to `.env` and add the keys (Azure Translator; Cohere for Ask). Never commit it
    or share it in chat.
-3. **Make the October bulletins** (needs the local model and internet, about 3 minutes):
-   `.venv/bin/python scripts/snapshot_demo.py`. It saves fresh data for offline use and remakes the
-   3 demo bulletins for the latest month (October), with "You said, we did" follow-ups and meetings
-   about two weeks out. Your own bulletins are never touched.
-4. **Start the app** and open **Status**. Everything should be ✅.
-5. **Rehearse once** with `DEMO_OFFLINE=true` in `.env` (restart), then switch back to `false`.
-6. **Optional backup link**: `scripts/demo_tunnel.sh --background --hours 6` gives a public link to the
+3. **October bulletins**: already made (meetings Dec 1 to 3) and live on the public site; October stays the
+   latest complete month until Dec 1, so there is nothing to remake for a November demo. (To remake them
+   later: `.venv/bin/python scripts/snapshot_demo.py`, then republish the site with `scripts/publish_site.sh`
+   so the live site matches.)
+4. **Local model**: `ollama list` must show `gemma3:12b` and `bge-m3` (if not: `ollama pull gemma3:12b` and
+   `ollama pull bge-m3`, about 9 GB). Then **start the app** and open **Status**. Everything should be ✅, and
+   the Cohere line shows this month's calls (the app stops at 300; Ask then falls back to the local model).
+5. **Refresh the offline data** (the Status page warns when it's more than 2 days old; takes about a minute,
+   keeps the demo bulletins as they are): Status → "Save for offline", or
+   `.venv/bin/python -c "from app import snapshot; snapshot.save_for_offline(['Thorncliffe Park', 'Milliken', 'Westminster-Branson', 'Steeles'])"`.
+   Status should then say "Ready for your meeting".
+6. **Rehearse once** with `DEMO_OFFLINE=true` in `.env` (restart), then switch back to `false`.
+7. **Optional backup link**: `scripts/demo_tunnel.sh --background --hours 6` gives a public link to the
    same app (staff pages behind a password). The permanent public site is listed in `README.md`.
-7. **Backup video**: `NeighbourBrief_demo_backup.mp4` (`demo_video/`, made with `scripts/record_demo_video.py`). Play it once on the presenting laptop.
+8. **Backup video**: `NeighbourBrief_demo_backup.mp4` (`demo_video/`, made with `scripts/record_demo_video.py`). Play it once on the presenting laptop.
 
 ## Before you go on
 
 - Start the app: `.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8010`.
 - **http://127.0.0.1:8010/status** should say "Ready for your meeting".
 - Tabs, left to right: **Thorncliffe Park profile** (`/neighbourhoods/055`), **Home**, **Check my numbers**
-  example (`/check?hood=Thorncliffe%20Park&example=1`), **Ward 15** (`/wards/15`), **Impact**.
+  example (`/check?hood=Thorncliffe%20Park&example=1`), **Ward 15** (`/wards/15`), **Impact**. Open them all before
+  you go on: the first Ward 15 load fetches every neighbourhood in the ward (about 25 s); after that it is instant.
 - Bad Wi-Fi: `DEMO_OFFLINE=true` and restart. The 3 demo neighbourhoods and Steeles work fully offline
   (profiles, automatic bulletins in English, maps as outlines).
+- Ask slow or out of Cohere calls: switch "Answer with" to the local model or sources only.
 - Slow model: skip the live draft and open the saved bulletin. Backup video: `demo_video/NeighbourBrief_demo_backup.mp4`.
 
 ## 0:00 The problem (20 s)
@@ -76,6 +84,12 @@ A three-minute cut is marked ✂. Talk track and judging notes are in `docs/PITC
 - "True story: TPS reloads its current-year data by emptying it first. For a few minutes every
   neighbourhood has zero reports. A naive tool would publish '0 assaults'. NeighbourBrief notices,
   keeps the last good copy and says so on the Status page."
+
+- **Ask** (`/ask`, optional, 30 s): choose Thorncliffe Park and ask *"How many assaults were reported in
+  Thorncliffe Park last month?"*. The answer cites its source (Cohere Embed, Rerank and Command A), and every number
+  in it was matched to the data. Then ask *"Which is the most dangerous neighbourhood in Toronto?"*: declined
+  by a rule before any model runs. "Same data, same checks: no rankings, no invented numbers." (About 3 Cohere
+  calls per question; the trial key's monthly quota is shared, so rehearse it once, not ten times.)
 
 ✂ *Three-minute cut: skip to 4:20.*
 

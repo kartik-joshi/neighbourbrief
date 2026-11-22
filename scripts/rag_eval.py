@@ -32,9 +32,9 @@ QCACHE = ROOT / "data" / "cache" / "rag_eval_questions.json"
 # What Cohere documents (checked on docs.cohere.com, Oct 24, 2026):
 # - embed-multilingual-v3.0 ("supported languages" page): every NeighbourBrief language except Pashto.
 # - Command A ("trained to perform well in 23 languages"): of ours, only these.
-EMBED_DOCUMENTED = {"ur", "ar", "fa", "zh-Hant", "zh-Hans", "ta", "ru", "fil", "it", "pt-pt", "es", "ko", "vi", "pl",
+EMBED_DOCUMENTED = {"fr", "ur", "ar", "fa", "zh-Hant", "zh-Hans", "ta", "ru", "fil", "it", "pt-pt", "es", "ko", "vi", "pl",
                     "bn", "el", "gu", "uk", "pa", "so"}
-COMMAND_A_DOCUMENTED = {"es", "it", "pt-pt", "ko", "zh-Hant", "zh-Hans", "ar", "ru", "pl", "vi", "uk", "el", "fa"}
+COMMAND_A_DOCUMENTED = {"fr", "es", "it", "pt-pt", "ko", "zh-Hant", "zh-Hans", "ar", "ru", "pl", "vi", "uk", "el", "fa"}
 ENGLISH_HINTS = re.compile(r"\b(assaults?|reported|reports|there were|so far)\b", re.I)
 
 

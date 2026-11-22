@@ -31,3 +31,10 @@ def _tmp_translation_memory(monkeypatch, tmp_path):
     """Tests never read or write the real translation memory (data/translation_memory/)."""
     from app import tm
     monkeypatch.setattr(tm, "TM_DIR", tmp_path / "translation_memory")
+
+
+@pytest.fixture(autouse=True)
+def _tmp_cohere_usage(monkeypatch, tmp_path):
+    """Tests never touch the real Cohere call counter (data/cache/cohere_usage.json)."""
+    from app.ai import cohere
+    monkeypatch.setattr(cohere, "USAGE_FILE", tmp_path / "cohere_usage.json")
