@@ -102,9 +102,15 @@ def layer_url(layer: str) -> str:
     return f"{BASE}/{layer}/FeatureServer/0"
 
 
+def _without_drawing_info(meta: dict) -> dict:
+    """The map styling isn't used, and TPS's has picture symbols stored as signed (long-expired) S3 links
+    whose temporary AWS key IDs trip secret scanners, so it is never saved."""
+    return {k: v for k, v in meta.items() if k != "drawingInfo"} if isinstance(meta, dict) else meta
+
+
 def schema(layer: str) -> dict:
     """Layer metadata (fields, editingInfo). Always inspected before querying."""
-    return cached(f"schema_{layer}", lambda: _get(layer_url(layer), {"f": "pjson"}))
+    return _without_drawing_info(cached(f"schema_{layer}", lambda: _without_drawing_info(_get(layer_url(layer), {"f": "pjson"}))))
 
 
 def field_names(layer: str) -> set[str]:

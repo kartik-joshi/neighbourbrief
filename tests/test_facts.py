@@ -288,3 +288,21 @@ def test_last_year_for_theft_from_vehicles_and_bike_thefts(monkeypatch):
     monkeypatch.setattr(tps, "fetch_category_year", down)
     by = {c["key"]: c for c in F.build_facts("055", today=dt.date(2026, 10, 15))["categories"]}
     assert by["Theft from Motor Vehicle"]["ytd_prev"] is None   # no data: no comparison, never a made-up 0
+
+
+def test_layer_schema_never_keeps_map_styling(monkeypatch, tmp_path):
+    """TPS's map styling holds signed S3 links with temporary AWS key IDs (flagged by secret scanners on
+    GitHub): neither the cache nor what callers get may contain it, even from an older cached copy."""
+    import json
+
+    from app.data import tps
+    monkeypatch.setenv("DEMO_OFFLINE", "false")
+    monkeypatch.setattr(tps, "CACHE_DIR", tmp_path)
+    monkeypatch.setattr(tps, "SNAPSHOT_DIR", tmp_path / "snap")
+    link = "https://s3.amazonaws.com/x.png?X-Amz-Credential=ASIAEXAMPLEEXAMPLE12%2F20230603"
+    meta = {"fields": [{"name": "OCC_DATE"}], "drawingInfo": {"renderer": {"symbol": {"url": link}}}}
+    monkeypatch.setattr(tps, "_get", lambda url, params: meta)
+    assert "drawingInfo" not in tps.schema("SOME_LAYER") and tps.schema("SOME_LAYER")["fields"]
+    assert "X-Amz" not in "".join(p.read_text() for p in tmp_path.glob("*.json"))
+    (tmp_path / "schema_OLD_LAYER.json").write_text(json.dumps(meta))  # a copy saved before the fix
+    assert "drawingInfo" not in tps.schema("OLD_LAYER")
