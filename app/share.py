@@ -48,10 +48,14 @@ def plain_text(rec: dict, code: str, limit: int | None = WHATSAPP_LIMIT) -> str:
     if len(text) <= limit:
         return text
     must = join([f"({L['reviewed'] if _reviewed(rec, code) else L['notice']})"] if code != "en" else [])
-    must = join([must, "Source: Toronto Police Service open data. Not affiliated with TPS."])
+    full = join([must, "Source: Toronto Police Service open data. Not affiliated with TPS."])
+    # The translation notice (with its "may contain mistakes") and "not affiliated" always stay; in the
+    # tightest case (an email link in a non-Latin script) the source line is shortened to make room.
+    must = full if len(full) <= limit - 20 else join([must, "Not affiliated with TPS."])
     body = join(head + ["\n".join(bullets + ['…'])] + officer + [d.get("closing", ""), L["emergency"]])
     room = max(0, limit - len(must) - 3)
-    return (body[:room].rstrip() + "…\n\n" + must) if room else must[:limit]
+    # never cut the mandatory lines: if they alone exceed the limit (a long notice), they go out whole
+    return (body[:room].rstrip() + "…\n\n" + must) if room else must
 
 
 def _reviewed(rec: dict, code: str) -> bool:

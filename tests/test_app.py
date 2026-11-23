@@ -197,7 +197,7 @@ def test_full_flow_llm_translation_without_azure_key(client, monkeypatch):
     assert store.load(bid)["status"] == "published"
     page = client.get(f"/publish/{bid}?lang=ur").text
     assert 'dir="rtl"' in page and 'lang="ur"' in page
-    assert "AI-assisted translation, not yet reviewed by a human translator." in page
+    assert "AI-assisted translation, not yet reviewed by a human translator. This translation may contain mistakes." in page
     assert "wa.me/?text=" in page and "mailto:?subject=" in page
     assert client.get(f"/bulletin/{bid}/ur").status_code == 200
 
@@ -772,6 +772,13 @@ def test_shortened_share_text_always_keeps_notice_and_affiliation(client, monkey
     from urllib.parse import unquote
     body = unquote(share.mailto_url(rec, "ur").split("&body=")[1])
     assert labels("ur")["notice"] in body and "Not affiliated" in body
+    # A notice as long as the longest real one (Tamil, 138 characters) is never cut either, and the
+    # email link still fits.
+    from app.languages import LABELS
+    monkeypatch.setitem(LABELS["ur"], "notice", "ن" * 140)
+    t = share.plain_text(rec, "ur", limit=160)
+    assert "ن" * 140 in t and "Not affiliated with TPS" in t
+    assert len(share.mailto_url(rec, "ur")) <= share.MAILTO_MAX
 
 
 def test_removing_a_language_after_translating(client, monkeypatch):

@@ -156,6 +156,15 @@ requests for any other host name are refused. Saved bulletins live in the mounte
 
 ## Public site
 
+**Monthly update (automatic).** The live site shows the latest complete month, so it is rebuilt once a month.
+`scripts/schedule_monthly_update.sh` installs a macOS launchd job that runs `scripts/monthly_update.sh` at 7 a.m.
+on days 4 to 10 of each month. It publishes once TPS has updated its data at least 3 days after the month ended
+(so late reports are in), crawls the built site first, publishes only if the crawl is clean, and then stops until
+the next month. A Mac notification reports the result. Logs are in `deploy/logs/monthly-YYYY-MM.log`.
+The Mac needs to be on (a run it slept through happens on wake), with the Azure key in `.env` and the SSH key for
+the site repository. `scripts/monthly_update.sh --check` runs only the checks;
+`--now` publishes immediately; `scripts/schedule_monthly_update.sh --remove` removes the schedule.
+
 ```bash
 scripts/publish_site.sh --owner kartik-joshi --ssh-host github-kartik   # build everything and publish to GitHub Pages
 .venv/bin/python scripts/build_public_site.py                  # published bulletins' neighbourhoods

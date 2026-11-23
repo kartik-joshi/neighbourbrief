@@ -134,7 +134,8 @@ Docker, offline demos, Azure and Cohere setup, and troubleshooting are covered i
 - **Not yet tested live:** the Azure OpenAI and Anthropic writer paths. A Cohere evaluation run uses about 215 of a trial key's
   1,000 monthly calls, so the app caps its own use at 300 a month (`COHERE_MONTHLY_CALLS`).
 - **TPS data lags.** Current-year data reloads daily and quarterly data trails by a few months, so bulletins
-  say which period each number covers.
+  say which period each number covers. The live site is rebuilt monthly by a scheduled job on the maintainer's Mac
+  (`scripts/monthly_update.sh`), once TPS data covers the whole previous month. If that Mac is off, the site waits.
 - **Next:** CI on every push; Aya or answer translation for the languages Command A doesn't document; a pilot with one
   Community Police Liaison Committee; a hosted deployment for Ask with the rate limits already in `app/ratelimit.py`.
 

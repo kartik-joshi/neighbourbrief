@@ -26,6 +26,15 @@
   "status": "machine",
   "tr": "Aggressioni: {0} rapporti a ottobre. {1} quest'anno, come a questo periodo l'anno scorso."
  },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Assaults: {0} reports in October. {1} this year, up {2}% compared to {3} in this period last year.",
+  "created": "2026-11-23",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 12 reports in October. 168 this year, up 1% from 166 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Aggressioni: {0} rapporti di ottobre. {1} quest'anno, in aumento {2}% rispetto a {3} in questo periodo dell'anno scorso."
+ },
  "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Assaults: {0} October reports. {1} this year, up from {3} by {2}% at this time last year.",
   "created": "2026-11-13",
@@ -133,6 +142,15 @@
   "reviewed_by": "",
   "status": "machine",
   "tr": "Furti con scasso: {0} rapporto di ottobre. {1} quest'anno, rispetto a {2} di questo periodo l'anno scorso."
+ },
+ "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year. |one,other,other,other": {
+  "back": "Burglaries: {0} report in October. {1} this year, down {2}% from {3} in this period last year.",
+  "created": "2026-11-23",
+  "en": "Break-ins: {0} report in October. {1} this year, down {2}% from {3} by this time last year.",
+  "example": "Break-ins: 1 report in October. 14 this year, down 56% from 32 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "Furti con scasso: {0} rapporto a ottobre. {1} quest'anno, in calo {2}% rispetto a {3} in questo periodo dell'anno scorso."
  },
  "Break-ins: {0} report in September. {1} this year, compared with {2} by this time last year. |one,other,other": {
   "back": "Burglaries: {0} report in September. {1} this year, compared to {2} at this time last year.",

@@ -269,6 +269,15 @@
   "status": "machine",
   "tr": "凶杀： {0} 报告将在九月发布。 {1} 今年。"
  },
+ "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged. |other": {
+  "back": "Last October, police received {0} reports from {name} this year. Reporting to the police does not mean someone is being prosecuted.",
+  "created": "2026-11-23",
+  "en": "In October, there were {0} reports to police in {name}. A report to police does not mean anyone was charged.",
+  "example": "In October, there were 16 reports to police in Agincourt North. A report to police does not mean anyone was charged.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "去年十月，警方收到了 {0} 起报告， {name}年。向警方报告并不意味着有人被起诉。"
+ },
  "Questions? Contact your local police division, listed below. In an emergency, call {0}. |other": {
   "back": "Got a question? Please contact your local police department for details. In case of emergency, please call {0}.",
   "created": "2026-10-24",

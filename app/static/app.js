@@ -432,7 +432,11 @@ window.NB = (function () {
     ctx.fillStyle = '#eef3fb'; ctx.fillRect(0, 860, W, 220);
     y = 885;
     text('✓ ' + btn.dataset.verified, 28, '700', '#0b5a37', 1.35, 2);
-    if (btn.dataset.notice) text(btn.dataset.notice, 24, '400', '#334155', 1.35, 2);
+    if (btn.dataset.notice) {  // the whole notice ("may contain mistakes" included), smaller if it needs a third line
+      ctx.font = '400 24px ' + font;
+      const long = wrapLines(ctx, btn.dataset.notice, maxW).length > 2;
+      text(btn.dataset.notice, long ? 20 : 24, '400', '#334155', 1.35, 3);
+    }
     ctx.direction = 'ltr'; ctx.textAlign = 'left';
     ctx.font = '400 22px "Noto Sans", system-ui, sans-serif'; ctx.fillStyle = '#475569';
     ctx.fillText('Source: Toronto Police Service open data. Not affiliated with or endorsed by TPS.', P, H - 50);

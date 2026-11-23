@@ -26,6 +26,15 @@
   "status": "machine",
   "tr": "தாக்குதல்கள்: அக்டோபரில் {0} அறிக்கைகள். {1} இந்த ஆண்டு, கடந்த ஆண்டு இதே நேரத்தில் {3} {2}% குறைந்துள்ளது."
  },
+ "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,one,other": {
+  "back": "Attacks: Reports are issued on October {0}. This year, {1} are up {2}% from {3} at the same time last year.",
+  "created": "2026-11-23",
+  "en": "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year.",
+  "example": "Assaults: 14 reports in October. 104 this year, up 1% from 103 by this time last year.",
+  "reviewed_by": "",
+  "status": "machine",
+  "tr": "தாக்குதல்கள்: {0} அக்டோபரில் அறிக்கைகள் அளிக்கின்றன. இந்த ஆண்டில் {1}, கடந்த ஆண்டு இதே நேரத்தில் {3} இருந்ததைவிட {2}% அதிகரித்துள்ளது."
+ },
  "Assaults: {0} reports in October. {1} this year, up {2}% from {3} by this time last year. |other,other,other,other": {
   "back": "Attacks: {0} reports in October. {1} This year, an increase of {2}% from {3} at this time last year.",
   "created": "2026-11-13",
